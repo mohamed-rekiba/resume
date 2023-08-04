@@ -7,6 +7,7 @@
             "script": "start",
             "isBackground": true,
             "presentation": { "reveal": "always", "close": true },
+            "dependsOn": ["clean"],
             "problemMatcher": [
                 {
                     "pattern": [
