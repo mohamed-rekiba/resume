@@ -1,11 +1,4 @@
 :host {
-    display: grid;
-    width: 100dvh;
-    height: 100dvh;
-    overflow: hidden;
-}
-
-.preloader {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,47 +13,43 @@
     z-index: 99999;
     transition: 100ms ease-in-out;
 
-    & > * {
-        min-width: 0;
-    }
-
-    &--hide {
+    &.app-loader--hide {
         opacity: 0;
         visibility: hidden;
         transition-duration: 300ms;
     }
+}
 
-    .preloader__wrap {
-        width: 100%;
-        max-width: 9.375rem;
+.loader__wrap {
+    width: 100%;
+    max-width: 9.375rem;
 
-        .circle-pulse {
-            & > * {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                border-radius: 50%;
-                box-sizing: border-box;
-                transform: scale(0);
-                animation: pulse 1.6s linear infinite;
-            }
+    .circle-pulse {
+        & > * {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            box-sizing: border-box;
+            transform: scale(0);
+            animation: pulse 1.6s linear infinite;
+        }
 
-            .circle-pulse__1 {
-                width: 6rem;
-                height: 6rem;
-                margin-top: -3rem;
-                margin-left: -3rem;
-                background-color: #304cfd;
-            }
+        .circle-pulse__1 {
+            width: 6rem;
+            height: 6rem;
+            margin-top: -3rem;
+            margin-left: -3rem;
+            background-color: #304cfd;
+        }
 
-            .circle-pulse__2 {
-                width: 4.8rem;
-                height: 4.8rem;
-                margin-top: -2.4rem;
-                margin-left: -2.4rem;
-                background-color: rgba(48, 76, 253, 0.7);
-                animation-delay: -0.8s;
-            }
+        .circle-pulse__2 {
+            width: 4.8rem;
+            height: 4.8rem;
+            margin-top: -2.4rem;
+            margin-left: -2.4rem;
+            background-color: rgba(48, 76, 253, 0.7);
+            animation-delay: -0.8s;
         }
     }
 }

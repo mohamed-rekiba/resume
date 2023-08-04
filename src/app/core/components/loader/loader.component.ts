@@ -1,9 +1,4 @@
-import {
-    AfterViewChecked,
-    Component,
-    WritableSignal,
-    signal,
-} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { delay, of, take } from 'rxjs';
 
@@ -14,14 +9,17 @@ import { delay, of, take } from 'rxjs';
     templateUrl: './loader.component.html',
     styleUrls: ['./loader.component.scss'],
 })
-export class LoaderComponent implements AfterViewChecked {
-    loaded: WritableSignal<boolean> = signal(false);
+export class LoaderComponent implements AfterViewInit {
+    constructor(
+        private el: ElementRef,
+        private render: Renderer2,
+    ) {}
 
-    constructor() {}
-
-    ngAfterViewChecked(): void {
+    ngAfterViewInit(): void {
         of(null)
-            .pipe(take(1), delay(1000))
-            .subscribe(() => this.loaded.set(true));
+            .pipe(take(1), delay(500))
+            .subscribe(() => {
+                this.render.addClass(this.el.nativeElement, 'app-loader--hide');
+            });
     }
 }
