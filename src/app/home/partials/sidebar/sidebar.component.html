@@ -31,7 +31,9 @@
                 "
                 [target]="contact.hrefSuffix ? '_blank' : '_self'"
             >
-                <mat-icon>{{ contact.icon }}</mat-icon>
+                <mat-icon fontSet="material-icons-outlined">{{
+                    contact.icon
+                }}</mat-icon>
                 {{ contact.value }}
             </a>
         </ng-container>

@@ -46,8 +46,8 @@
     gap: 0.5rem;
 
     .link-icon {
-        width: 14px;
-        height: 14px;
+        width: 10px;
+        height: 10px;
         padding: unset;
         color: #44566c;
 
@@ -75,6 +75,7 @@
 .sidebar__header {
     position: relative;
     padding: var(--padding);
+    padding-bottom: 0.5rem;
     height: fit-content;
 
     .header__name {

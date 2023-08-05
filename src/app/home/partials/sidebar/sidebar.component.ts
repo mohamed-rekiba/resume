@@ -37,7 +37,7 @@ export class SidebarComponent {
         },
         {
             value: 'muhammad.shaban.dev@gmail.com',
-            icon: 'mail_outline',
+            icon: 'mail',
             hrefSuffix: 'mailto:',
         },
         {
