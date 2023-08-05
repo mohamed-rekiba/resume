@@ -1,0 +1,68 @@
+:host {
+    position: relative;
+    display: grid;
+    gap: 0.5cm;
+    width: 21cm;
+    height: fit-content;
+    min-height: 29.7cm;
+    margin-inline: auto;
+    padding-block: 1cm;
+
+    ::ng-deep {
+        > * {
+            height: 29.686cm;
+            border: 1px #d3d3d3 solid;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+            background-image: url(/assets/images/triangles-top.svg),
+                url(/assets/images/triangles-bottom.svg);
+            background-position:
+                left top,
+                right bottom;
+            background-repeat: no-repeat;
+            background-size: inherit;
+            // background-attachment: fixed;
+
+            svg {
+                overflow: hidden;
+                vertical-align: middle;
+
+                image {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .page--wrapper {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                padding: 1cm;
+            }
+        }
+    }
+
+    @media print {
+        margin: unset;
+        width: unset;
+        min-height: unset;
+        padding: unset;
+        gap: unset;
+        zoom: unset !important;
+        page-break-after: always;
+
+        ::ng-deep {
+            > * {
+                border: initial;
+                border-radius: initial;
+                box-shadow: initial;
+            }
+        }
+    }
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}

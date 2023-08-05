@@ -1,0 +1,134 @@
+:host {
+    --padding: 0.25rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    width: calc(21cm / 5);
+}
+
+.sidebar__wrapper {
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 2.5rem 3.125rem rgba(103, 118, 128, 0.1);
+}
+
+.avatar {
+    display: block;
+    margin: auto;
+    max-height: 4rem;
+    max-width: 4rem;
+    margin-top: -2rem;
+    filter: drop-shadow(-0.15625rem 0 0 #fff) drop-shadow(0.1875rem 0 0 #fff)
+        drop-shadow(0 -0.125rem 0 #fff) drop-shadow(0 0.125rem 0 #fff)
+        drop-shadow(0 0.25rem 0.25rem rgba(134, 151, 168, 0.25))
+        drop-shadow(0 0.5rem 0.5rem rgba(134, 151, 168, 0.4));
+}
+
+.avatar image {
+    height: 100%;
+    width: 100%;
+}
+
+.avatar__box {
+    -webkit-clip-path: url(#avatar-box);
+    clip-path: url(#avatar-box);
+}
+
+.avatar__hexagon {
+    -webkit-clip-path: url(#avatar-hexagon);
+    clip-path: url(#avatar-hexagon);
+}
+
+.sidebar__header {
+    position: relative;
+    padding: var(--padding);
+    height: fit-content;
+
+    .header__name {
+        position: relative;
+        margin-block: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    .header__position {
+        padding: 0.5rem 1rem;
+        font-size: 0.5rem;
+        font-weight: 400;
+        text-align: center;
+        border-radius: 10rem;
+        color: #44566c;
+        background-color: #f0f0f6;
+    }
+
+    .social-links {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        .social-icon {
+            width: 14px;
+            height: 14px;
+            padding: unset;
+            color: #44566c;
+
+            &,
+            .mat-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .mat-icon {
+                width: 75%;
+                height: 75%;
+            }
+
+            ::ng-deep {
+                .mat-mdc-button-touch-target {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.sidebar__info {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: var(--padding);
+    height: fit-content;
+    min-height: 100px;
+    background-color: #f5f8f9;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    .download-resume {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -12.5px;
+        margin: auto;
+        height: 25px;
+        width: 70%;
+        font-size: 0.5rem;
+        border-radius: 36px;
+        background-color: #02c3c6;
+    }
+}
+
+@media print {
+    .download-resume {
+        display: none;
+    }
+}

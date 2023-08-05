@@ -20,7 +20,12 @@
         "module": "ES2022",
         "useDefineForClassFields": false,
         "allowSyntheticDefaultImports": true,
-        "lib": ["ES2022", "dom"]
+        "lib": ["ES2022", "dom"],
+        "paths": {
+            "@app/*": ["src/app/*"],
+            "@env/*": ["src/environments/*"],
+            "@services/*": ["src/app/services/*"]
+        }
     },
     "angularCompilerOptions": {
         "enableI18nLegacyMessageIdFormat": false,
