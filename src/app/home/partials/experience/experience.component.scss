@@ -7,7 +7,7 @@
     border-radius: var(--border-radius);
 }
 
-.experience-section {
+.experience--header {
     position: relative;
     gap: 0.5rem;
     margin: unset;
@@ -37,5 +37,83 @@
         bottom: calc(-2 * var(--size));
         background-color: var(--highlight-color);
         border-radius: var(--size);
+    }
+}
+
+.experience--list {
+    --main-color: 48, 76, 253;
+    margin-inline-start: 0.3rem;
+
+    .experience__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0.6rem;
+        padding-left: 1.3rem;
+        border-left: 1px solid #f0f0f6;
+
+        &:first-of-type {
+            margin-top: 2rem;
+        }
+
+        &:last-of-type {
+            padding-bottom: unset !important;
+            margin-bottom: 2rem;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -0.23rem;
+            height: 0.4rem;
+            width: 0.4rem;
+            background-color: rgb(var(--main-color));
+            box-shadow: 0 0 0 0.15rem rgba(var(--main-color), 0.25);
+            border-radius: 50%;
+        }
+
+        .experience__title {
+            position: relative;
+            top: -0.3rem;
+            margin: unset;
+            font-size: 0.8rem;
+        }
+
+        .experience__period {
+            position: relative;
+            top: -0.3rem;
+            font-size: 0.5rem;
+            line-height: 2;
+            color: #8697a8;
+        }
+
+        .experience__description {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem;
+            margin-top: unset;
+            padding-inline-start: 0.5rem;
+            max-width: 80%;
+            font-size: 0.6rem;
+
+            li {
+                position: relative;
+                display: flex;
+                align-items: center;
+                min-height: 15px;
+                line-height: 1.2;
+
+                &:before {
+                    content: '\2022';
+                    position: absolute;
+                    top: 0;
+                    left: -1em;
+                    font-weight: bold;
+                    color: rgb(var(--main-color));
+                }
+            }
+        }
     }
 }

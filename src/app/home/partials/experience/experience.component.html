@@ -1,8 +1,16 @@
-<h3 class="experience-section">
+<h3 class="experience--header">
     <mat-icon fontSet="material-icons-outlined">business_center</mat-icon>
     Experience
 </h3>
 
-<section class="experiences--list">
-    <article class="experiences__item"></article>
+<section class="experience--list">
+    <article class="experience__item" *ngFor="let experience of experiences">
+        <h4 class="experience__title">{{ experience.title }}</h4>
+        <span class="experience__period">{{ experience.period }}</span>
+        <ul class="experience__description">
+            <li *ngFor="let description of experience.descriptions">
+                {{ description }}
+            </li>
+        </ul>
+    </article>
 </section>
