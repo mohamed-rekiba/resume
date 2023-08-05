@@ -24,6 +24,29 @@ export class SidebarComponent {
         },
     ];
 
+    contactInfo = [
+        {
+            value: 'December 12, 1984',
+            icon: 'event_note',
+            hrefSuffix: '',
+        },
+        {
+            value: 'İstanbul, Türkiye',
+            icon: 'location_on',
+            hrefSuffix: '',
+        },
+        {
+            value: 'muhammad.shaban.dev@gmail.com',
+            icon: 'mail_outline',
+            hrefSuffix: 'mailto:',
+        },
+        {
+            value: '+905467117695',
+            icon: 'smartphone',
+            hrefSuffix: 'tel:',
+        },
+    ];
+
     constructor(private domToPdf: DomToPdfService) {}
 
     downloadCV() {
