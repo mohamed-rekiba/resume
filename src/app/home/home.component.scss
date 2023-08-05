@@ -1,0 +1,14 @@
+:host {
+    display: flex;
+    width: 100%;
+
+    .page--wrapper {
+        padding-top: 2cm;
+    }
+}
+
+.svg-defs {
+    position: absolute;
+    height: 0;
+    width: 0;
+}

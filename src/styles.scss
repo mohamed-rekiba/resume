@@ -6,7 +6,7 @@ body {
 }
 body {
     margin: 0;
-    font-family: Roboto, 'Helvetica Neue', sans-serif;
+    font-family: Archivo, 'Helvetica Neue', sans-serif;
 }
 
 html,
@@ -15,5 +15,11 @@ body {
 }
 body {
     margin: 0;
-    font-family: Roboto, 'Helvetica Neue', sans-serif;
+    font-family: Archivo, 'Helvetica Neue', sans-serif;
+    color: #44566c;
+    background-color: #f5f6f7;
+}
+
+router-outlet {
+    display: none;
 }
