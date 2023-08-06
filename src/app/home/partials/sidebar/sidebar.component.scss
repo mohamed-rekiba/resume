@@ -149,6 +149,12 @@
         border-radius: 36px;
         background-color: #02c3c6;
         box-shadow: var(--box-shadow);
+
+        .mat-icon {
+            height: 10px;
+            width: 10px;
+            font-size: 0.7rem;
+        }
     }
 }
 

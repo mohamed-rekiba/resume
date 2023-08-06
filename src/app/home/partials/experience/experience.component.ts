@@ -19,7 +19,7 @@ export class ExperienceComponent {
             period: '2019 - 2020',
             descriptions: [
                 'Developed and maintained interfaces, APIs, and SDKs.',
-                'Created Bulk Runner, a generic tool for sending bulk requests using CSV files (both desktop tool and API server).',
+                'Created Bulk Runner (Desktop app and API server), a generic app/service for sending bulk requests using CSV files.',
                 'Worked extensively with AWS services and microservices architecture.',
             ],
         },
@@ -27,9 +27,9 @@ export class ExperienceComponent {
             title: 'Vrteek - Senior Software Engineer',
             period: '2017 - 2019',
             descriptions: [
-                'Developed Brain Coach, a fun game for Tizen OS using HTML, CSS, and JavaScript.',
-                'Created Facebook Chat Bots for Messenger Challenge (Tic Tac Toe & Captain Lungs) using Node.js, MySQL, and CentOS.',
-                'Developed backend and web app for VR & AR products administration using Node.js, Angular 2, MySQL, and CentOS.',
+                'Developed Brain Coach, a fun game for Tizen OS using HTML, CSS and JavaScript.',
+                'Created Facebook Chat Bots for Messenger Challenge (Tic Tac Toe & Captain Lungs) using Node.js, MySQL and CentOS.',
+                'Developed backend and web app for VR & AR products administration using Node.js, Angular 2, MySQL and CentOS.',
                 'Implemented Three.js 3D model viewer & editor and developed cross-platform mobile apps.',
                 'Managed server infrastructure, including dedicated servers and web hosting in AWS and GoDaddy.',
             ],
@@ -46,7 +46,7 @@ export class ExperienceComponent {
             title: 'Freelance, self-employed - Software Engineer',
             period: '2014 - 2015',
             descriptions: [
-                'PHP Developer using Codeigniter, Laravel Frameworks & MySQL Database Linux System Administrator.',
+                'PHP Developer using Codeigniter, Laravel Frameworks, MySQL Database & Linux System Administrator.',
             ],
         },
         {
