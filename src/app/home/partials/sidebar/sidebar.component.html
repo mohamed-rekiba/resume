@@ -24,6 +24,7 @@
             <a
                 mat-icon-button
                 class="contact-item"
+                [title]="contact.title"
                 [href]="
                     contact.hrefSuffix
                         ? contact.hrefSuffix + contact.value
@@ -48,6 +49,14 @@
         </button>
     </div>
 </aside>
+<section class="sidebar__keywords">
+    <h5 class="keywords__title">Keywords</h5>
+
+    <div class="keywords__wrapper">
+        <span *ngFor="let keyword of keywords">{{ keyword }}</span>
+    </div>
+</section>
+
 <!-- 
 <svg class="avatar" viewBox="0 0 84 84">
     <g class="avatar__hexagon">

@@ -158,6 +158,45 @@
     }
 }
 
+.sidebar__keywords {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: var(--box-shadow);
+
+    .keywords__title {
+        margin: unset;
+        padding-top: 1rem;
+    }
+    .keywords__title,
+    .keywords__wrapper {
+        padding-inline: 1rem;
+    }
+
+    .keywords__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5px;
+        padding-block: 1rem;
+        font-size: 0.4rem;
+        background-color: #f5f8f9;
+        border-bottom-left-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+
+        span {
+            padding: 0.3rem 0.5rem;
+            background-color: #fff;
+            border-radius: 50px;
+        }
+    }
+}
+
 @media print {
     .download-resume {
         display: none;
