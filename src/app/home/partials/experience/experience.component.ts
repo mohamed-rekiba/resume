@@ -8,28 +8,30 @@ import { Component } from '@angular/core';
 export class ExperienceComponent {
     experiences = [
         {
-            title: 'Cequens - Senior Devops Engineer',
+            title: 'Senior Devops Engineer',
+            company: 'Cequens',
             period: '2020 - Present',
             descriptions: [
-                'Proficiently managed various Linux distributions to ensure smooth operations and system stability.',
-                'Successfully created and maintained Docker containers with ECS, offering efficient containerization similar to Kubernetes.',
-                'Developed and managed Data Lakes using AWS tools such as Athena, Glue Schema, Kinesis Data Analytics Application, S3 bucket, and Lambda. These Data Lakes served as centralized repositories for storing structured and unstructured data at any scale.',
-                'Leveraged Terraform and Ansible to implement Infrastructure as Code (IaC) principles, automating infrastructure provisioning and management, resulting in streamlined processes and reduced deployment time.',
-                'Implemented automation infrastructure pipelines using AWS CodePipeline, GitLab pipeline, and GitHub actions, seamlessly integrating services like CodeCommit, CodeBuild, and CodeDeploy.',
-                'Designed and automated Firewalls like pfSense using Ansible playbooks, ensuring enhanced security and efficiency.',
-                'Proficiently worked with Apache, Nginx, and HaProxy for web serving, reverse proxying, caching, and load balancing, optimizing application performance and user experience.',
-                'Utilized SonarQube for Code quality assessment and successfully integrated it with the CI/CD pipeline, maintaining code health and promoting best practices.',
-                'Gained valuable experience with telecommunication protocols such as SS7 and Sigtran, contributing to the smooth functioning of communication systems.',
-                'Effectively utilized AWS CloudWatch and Datadog for logs, monitoring, and handling alerts, enabling proactive issue identification and resolution.',
-                'Successfully engineered high-traffic infrastructure with optimal performance, meeting demanding requirements and ensuring high availability.',
-                'Led the implementation of effective git branch strategies, resulting in efficient collaboration and code versioning.',
-                'Developed and managed infrastructure to serve high traffic from Al Rajhi Bank, ensuring a smooth user experience for critical clients.',
-                'Innovatively designed a Python agent to collect pfSense firewall logs and forward them to a log shipper for creating monitoring dashboards and alerts, enhancing system monitoring capabilities.',
-                'Demonstrated extensive programming skills in Python, Golang, C#, Javascript, Typescript, PHP, Lua, and Shell scripting, enabling seamless development and deployment of applications and scripts.',
+                'Proficiently managed Linux distributions for smooth operations and stability.',
+                'Created and maintained Docker containers with ECS, offering efficient containerization similar to Kubernetes.',
+                'Developed and managed Data Lakes using AWS tools for centralized data storage.',
+                'Leveraged Terraform and Ansible for Infrastructure as Code principles.',
+                'Implemented automation pipelines using AWS CodePipeline and Gitlab.',
+                'Designed and automated Firewalls like pfSense with Ansible for enhanced security.',
+                'Worked with Apache, Nginx, and HaProxy for optimized web serving, proxying ... etc.',
+                'Utilized SonarQube for code quality assessment in CI/CD pipelines.',
+                'Experienced with telecommunication protocols like SS7 and Sigtran.',
+                'Used AWS CloudWatch and Datadog for proactive monitoring and alerts.',
+                'Engineered high-traffic infrastructure with optimal performance.',
+                'Led effective git branch strategies for efficient collaboration.',
+                "Managed infrastructure for Al Rajhi Bank's high traffic.",
+                'Designed a Python agent for pfSense logs and monitoring dashboards.',
+                'Demonstrated programming skills in Python, Golang, C#, Javascript, Typescript, PHP, Lua, and Shell scripting.',
             ],
         },
         {
-            title: 'Cequens - Senior Software Engineer',
+            title: 'Senior Software Engineer',
+            company: 'Cequens',
             period: '2019 - 2020',
             descriptions: [
                 'Developed and maintained interfaces, APIs, and SDKs.',
@@ -38,7 +40,8 @@ export class ExperienceComponent {
             ],
         },
         {
-            title: 'Vrteek - Senior Software Engineer',
+            title: 'Senior Software Engineer',
+            company: 'Vrteek',
             period: '2017 - 2019',
             descriptions: [
                 'Developed Brain Coach, a fun game for Tizen OS using HTML, CSS and JavaScript.',
@@ -49,7 +52,8 @@ export class ExperienceComponent {
             ],
         },
         {
-            title: 'EscapeHD - Software Engineer',
+            title: 'Software Engineer',
+            company: 'EscapeHD',
             period: '2015 - 2017',
             descriptions: [
                 'Developed backend and web app for administration using Laravel, MySQL and CentOS.',
@@ -57,14 +61,16 @@ export class ExperienceComponent {
             ],
         },
         {
-            title: 'Freelance, self-employed - Software Engineer',
+            title: 'Software Engineer',
+            company: 'Freelance (Self employed)',
             period: '2014 - 2015',
             descriptions: [
                 'PHP Developer using Codeigniter, Laravel Frameworks, MySQL Database & Linux System Administrator.',
             ],
         },
         {
-            title: 'Emec - IT Consultant & Linux Administrator',
+            title: 'IT Consultant & Linux Administrator',
+            company: 'Emec',
             period: '2008 - 2015',
             descriptions: [
                 'Managed system, network, and devices administration.',
