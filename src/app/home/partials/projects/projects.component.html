@@ -1,0 +1,77 @@
+<div class="project--header">
+    <mat-icon fontSet="material-icons-outlined">highlight</mat-icon>
+    <h3>Highlighted Projects</h3>
+</div>
+
+<section class="project--list">
+    <article class="project__item" *ngFor="let project of projects">
+        <h4
+            class="project__title"
+            [innerHtml]="project.title | safe: 'html'"
+        ></h4>
+        <h5
+            class="project__description"
+            *ngIf="project.description"
+            [innerHtml]="project.description | safe: 'html'"
+        ></h5>
+        <ul class="project__details">
+            <ng-container *ngFor="let item of project.detailsList">
+                <ng-template
+                    [ngIf]="item.startsWith('http')"
+                    [ngIfElse]="notLinkItem"
+                >
+                    <li>
+                        <a [href]="item" target="_blank">{{ item }}</a>
+                    </li>
+                </ng-template>
+
+                <ng-template #notLinkItem>
+                    <li [innerHtml]="item | safe: 'html'"></li>
+                </ng-template>
+            </ng-container>
+        </ul>
+        <p
+            class="project__more-details"
+            *ngIf="project.moreDetails"
+            [innerHtml]="project.moreDetails | safe: 'html'"
+        ></p>
+    </article>
+</section>
+
+<div class="project--header">
+    <mat-icon fontSet="material-icons-outlined">highlight</mat-icon>
+    <h3>Open Source Projects</h3>
+</div>
+<p class="project--note">
+    It is a privilege to be a part of various Open Source Projects.
+</p>
+
+<section class="project--list">
+    <article class="project__item" *ngFor="let project of osProjects">
+        <h4
+            class="project__title"
+            [innerHtml]="project.title | safe: 'html'"
+        ></h4>
+        <h5
+            class="project__description"
+            *ngIf="project.description"
+            [innerHtml]="project.description | safe: 'html'"
+        ></h5>
+        <ul class="project__details">
+            <ng-container *ngFor="let item of project.detailsList">
+                <ng-template
+                    [ngIf]="item.startsWith('http')"
+                    [ngIfElse]="notLinkItem"
+                >
+                    <li>
+                        <a [href]="item" target="_blank">{{ item }}</a>
+                    </li>
+                </ng-template>
+
+                <ng-template #notLinkItem>
+                    <li [innerHtml]="item | safe: 'html'"></li>
+                </ng-template>
+            </ng-container>
+        </ul>
+    </article>
+</section>

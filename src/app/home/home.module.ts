@@ -7,9 +7,22 @@ import { HomeComponent } from './home.component';
 import { SidebarComponent } from './partials/sidebar/sidebar.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { ExperienceComponent } from './partials/experience/experience.component';
+import { ProjectsComponent } from './partials/projects/projects.component';
+import { SafePipe } from '@app/services/SafePipe.pipe';
 
 @NgModule({
-    declarations: [HomeComponent, SidebarComponent, ExperienceComponent],
-    imports: [CommonModule, MatButtonModule, MatIconModule, HomeRoutingModule],
+    declarations: [
+        HomeComponent,
+        SidebarComponent,
+        ExperienceComponent,
+        ProjectsComponent,
+    ],
+    imports: [
+        CommonModule,
+        MatButtonModule,
+        MatIconModule,
+        HomeRoutingModule,
+        SafePipe,
+    ],
 })
 export class HomeModule {}

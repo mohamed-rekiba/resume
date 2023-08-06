@@ -13,8 +13,11 @@ export class DomToPdfService {
         return this.document.getElementsByTagName('body')[0] as HTMLElement;
     }
 
-    toPdf(el: HTMLElement) {
-        return window.print();
+    printPdf() {
+        window.print();
+    }
+
+    canvasToPdf(el: HTMLElement) {
         html2canvas(el).then((canvas) => {
             const imgData = canvas.toDataURL('image/png');
             const pdf = new jsPDF({

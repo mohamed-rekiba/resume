@@ -1,18 +1,23 @@
 :host {
+    --main-color: 48, 76, 253;
     --highlight-color: #304cfd;
+
+    display: flex;
+    flex-direction: column;
     flex: 1;
+    gap: 0.5rem;
     padding: 1.5rem 1rem;
     background-color: #fff;
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
 }
 
-.experience--header {
+.project--header {
     position: relative;
     gap: 0.5rem;
-    margin: unset;
     font-size: 0.9rem;
-    line-height: 1.5;
+    height: 35px;
+    padding-bottom: 5px;
 
     &,
     .mat-icon {
@@ -25,6 +30,11 @@
         width: 20px;
         font-size: 1.5rem;
         color: var(--highlight-color);
+    }
+
+    h3 {
+        margin: unset;
+        line-height: initial;
     }
 
     &::after {
@@ -40,25 +50,35 @@
     }
 }
 
-.experience--list {
-    --main-color: 48, 76, 253;
+.project--note {
+    padding-inline: 1rem;
+    margin-bottom: unset;
+    width: fit-content;
+    font-size: 0.6rem;
+    line-height: 2;
+    background-color: #eee;
+    border-left: 5px solid rgb(var(--main-color));
+    border-radius: 5px;
+}
+
+.project--list {
     margin-inline-start: 0.3rem;
 
-    .experience__item {
+    .project__item {
         position: relative;
         display: flex;
         flex-direction: column;
-        padding-bottom: 0.6rem;
+        padding-bottom: 1.5rem;
         padding-left: 1.3rem;
         border-left: 1px solid #f0f0f6;
 
         &:first-of-type {
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
 
         &:last-of-type {
             padding-bottom: unset !important;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
 
         &::before {
@@ -73,27 +93,31 @@
             border-radius: 50%;
         }
 
-        .experience__title {
+        .project__title {
             position: relative;
             top: -0.3rem;
             margin: unset;
             font-size: 0.8rem;
         }
 
-        .experience__period {
+        .project__description,
+        .project__more-details {
             position: relative;
-            top: -0.3rem;
-            font-size: 0.5rem;
-            line-height: 2;
-            color: #8697a8;
+            font-size: 0.8rem;
+            line-height: 1.2;
         }
 
-        .experience__description {
+        .project__description {
+            font-size: 0.7rem;
+            margin-block: 0.5rem;
+        }
+
+        .project__details {
             position: relative;
             display: flex;
             flex-direction: column;
             gap: 0.2rem;
-            margin-top: unset;
+            margin: unset;
             padding-inline-start: 0.5rem;
             max-width: 90%;
             font-size: 0.6rem;
@@ -102,6 +126,7 @@
                 position: relative;
                 display: flex;
                 align-items: center;
+                gap: 0.25rem;
                 min-height: 15px;
                 line-height: 1.3;
 
@@ -113,7 +138,18 @@
                     font-weight: bold;
                     color: rgb(var(--main-color));
                 }
+
+                ::ng-deep {
+                    a {
+                        color: rgb(var(--main-color));
+                    }
+                }
             }
+        }
+
+        .project__more-details {
+            margin-bottom: unset;
+            font-size: 0.6rem;
         }
     }
 }

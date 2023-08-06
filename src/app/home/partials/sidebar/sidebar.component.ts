@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { DomToPdfService } from '@services/dom-to-pdf.service';
 
 @Component({
@@ -7,8 +7,6 @@ import { DomToPdfService } from '@services/dom-to-pdf.service';
     styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent {
-    @Input() printEl!: ElementRef;
-
     socialInfo = [
         {
             link: 'https://www.linkedin.com/in/mohamed-rekiba/',
@@ -31,6 +29,10 @@ export class SidebarComponent {
             hrefSuffix: '',
         },
         {
+            value: 'Bachelor of Commerce',
+            icon: 'school',
+        },
+        {
             value: 'İstanbul, Türkiye',
             icon: 'location_on',
             hrefSuffix: '',
@@ -50,6 +52,6 @@ export class SidebarComponent {
     constructor(private domToPdf: DomToPdfService) {}
 
     downloadCV() {
-        this.domToPdf.toPdf(this.printEl.nativeElement);
+        this.domToPdf.printPdf();
     }
 }
