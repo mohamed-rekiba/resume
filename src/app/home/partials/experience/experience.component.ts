@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./experience.component.scss'],
 })
 export class ExperienceComponent {
+    summary =
+        'I am a highly motivated and experienced DevOps Engineer with a proven track record of success in delivering high-quality software. I am passionate about open source software development and I am always looking for new challenges. I am confident that I can make a significant contribution to your team.';
+
     experiences = [
         {
             title: 'Senior Devops Engineer',

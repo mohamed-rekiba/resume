@@ -172,10 +172,12 @@
     .keywords__title {
         margin: unset;
         padding-top: 1rem;
+        text-align: center;
     }
+
     .keywords__title,
     .keywords__wrapper {
-        padding-inline: 1rem;
+        padding-inline: 0.6rem;
     }
 
     .keywords__wrapper {
