@@ -17,7 +17,6 @@
     gap: 0.5rem;
     font-size: 0.9rem;
     height: 35px;
-    padding-bottom: 5px;
 
     &,
     .mat-icon {
@@ -51,12 +50,12 @@
 }
 
 .project--note {
-    padding-inline: 1rem;
+    padding-inline: 0.5rem;
     margin-bottom: unset;
     width: fit-content;
     font-size: 0.6rem;
     line-height: 2;
-    background-color: #eee;
+    background-color: #f5f8f9;
     border-left: 5px solid rgb(var(--main-color));
     border-radius: 5px;
 }
@@ -68,9 +67,9 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        padding-bottom: 1.5rem;
+        padding-bottom: 1rem;
         padding-left: 1.3rem;
-        border-left: 1px solid #f0f0f6;
+        border-left: 1px solid #f5f8f9;
 
         &:first-of-type {
             margin-top: 1rem;
@@ -78,7 +77,6 @@
 
         &:last-of-type {
             padding-bottom: unset !important;
-            margin-bottom: 1rem;
         }
 
         &::before {
@@ -149,7 +147,10 @@
 
         .project__more-details {
             margin-bottom: unset;
+            padding-inline-start: 0.5rem;
             font-size: 0.6rem;
+            border-left: 5px solid rgb(var(--main-color));
+            border-radius: 5px;
         }
     }
 }

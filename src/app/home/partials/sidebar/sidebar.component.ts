@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { DomToPdfService } from '@services/dom-to-pdf.service';
 
 @Component({
     selector: 'app-sidebar',
@@ -59,6 +58,7 @@ export class SidebarComponent {
         'Cloud Computing',
         'Git',
         'Amazon Web Services (AWS)',
+        'stc Cloud',
         'Docker',
         'Ansible',
         'IaC',
@@ -68,8 +68,9 @@ export class SidebarComponent {
         'PCAP',
         'SS7',
         'Sigtran',
-        'Continuous Integration and Continuous Delivery (CI/CD)',
         'Automation',
+        'Autoscaling',
+        'Continuous Integration and Continuous Delivery (CI/CD)',
         'Software Development',
         'Python (Programming Language)',
         'MySQL',
@@ -78,10 +79,4 @@ export class SidebarComponent {
         'TypeScript',
         'angular',
     ];
-
-    constructor(private domToPdf: DomToPdfService) {}
-
-    downloadCV() {
-        this.domToPdf.printPdf();
-    }
 }

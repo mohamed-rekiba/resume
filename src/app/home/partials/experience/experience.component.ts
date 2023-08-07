@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DomToPdfService } from '@app/services/dom-to-pdf.service';
 
 @Component({
     selector: 'app-experience',
@@ -15,19 +16,23 @@ export class ExperienceComponent {
             company: 'Cequens',
             period: '2020 - Present',
             descriptions: [
+                'Revamped the legacy infrastructure, ensuring a seamless transition to full automation on AWS.',
+                'Establish and oversee infrastructure within the <span class="experience__highlight">stc Cloud</span> platform.',
+                `Supervised the administration of infrastructure to meet the high-traffic demands of <span class="experience__highlight">Al Rajhi Bank</span>`,
                 'Proficiently managed Linux distributions for smooth operations and stability.',
+                'Implemented auto-scaling strategies to dynamically adjust resources based on traffic demands, ensuring seamless performance even during high-traffic spikes.',
                 'Created and maintained Docker containers with ECS, offering efficient containerization similar to Kubernetes.',
                 'Developed and managed Data Lakes using AWS tools for centralized data storage.',
                 'Leveraged Terraform and Ansible for Infrastructure as Code principles.',
                 'Implemented automation pipelines using AWS CodePipeline and Gitlab.',
                 'Designed and automated Firewalls like pfSense with Ansible for enhanced security.',
+                'Utilized auto-scaling groups to efficiently handle varying workloads and ensure optimal resource allocation.',
                 'Worked with Apache, Nginx, and HaProxy for optimized web serving, proxying ... etc.',
                 'Utilized SonarQube for code quality assessment in CI/CD pipelines.',
                 'Experienced with telecommunication protocols like SS7 and Sigtran.',
                 'Used AWS CloudWatch and Datadog for proactive monitoring and alerts.',
-                'Engineered high-traffic infrastructure with optimal performance.',
+                'Engineered and optimized high-traffic infrastructure with auto-scaling capabilities for maximum performance.',
                 'Led effective git branch strategies for efficient collaboration.',
-                "Managed infrastructure for Al Rajhi Bank's high traffic.",
                 'Designed a Python agent for pfSense logs and monitoring dashboards.',
                 'Demonstrated programming skills in Python, Golang, C#, Javascript, Typescript, PHP, Lua, and Shell scripting.',
             ],
@@ -81,4 +86,6 @@ export class ExperienceComponent {
             ],
         },
     ];
+
+    constructor(public domToPdf: DomToPdfService) {}
 }
