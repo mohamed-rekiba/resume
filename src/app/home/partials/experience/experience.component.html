@@ -16,9 +16,14 @@
         <p class="experience__company">{{ experience.company }}</p>
         <span class="experience__period">{{ experience.period }}</span>
         <ul class="experience__description">
-            <li *ngFor="let description of experience.descriptions">
-                {{ description }}
-            </li>
+            <li
+                *ngFor="let description of experience.descriptions"
+                [innerHtml]="description | safe: 'html'"
+            ></li>
         </ul>
     </article>
 </section>
+
+<button mat-raised-button (click)="domToPdf.printPdf()" class="download-resume">
+    <mat-icon>download</mat-icon>
+</button>
