@@ -81,8 +81,9 @@ export class SidebarComponent {
         'MySQL',
         'PostgreSQL',
         'MongoDB',
-        'REST API',
-        'SOAP API',
+        'REST',
+        'GraphQL',
+        'SOAP',
         'SMPP',
     ];
 }
