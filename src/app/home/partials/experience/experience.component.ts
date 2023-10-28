@@ -16,7 +16,8 @@ export class ExperienceComponent {
             company: 'Cequens',
             period: '2020 - Present',
             descriptions: [
-                'Revamped the legacy infrastructure, ensuring a seamless transition to full automation on AWS.',
+                'Revamped the legacy infrastructure, ensuring a seamless transition to full automation on <span class="experience__highlight">AWS</span>.',
+                'Transformed the <span class="experience__highlight">AWS</span> infrastructure into a hybrid setup, where <span class="experience__highlight">AWS</span> was exclusively used for hosting the source code and pipeline, while <span class="experience__highlight">Kubernetes</span> played a crucial role in managing other vital components.',
                 'Establish and oversee infrastructure within the <span class="experience__highlight">stc Cloud</span> platform.',
                 `Supervised the administration of infrastructure to meet the high-traffic demands of <span class="experience__highlight">Al Rajhi Bank</span>`,
                 'Proficiently managed Linux distributions for smooth operations and stability.',
@@ -81,8 +82,7 @@ export class ExperienceComponent {
             company: 'Emec',
             period: '2008 - 2015',
             descriptions: [
-                'Managed system, network, and devices administration.',
-                'Created Linux servers using CentOS (email server, data center, DNS server, FTP server, proxy server).',
+                'Managed system, network, devices, create linux server include (data center, email, DNS, FTP and proxy).',
             ],
         },
     ];

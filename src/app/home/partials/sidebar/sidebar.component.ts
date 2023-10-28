@@ -58,6 +58,7 @@ export class SidebarComponent {
         'Cloud Computing',
         'Git',
         'Amazon Web Services (AWS)',
+        'Kubernetes',
         'stc Cloud',
         'IaC',
         'Terraform',
