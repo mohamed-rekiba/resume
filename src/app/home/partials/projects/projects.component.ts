@@ -30,7 +30,7 @@ export class ProjectsComponent {
                 'Adding columns and rows.',
                 'Selecting and merging both columns and rows.',
                 'Navigating between cells using arrow keys.',
-                'For more details, visit: <a href="https://mshaaban-tech.github.io/table-box/" target="_blank">https://mshaaban-tech.github.io/table-box/</a>',
+                'For more details, visit: <a href="https://mohamed-rekiba.github.io/table-box/" target="_blank">https://mohamed-rekiba.github.io/table-box/</a>',
             ],
         },
         {
