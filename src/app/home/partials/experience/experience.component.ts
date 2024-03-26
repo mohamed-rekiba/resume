@@ -12,9 +12,15 @@ export class ExperienceComponent {
 
     experiences = [
         {
+            title: 'Senior Cloud Infrastructure Engineer',
+            company: 'McKinsey & Company',
+            period: '2023 - 2024',
+            descriptions: ['I played an integral role within the secrets team, overseeing the management of both company and client secrets.Leveraging <span class="experience__highlight">HashiCorp Vault</span> in conjunction with <span class="experience__highlight">Okta</span>, <span class="experience__highlight">GitHub Actions</span>, and our proprietary <span class="experience__highlight">Authorization System</span>, I ensured secure handling of user and project secrets across various cloud providers and on- premise environments.'],
+        },
+        {
             title: 'Senior Devops Engineer',
             company: 'Cequens',
-            period: '2020 - Present',
+            period: '2020 - 2023',
             descriptions: [
                 'Revamped the legacy infrastructure, ensuring a seamless transition to full automation on <span class="experience__highlight">AWS</span>.',
                 'Transformed the <span class="experience__highlight">AWS</span> infrastructure into a hybrid setup, where <span class="experience__highlight">AWS</span> was exclusively used for hosting the source code and pipeline, while <span class="experience__highlight">Kubernetes</span> played a crucial role in managing other vital components.',
@@ -69,23 +75,23 @@ export class ExperienceComponent {
                 'Managed server infrastructure, including dedicated servers and web hosting in AWS and GoDaddy.',
             ],
         },
-        {
-            title: 'Software Engineer',
-            company: 'Freelance (Self employed)',
-            period: '2014 - 2015',
-            descriptions: [
-                'PHP Developer using Codeigniter, Laravel Frameworks, MySQL Database & Linux System Administrator.',
-            ],
-        },
-        {
-            title: 'IT Consultant & Linux Administrator',
-            company: 'Emec',
-            period: '2008 - 2015',
-            descriptions: [
-                'Managed system, network, devices, create linux server include (data center, email, DNS, FTP and proxy).',
-            ],
-        },
+        // {
+        //     title: 'Software Engineer',
+        //     company: 'Freelance (Self employed)',
+        //     period: '2014 - 2015',
+        //     descriptions: [
+        //         'PHP Developer using Codeigniter, Laravel Frameworks, MySQL Database & Linux System Administrator.',
+        //     ],
+        // },
+        // {
+        //     title: 'IT Consultant & Linux Administrator',
+        //     company: 'Emec',
+        //     period: '2008 - 2015',
+        //     descriptions: [
+        //         'Managed system, network, devices, create linux server include (data center, email, DNS, FTP and proxy).',
+        //     ],
+        // },
     ];
 
-    constructor(public domToPdf: DomToPdfService) {}
+    constructor(public domToPdf: DomToPdfService) { }
 }

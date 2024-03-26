@@ -12,7 +12,7 @@ export class SidebarComponent {
             icon: 'linkedin',
         },
         {
-            link: 'https://github.com/mshaaban-tech',
+            link: 'https://github.com/mohamed-rekiba',
             icon: 'github',
         },
         {
@@ -35,7 +35,7 @@ export class SidebarComponent {
         },
         {
             title: 'Location',
-            value: 'İstanbul, Türkiye',
+            value: 'Dubai, United Arab Emirates',
             icon: 'person_pin_circle',
             hrefSuffix: '',
         },
@@ -47,7 +47,7 @@ export class SidebarComponent {
         },
         {
             title: 'Phone',
-            value: '+905467117695',
+            value: '+971501229435',
             icon: 'smartphone',
             hrefSuffix: 'tel:',
         },
@@ -86,5 +86,7 @@ export class SidebarComponent {
         'GraphQL',
         'SOAP',
         'SMPP',
+        'HashiCorp Vault',
+        'Okta'
     ];
 }
