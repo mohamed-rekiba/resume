@@ -15,7 +15,9 @@ export class ExperienceComponent {
             title: 'Senior Cloud Infrastructure Engineer',
             company: 'McKinsey & Company',
             period: '2023 - 2024',
-            descriptions: ['I played an integral role within the secrets team, overseeing the management of both company and client secrets.Leveraging <span class="experience__highlight">HashiCorp Vault</span> in conjunction with <span class="experience__highlight">Okta</span>, <span class="experience__highlight">GitHub Actions</span>, and our proprietary <span class="experience__highlight">Authorization System</span>, I ensured secure handling of user and project secrets across various cloud providers and on- premise environments.'],
+            descriptions: [
+                'In addition to overseeing the management of both company and client secrets, I played an integral role within the secrets team, ensuring their utmost security. Leveraging <span class="experience__highlight">HashiCorp Vault</span> in conjunction with <span class="experience__highlight">Okta</span>, <span class="experience__highlight">GitHub Actions</span>, and our proprietary <span class="experience__highlight">Authorization System</span>, I ensured the secure handling of user and project secrets across various cloud providers and on-premise environments. Furthermore, our collaboration extended to working closely with <span class="experience__highlight">GitGuardian</span> to enhance our security measures and protect sensitive information from unauthorized access.',
+            ],
         },
         {
             title: 'Senior Devops Engineer',
@@ -61,7 +63,7 @@ export class ExperienceComponent {
             descriptions: [
                 'Developed Brain Coach, a fun game for Tizen OS using HTML, CSS and JavaScript.',
                 'Created Facebook Chat Bots for Messenger Challenge (Tic Tac Toe & Captain Lungs) using Node.js, MySQL and CentOS.',
-                'Developed backend and web app for VR & AR products administration using Node.js, Angular 2, MySQL and CentOS.',
+                'Developed backends and web apps for VR & AR products administration using Laravel, Node.js, Angular 2+, MySQL and CentOS.',
                 'Implemented Three.js 3D model viewer & editor and developed cross-platform mobile apps.',
                 'Managed server infrastructure, including dedicated servers and web hosting in AWS and GoDaddy.',
             ],
@@ -93,5 +95,5 @@ export class ExperienceComponent {
         // },
     ];
 
-    constructor(public domToPdf: DomToPdfService) { }
+    constructor(public domToPdf: DomToPdfService) {}
 }
