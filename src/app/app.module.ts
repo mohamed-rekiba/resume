@@ -7,14 +7,17 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { ICONS, initIconsFactory } from './utils/svg-icons';
 import { MatIconRegistry } from '@angular/material/icon';
-import { HttpClientModule } from '@angular/common/http';
+import {
+    provideHttpClient,
+    withInterceptorsFromDi,
+} from '@angular/common/http';
 
 @NgModule({
     declarations: [AppComponent],
+    bootstrap: [AppComponent],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        HttpClientModule,
         AppRoutingModule,
         HomeModule,
     ],
@@ -30,7 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
             deps: [ICONS, MatIconRegistry, DomSanitizer],
             multi: true,
         },
+        provideHttpClient(withInterceptorsFromDi()),
     ],
-    bootstrap: [AppComponent],
 })
 export class AppModule {}
