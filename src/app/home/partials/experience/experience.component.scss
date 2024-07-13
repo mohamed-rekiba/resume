@@ -1,6 +1,4 @@
 :host {
-    --highlight-color: #304cfd;
-
     position: relative;
     flex: 1;
     padding: 1rem;
@@ -26,7 +24,7 @@
         justify-content: center;
         width: 20px;
         font-size: 1.3rem;
-        color: var(--highlight-color);
+        color: var(--main-color);
     }
 
     &::after {
@@ -37,7 +35,7 @@
         height: var(--size);
         left: 0;
         bottom: calc(-2 * var(--size));
-        background-color: var(--highlight-color);
+        background-color: var(--main-color);
         border-radius: var(--size);
     }
 }
@@ -50,7 +48,6 @@
 }
 
 .experience--list {
-    --main-color: 48, 76, 253;
     margin-inline-start: 0.3rem;
 
     .experience__item {
@@ -76,8 +73,8 @@
             left: -0.23rem;
             height: 0.4rem;
             width: 0.4rem;
-            background-color: rgb(var(--main-color));
-            box-shadow: 0 0 0 0.15rem rgba(var(--main-color), 0.25);
+            background-color: var(--main-color);
+            box-shadow: 0 0 0 0.15rem var(--shadow-color);
             border-radius: 50%;
         }
 
@@ -154,7 +151,7 @@
     width: 2rem;
     height: 2rem;
     min-width: unset;
-    background-color: var(--highlight-color) !important;
+    background-color: var(--main-color) !important;
     border-radius: 50% var(--border-radius) 50% 50%;
 
     .mat-icon {
