@@ -35,7 +35,7 @@ export class SidebarComponent {
         },
         {
             title: 'Location',
-            value: 'Dubai, United Arab Emirates',
+            value: 'Istanbul, Türkiye',
             icon: 'person_pin_circle',
             hrefSuffix: '',
         },
@@ -47,7 +47,7 @@ export class SidebarComponent {
         },
         {
             title: 'Phone',
-            value: '+971501229435',
+            value: '+905467117695',
             icon: 'smartphone',
             hrefSuffix: 'tel:',
         },
