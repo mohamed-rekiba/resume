@@ -33,26 +33,25 @@ export class ProjectsComponent {
                 'For more details, visit: <a href="https://mohamed-rekiba.github.io/table-box/" target="_blank">https://mohamed-rekiba.github.io/table-box/</a>',
             ],
         },
+        // {
+        //     title: 'Facebook Messenger Bot Challenge - (Node.js)',
+        //     description:
+        //         'Tic Tac bot was among the top 60 finalists for the Middle East and Africa in the Facebook Messenger Bot Challenge.',
+        //     moreDetails: null,
+        //     detailsList: [
+        //         'For more information, visit: <a href="https://messengerchallengefinalists.splashthat.com" target="_blank">https://messengerchallengefinalists.splashthat.com</a>',
+        //         'Facebook page for Tic Tac bot: <a href="https://facebook.com/TicTac.bot" target="_blank">https://facebook.com/TicTac.bot</a>',
+        //         'Facebook page for CaptainLungs: <a href="https://facebook.com/CaptainLungs" target="_blank">https://facebook.com/CaptainLungs</a>',
+        //     ],
+        // },
         {
-            title: 'Facebook Messenger Bot Challenge - (Node.js)',
-            description:
-                'Tic Tac bot was among the top 60 finalists for the Middle East and Africa in the Facebook Messenger Bot Challenge.',
-            moreDetails: null,
-            detailsList: [
-                'For more information, visit: <a href="https://messengerchallengefinalists.splashthat.com" target="_blank">https://messengerchallengefinalists.splashthat.com</a>',
-                'Facebook page for Tic Tac bot: <a href="https://facebook.com/TicTac.bot" target="_blank">https://facebook.com/TicTac.bot</a>',
-                'Facebook page for CaptainLungs: <a href="https://facebook.com/CaptainLungs" target="_blank">https://facebook.com/CaptainLungs</a>',
-            ],
-        },
-        {
-            title: 'Kenzy Linux',
+            title: 'Kenzy Linux - 2009',
             description:
                 'Built my own Linux distribution based on Fedora Linux.',
             moreDetails: null,
             detailsList: [
                 'Created my own packages repository at: <a href="https://build.opensuse.org/user/show/Kenzy" target="_blank">https://build.opensuse.org/user/show/Kenzy</a>',
                 'First announcement: <a href="https://www.linuxac.org/node/67869" target="_blank">https://www.linuxac.org/node/67869</a>',
-                'Project home page: <a href="https://kenzy.sourceforge.net" target="_blank">https://kenzy.sourceforge.net</a>',
             ],
         },
     ];
@@ -73,13 +72,12 @@ export class ProjectsComponent {
                 'Alfanous is a Quranic search engine that can find any word or aya in the Holy Quran.',
             detailsList: [
                 'Home Page: <a href="https://www.alfanous.org" target="_blank">https://www.alfanous.org</a>',
-                'Packages Repository: <a href="https://build.opensuse.org/package/show/home:Kenzy:tahadz/alfanous" target="_blank">https://build.opensuse.org/package/show/home:Kenzy:tahadz/alfanous</a>',
             ],
         },
         {
             title: 'Other Arabic open source software',
             detailsList: [
-                'Packages Repository: <a href="https://build.opensuse.org/package/show/home:Kenzy:tahadz" target="_blank">https://build.opensuse.org/package/show/home:Kenzy:tahadz</a>',
+                'Home Page: <a href="https://www.tahadz.com/" target="_blank">https://www.tahadz.com/</a>',
             ],
         },
     ];

@@ -65,6 +65,10 @@ export class SidebarComponent {
         'Ansible',
         'Automation',
         'Autoscaling',
+        'Nginx',
+        'Apache',
+        'HAProxy',
+        'Traefik',
         'Python',
         'TypeScript',
         'Node.js',
@@ -85,6 +89,7 @@ export class SidebarComponent {
         'SMPP',
         'GitGuardian',
         'Okta',
+        'MFA',
         'HashiCorp Vault',
     ];
 }
