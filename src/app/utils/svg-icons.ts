@@ -6,7 +6,7 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import env from '@env/environment';
 
-export const ICONS = new InjectionToken('ICONS');
+export const ICONS: InjectionToken<string[]> = new InjectionToken('ICONS');
 
 export function initIconsFactory(
     icons: string[],
