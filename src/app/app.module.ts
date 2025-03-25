@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { NgModule, inject, provideAppInitializer } from '@angular/core';
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -27,12 +27,10 @@ import {
             provide: ICONS,
             useValue: ['linkedin', 'github', 'npm'],
         },
-        {
-            provide: APP_INITIALIZER,
-            useFactory: initIconsFactory,
-            deps: [ICONS, MatIconRegistry, DomSanitizer],
-            multi: true,
-        },
+        provideAppInitializer(() => {
+        const initializerFn = (initIconsFactory)(inject(ICONS), inject(MatIconRegistry), inject(DomSanitizer));
+        return initializerFn();
+      }),
         provideHttpClient(withInterceptorsFromDi()),
     ],
 })

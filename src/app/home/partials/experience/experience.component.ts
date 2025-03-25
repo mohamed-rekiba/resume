@@ -5,6 +5,7 @@ import { DomToPdfService } from '@app/services/dom-to-pdf.service';
     selector: 'app-experience',
     templateUrl: './experience.component.html',
     styleUrls: ['./experience.component.scss'],
+    standalone: false
 })
 export class ExperienceComponent {
     summary =
