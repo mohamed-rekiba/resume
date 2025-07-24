@@ -1,29 +1,32 @@
 <h3 class="experience--header">
-    <mat-icon fontSet="material-icons-outlined">receipt_long</mat-icon>
-    Summary
+  <mat-icon fontSet="material-icons-outlined">receipt_long</mat-icon>
+  Summary
 </h3>
 
 <article class="experience--summary">{{ summary }}</article>
 
 <h3 class="experience--header">
-    <mat-icon fontSet="material-icons-outlined">business_center</mat-icon>
-    Experience
+  <mat-icon fontSet="material-icons-outlined">business_center</mat-icon>
+  Experience
 </h3>
 
 <section class="experience--list">
-    <article class="experience__item" *ngFor="let experience of experiences">
-        <h4 class="experience__title">{{ experience.title }}</h4>
-        <p class="experience__company">{{ experience.company }}</p>
-        <span class="experience__period">{{ experience.period }}</span>
-        <ul class="experience__description">
-            <li
-                *ngFor="let description of experience.descriptions"
-                [innerHtml]="description | safe: 'html'"
-            ></li>
-        </ul>
+  @for (experience of experiences; track experience) {
+    <article class="experience__item">
+      <h4 class="experience__title">{{ experience.title }}</h4>
+      <p class="experience__company">{{ experience.company }}</p>
+      <span class="experience__period">{{ experience.period }}</span>
+      <ul class="experience__description">
+        @for (description of experience.descriptions; track description) {
+          <li
+            [innerHtml]="description | safe: 'html'"
+          ></li>
+        }
+      </ul>
     </article>
+  }
 </section>
 
 <button mat-raised-button (click)="domToPdf.printPdf()" class="download-resume">
-    <mat-icon>download</mat-icon>
+  <mat-icon>download</mat-icon>
 </button>

@@ -59,6 +59,16 @@ export class ProjectsComponent {
 
     osProjects = [
         {
+            title: 'Kenzy Linux - 2009',
+            description:
+                'Built my own Linux distribution based on Fedora Linux.',
+            moreDetails: null,
+            detailsList: [
+                'Created my own packages repository at: <a href="https://build.opensuse.org/user/show/Kenzy" target="_blank">https://build.opensuse.org/user/show/Kenzy</a>',
+                'First announcement: <a href="https://www.linuxac.org/node/67869" target="_blank">https://www.linuxac.org/node/67869</a>',
+            ],
+        },
+        {
             title: 'Elkirtasse Softwares',
             description:
                 'A set of Linux applications, for example, desktop environment, electronic Quran, Quran library, book library.',
@@ -73,12 +83,14 @@ export class ProjectsComponent {
                 'Alfanous is a Quranic search engine that can find any word or aya in the Holy Quran.',
             detailsList: [
                 'Home Page: <a href="https://www.alfanous.org" target="_blank">https://www.alfanous.org</a>',
+                'Packages Repository: <a href="https://build.opensuse.org/package/show/home:Kenzy:tahadz/alfanous" target="_blank">https://build.opensuse.org/package/show/home:Kenzy:tahadz/alfanous</a>',
             ],
         },
         {
             title: 'Other Arabic open source software',
             detailsList: [
-                'Home Page: <a href="https://www.tahadz.com/" target="_blank">https://www.tahadz.com/</a>',
+                'Home Page: <a href="https://tahadz.com" target="_blank">https://tahadz.com</a>',
+                'Packages Repository: <a href="https://build.opensuse.org/project/show/home:Kenzy:tahadz" target="_blank">https://build.opensuse.org/project/show/home:Kenzy:tahadz</a>',
             ],
         },
     ];

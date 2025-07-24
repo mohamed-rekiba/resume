@@ -1,10 +1,11 @@
-import { DOCUMENT } from '@angular/common';
+
 import {
-    AfterViewInit,
-    Component,
-    ElementRef,
-    Inject,
-    Renderer2,
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Inject,
+  Renderer2,
+  DOCUMENT
 } from '@angular/core';
 import { delay, of, take } from 'rxjs';
 

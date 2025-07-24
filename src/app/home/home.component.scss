@@ -10,24 +10,24 @@
 
     .page--wrapper {
         display: flex;
-        gap: 1rem;
+        gap: 0.5rem;
         width: 100%;
         height: 29.686cm;
-        padding: 0.5cm;
+        padding: 0.2cm;
         border: 1px #d3d3d3 solid;
         border-radius: 5px;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        background-image: url(/assets/images/triangles-top.svg),
-            url(/assets/images/triangles-bottom.svg);
-        background-position:
-            left top,
-            right bottom;
-        background-repeat: no-repeat;
-        background-size: inherit;
+        // background-image: url(/assets/images/triangles-top.svg),
+        //     url(/assets/images/triangles-bottom.svg);
+        // background-position:
+        //     left top,
+        //     right bottom;
+        // background-repeat: no-repeat;
+        // background-size: inherit;
         // background-attachment: fixed;
 
         &:first-of-type {
-            padding-top: 1.2cm;
+            padding-top: 1.1cm;
         }
     }
 }

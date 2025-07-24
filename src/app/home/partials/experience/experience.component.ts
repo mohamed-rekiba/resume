@@ -9,18 +9,18 @@ import { DomToPdfService } from '@app/services/dom-to-pdf.service';
 })
 export class ExperienceComponent {
     summary =
-        'I am a highly motivated and experienced DevOps Engineer with a proven track record of success in delivering high-quality software. I am passionate about open source software development and I am always looking for new challenges. I am confident that I can make a significant contribution to your team.';
+        'A highly experienced Senior Cloud Infrastructure Engineer with over a decade of expertise in DevOps, cloud computing (AWS/GCP), and infrastructure automation. Technical proficiency spans containerization technologies (Kubernetes, Docker), Infrastructure as Code (Terraform, Ansible), and multiple programming languages including Python, Golang, and C#. Proven track record of leading critical system modernization initiatives, managing high-traffic infrastructure for major clients like Al Rajhi Bank, and transforming legacy systems into fully automated cloud solutions. Passionate about open source software development, with contributions to various projects including building custom Linux distributions.';
 
     experiences = [
         {
-            title: 'Senior Cloud Infrastructure Engineer',
-            company: 'McKinsey & Company',
-            period: '2023 - 2024',
+            title: 'Senior Cloud Infrastructure Engineer @ McKinsey & Company',
+            company: 'Vertex Agility',
+            period: '2023 - Present',
             descriptions: [
-                'In addition to overseeing the management of both company and client secrets, I played an integral role within the secrets team, ensuring their utmost security.',
-                'Implemented <span class="experience__highlight">OKTA/OIDC</span> authentication with <span class="experience__highlight">MFA</span> and developed vault identity groups, creating secure integrations between <span class="experience__highlight">Vault</span>, <span class="experience__highlight">EKS</span>, <span class="experience__highlight">Terraform Cloud</span>, and <span class="experience__highlight">GitHub Actions</span>.',
-                'Collaborated across teams to establish secure AWS connectivity, implement service-provider features, and create documentation reducing onboarding time by <span class="experience__highlight">40%</span>.',
-                'Refactored multiple repositories into a mono-repo architecture, reducing deployment issues by <span class="experience__highlight">30%</span> while enhancing <span class="experience__highlight">HashiCorp Vault</span> package with improved test coverage.',
+                'Spearheaded critical system modernization initiatives, achieving a significant reduction in deployment issues and enhancing security.',
+                'Collaborated with over five internal teams to implement secure solutions, optimizing workflows across platforms.',
+                'Developed comprehensive documentation and training programs, substantially cutting onboarding time and boosting productivity.',
+                'Designed monitoring and disaster recovery solutions, ensuring high availability for mission-critical systems.',
             ],
         },
         {
@@ -47,7 +47,7 @@ export class ExperienceComponent {
                 'Engineered and optimized <span class="experience__highlight">high-traffic</span> infrastructure with <span class="experience__highlight">auto-scaling</span> capabilities for maximum performance.',
                 'Led effective git branch strategies for efficient collaboration.',
                 'Designed a Python agent for pfSense logs and monitoring dashboards.',
-                'Demonstrated programming skills in <span class="experience__highlight">Python</span>, <span class="experience__highlight">Golang</span>, <span class="experience__highlight">C#</span>, <span class="experience__highlight">Javascript</span>, <span class="experience__highlight">Typescript</span>, <span class="experience__highlight">PHP</span>, <span class="experience__highlight">Lua</span> and <span class="experience__highlight">Shell Scripting</span>.',
+                'Demonstrated programming skills in <span class="experience__highlight">Python</span>, <span class="experience__highlight">Golang</span>, <span class="experience__highlight">C#</span>, <span class="experience__highlight">Javascript</span>, <span class="experience__highlight">Typescript</span>, <span class="experience__highlight">Lua</span> and <span class="experience__highlight">Shell Scripting</span>.',
             ],
         },
         {
