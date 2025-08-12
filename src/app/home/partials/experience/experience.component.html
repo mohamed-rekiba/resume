@@ -1,32 +1,45 @@
-<h3 class="experience--header">
-  <mat-icon fontSet="material-icons-outlined">receipt_long</mat-icon>
-  Summary
-</h3>
+<!-- Loading State -->
+@if (loading) {
+  <div class="experience--loading">
+    <mat-spinner diameter="40"></mat-spinner>
+    <p>Loading experience...</p>
+  </div>
+}
 
-<article class="experience--summary">{{ summary }}</article>
+<!-- Error State -->
+@if (error) {
+  <div class="experience--error">
+    <mat-icon>error</mat-icon>
+    <p>Failed to load experience content. Please refresh the page.</p>
+  </div>
+}
 
-<h3 class="experience--header">
-  <mat-icon fontSet="material-icons-outlined">business_center</mat-icon>
-  Experience
-</h3>
+<!-- Content -->
+@if (!loading && !error) {
+  <h3 class="experience--header">
+    <mat-icon fontSet="material-icons-outlined">receipt_long</mat-icon>
+    Summary
+  </h3>
 
-<section class="experience--list">
-  @for (experience of experiences; track experience) {
-    <article class="experience__item">
-      <h4 class="experience__title">{{ experience.title }}</h4>
-      <p class="experience__company">{{ experience.company }}</p>
-      <span class="experience__period">{{ experience.period }}</span>
-      <ul class="experience__description">
-        @for (description of experience.descriptions; track description) {
-          <li
-            [innerHtml]="description | safe: 'html'"
-          ></li>
-        }
-      </ul>
-    </article>
-  }
-</section>
+  <article class="experience--summary" [innerHtml]="summary | safe: 'html'"></article>
 
-<button mat-raised-button (click)="domToPdf.printPdf()" class="download-resume">
-  <mat-icon>download</mat-icon>
-</button>
+  <h3 class="experience--header">
+    <mat-icon fontSet="material-icons-outlined">business_center</mat-icon>
+    Experience
+  </h3>
+
+  <section class="experience--list">
+    @for (experience of experiences; track experience) {
+      <article class="experience__item">
+        <h4 class="experience__title">{{ experience.title }}</h4>
+        <p class="experience__company">{{ experience.company }}</p>
+        <span class="experience__period">{{ experience.period }}</span>
+        <div class="experience__content" [innerHtml]="experience.content | safe: 'html'"></div>
+      </article>
+    }
+  </section>
+
+  <button mat-raised-button (click)="domToPdf.printPdf()" class="download-resume">
+    <mat-icon>download</mat-icon>
+  </button>
+}
