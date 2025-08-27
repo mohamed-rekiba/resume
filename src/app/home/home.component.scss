@@ -17,6 +17,7 @@
         border: 1px #d3d3d3 solid;
         border-radius: 5px;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
         // background-image: url(/assets/images/triangles-top.svg),
         //     url(/assets/images/triangles-bottom.svg);
         // background-position:
@@ -26,8 +27,9 @@
         // background-size: inherit;
         // background-attachment: fixed;
 
-        &:first-of-type {
-            padding-top: 1.1cm;
+        &:not(:first-of-type) {
+            flex-direction: column;
+            padding-inline: 1rem;
         }
     }
 }

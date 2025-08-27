@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
     selector: 'app-projects',
     templateUrl: './projects.component.html',
     styleUrls: ['./projects.component.scss'],
-    standalone: false
+    standalone: false,
 })
 export class ProjectsComponent {
     projects = [
@@ -59,9 +59,18 @@ export class ProjectsComponent {
 
     osProjects = [
         {
+            title: 'openSUSE Build Service - OBS',
+            description:
+                'Contributed to OBS by resolving RPM spec file processing issues, self-hosting OBS, creating custom Linux distributions and Docker images.',
+            moreDetails: null,
+            detailsList: [
+                'PR: <a href="https://github.com/openSUSE/obs-build/pull/1094" target="_blank">https://github.com/openSUSE/obs-build/pull/1094</a>',
+            ],
+        },
+        {
             title: 'Kenzy Linux - 2009',
             description:
-                'Built my own Linux distribution based on Fedora Linux.',
+                'Developed and maintained a custom Linux distribution based on Fedora Linux with personalized package management and system configurations.',
             moreDetails: null,
             detailsList: [
                 'Created my own packages repository at: <a href="https://build.opensuse.org/user/show/Kenzy" target="_blank">https://build.opensuse.org/user/show/Kenzy</a>',
@@ -69,29 +78,30 @@ export class ProjectsComponent {
             ],
         },
         {
-            title: 'Elkirtasse Softwares',
-            description:
-                'A set of Linux applications, for example, desktop environment, electronic Quran, Quran library, book library.',
-            detailsList: [
-                'Home Page: <a href="https://elkirtasse.sourceforge.net" target="_blank">https://elkirtasse.sourceforge.net</a>',
-                'Packages Repository: <a href="https://build.opensuse.org/project/show/home:abouzakaria" target="_blank">https://build.opensuse.org/project/show/home:abouzakaria</a>',
-            ],
-        },
-        {
             title: 'Alfanous Quran',
             description:
-                'Alfanous is a Quranic search engine that can find any word or aya in the Holy Quran.',
+                'Contributed to Alfanous, an advanced Quranic search engine designed for comprehensive text search and verse retrieval within the Holy Quran.',
             detailsList: [
                 'Home Page: <a href="https://www.alfanous.org" target="_blank">https://www.alfanous.org</a>',
                 'Packages Repository: <a href="https://build.opensuse.org/package/show/home:Kenzy:tahadz/alfanous" target="_blank">https://build.opensuse.org/package/show/home:Kenzy:tahadz/alfanous</a>',
+                'PRs: <a href="https://github.com/Alfanous-team/alfanous/pulls?q=is%3Apr+author%3Amohamed-rekiba" target="_blank">https://github.com/Alfanous-team/alfanous/pulls?q=is%3Apr+author%3Amohamed-rekiba</a>',
             ],
         },
-        {
-            title: 'Other Arabic open source software',
-            detailsList: [
-                'Home Page: <a href="https://tahadz.com" target="_blank">https://tahadz.com</a>',
-                'Packages Repository: <a href="https://build.opensuse.org/project/show/home:Kenzy:tahadz" target="_blank">https://build.opensuse.org/project/show/home:Kenzy:tahadz</a>',
-            ],
-        },
+        // {
+        //     title: 'Elkirtasse Softwares',
+        //     description:
+        //         'A set of Linux applications, for example, desktop environment, electronic Quran, Quran library, book library.',
+        //     detailsList: [
+        //         'Home Page: <a href="https://elkirtasse.sourceforge.net" target="_blank">https://elkirtasse.sourceforge.net</a>',
+        //         'Packages Repository: <a href="https://build.opensuse.org/project/show/home:abouzakaria" target="_blank">https://build.opensuse.org/project/show/home:abouzakaria</a>',
+        //     ],
+        // },
+        // {
+        //     title: 'Other Arabic open source software',
+        //     detailsList: [
+        //         'Home Page: <a href="https://tahadz.com" target="_blank">https://tahadz.com</a>',
+        //         'Packages Repository: <a href="https://build.opensuse.org/project/show/home:Kenzy:tahadz" target="_blank">https://build.opensuse.org/project/show/home:Kenzy:tahadz</a>',
+        //     ],
+        // },
     ];
 }
