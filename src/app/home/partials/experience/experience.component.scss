@@ -1,10 +1,5 @@
 :host {
     position: relative;
-    flex: 1;
-    padding: 0.8rem;
-    background-color: #fff;
-    box-shadow: var(--box-shadow);
-    border-radius: var(--border-radius);
 }
 
 // Loading State
@@ -152,7 +147,12 @@
             // Markdown content styling
             ::ng-deep {
                 // Headers
-                h1, h2, h3, h4, h5, h6 {
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
                     margin: 0.5rem 0 0.3rem 0;
                     font-weight: 600;
                     color: var(--main-color);
@@ -166,7 +166,10 @@
                     font-size: 0.75rem;
                 }
 
-                h3, h4, h5, h6 {
+                h3,
+                h4,
+                h5,
+                h6 {
                     font-size: 0.7rem;
                 }
 
@@ -177,7 +180,8 @@
                 }
 
                 // Lists
-                ul, ol {
+                ul,
+                ol {
                     margin: 0.2rem 0;
                     padding-left: 1rem;
                 }
@@ -188,13 +192,15 @@
                 }
 
                 // Bold text
-                strong, b {
+                strong,
+                b {
                     font-weight: 600;
                     color: var(--main-color);
                 }
 
                 // Emphasis
-                em, i {
+                em,
+                i {
                     font-style: italic;
                 }
 
@@ -240,7 +246,8 @@
                     font-size: 0.55rem;
                 }
 
-                th, td {
+                th,
+                td {
                     padding: 0.2rem;
                     border: 1px solid #f0f0f6;
                     text-align: left;

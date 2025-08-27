@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DomToPdfService } from '@app/services/dom-to-pdf.service';
 import { ContentService, Experience } from '@app/services/content.service';
 
@@ -6,17 +6,20 @@ import { ContentService, Experience } from '@app/services/content.service';
     selector: 'app-experience',
     templateUrl: './experience.component.html',
     styleUrls: ['./experience.component.scss'],
-    standalone: false
+    standalone: false,
 })
 export class ExperienceComponent implements OnInit {
-    summary = '';
-    experiences: Experience[] = [];
+    @Input() summary?: boolean;
+    @Input() experiences: string[] = [];
+
+    content: Experience[] = [];
+    summaryContent: string = '';
     loading = true;
     error = false;
 
     constructor(
         public domToPdf: DomToPdfService,
-        private contentService: ContentService
+        private contentService: ContentService,
     ) {}
 
     ngOnInit(): void {
@@ -27,27 +30,29 @@ export class ExperienceComponent implements OnInit {
         this.loading = true;
         this.error = false;
 
-        // Load summary and experiences in parallel
-        this.contentService.loadSummary().subscribe({
-            next: (summary) => {
-                this.summary = summary;
-            },
-            error: (error) => {
-                console.error('Error loading summary:', error);
-                this.error = true;
-            }
-        });
+        if (this.summary) {
+            this.contentService.loadSummary().subscribe({
+                next: (content) => {
+                    this.summaryContent = content;
+                },
+                error: (error) => {
+                    console.error('Error loading summary:', error);
+                    this.error = true;
+                    this.loading = false;
+                },
+            });
+        }
 
-        this.contentService.loadExperiences().subscribe({
-            next: (experiences) => {
-                this.experiences = experiences;
+        this.contentService.loadExperiences(this.experiences).subscribe({
+            next: (content) => {
+                this.content = content;
                 this.loading = false;
             },
             error: (error) => {
                 console.error('Error loading experiences:', error);
                 this.error = true;
                 this.loading = false;
-            }
+            },
         });
     }
 }

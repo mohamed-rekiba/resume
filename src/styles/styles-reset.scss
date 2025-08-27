@@ -89,6 +89,10 @@ p {
     touch-action: manipulation;
 }
 
+p {
+    margin: unset;
+}
+
 /**
 * Remove list style
 */

@@ -44,16 +44,7 @@ export class ContentService {
   /**
    * Load all experience files
    */
-  loadExperiences(): Observable<Experience[]> {
-    const experienceFiles = [
-      'vertex-mckinsey.md',
-      'cequens-senior-devops.md',
-      'cequens-senior-software.md',
-      'vrteek.md',
-      'escapehd.md',
-      'freelance.md'
-    ];
-
+  loadExperiences(experienceFiles: string[]): Observable<Experience[]> {
     const requests = experienceFiles.map(file =>
       this.loadExperienceFile(file)
     );

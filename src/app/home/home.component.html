@@ -1,6 +1,9 @@
 <section class="page--wrapper">
     <app-sidebar></app-sidebar>
-    <app-experience></app-experience>
+    <app-experience
+        [summary]="true"
+        [experiences]="experiencesPage1"
+    ></app-experience>
     <!-- SVG Masks -->
     <svg class="svg-defs">
         <clipPath id="avatar-box">
@@ -17,5 +20,6 @@
 </section>
 
 <section class="page--wrapper">
+    <app-experience [experiences]="experiencesPage2"></app-experience>
     <app-projects></app-projects>
 </section>
