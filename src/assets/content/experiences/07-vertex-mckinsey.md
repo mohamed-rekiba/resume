@@ -1,25 +1,22 @@
 ---
-title: 'Senior Cloud Infrastructure Engineer @ McKinsey & Company'
-company: 'Vertex Agility'
+title: 'Senior Cloud Infrastructure Engineer'
+company: 'Vertex Agility (McKinsey & Company)'
 period: '2023 - Present'
 ---
 
-**Professional Experience**
+**Key Achievements**
 
-- **Integrated** HashiCorp Vault with Amazon EKS providing secure container orchestration and automated secrets management for Kubernetes environments
-- **Collaborated** with cross-functional teams to implement secure integrations using short-lived tokens, reducing credential leaks and rotation efforts
-- **Enhanced** Enhance legacy projects performance through critical issue resolution and system optimization, improving stability and user satisfaction
-- **Established** identity management lifecycle with vault identity groups and OKTA integration, replacing legacy authentication mapping systems, improving security posture and user experience
-- **Modernized** HashiCorp Vault infrastructure by migrating from legacy and implementing comprehensive disaster recovery solution, ensuring business continuity with AWS credential management and automated secrets rotation
-- **Architected** mono-repository refactoring consolidating multiple repositories, streamlining infrastructure management and reducing deployment complexity by 30%
-- **Developed** Create monitoring solution for critical service network accessibility, enabling proactive issue detection and high availability
-- **Created** comprehensive technical documentation and training programs, reducing new team member onboarding time by 40%
+- **Architected** HashiCorp Vault integration with Amazon EKS, implementing automated secrets management and reducing credential rotation efforts by 60%
+- **Modernized** legacy authentication systems through OKTA integration and vault identity groups, improving security posture and reducing onboarding time by 40%
+- **Consolidated** mono-repository architecture reducing deployment complexity by 30% and streamlining infrastructure management across multiple teams
+- **Developed** comprehensive disaster recovery solution ensuring business continuity with automated AWS credential management and secrets rotation
+- **Created** proactive monitoring solutions for critical services, achieving 99.9% network accessibility and enabling rapid issue detection
+- **Established** technical documentation and training programs, reducing new team member onboarding time by 40%
 
 **Technical Skills**
 
-- **Security & Identity:** HashiCorp Vault, OKTA/OIDC, Multi-Factor Authentication (MFA), Identity Federation
-- **Cloud & Containers:** Amazon Web Services (AWS), AWS Lambda, AWS Glue, Amazon EKS, Kubernetes, Docker
-- **DevOps & Infrastructure:** Terraform, Ansible, GitHub Actions, CI/CD, Infrastructure as Code, Disaster Recovery
-- **Programming & Automation:** Golang, Python, Shell Scripting, Test-Driven Development, API Integration
-- **Platforms & Integration:** Kafka, Mono-Repository Architecture, Service Provider Integration
-- **Documentation:** Technical Writing, Knowledge Transfer, Training Development
+- **Cloud & Containers:** AWS, EKS, Lambda, Glue, Kubernetes, Docker
+- **Security & Identity:** HashiCorp Vault, OKTA/OIDC, MFA, Identity Federation
+- **DevOps:** Terraform, Ansible, GitHub Actions, CI/CD, Infrastructure as Code
+- **Programming:** Golang, Python, Shell Scripting, API Integration
+- **Platforms:** Kafka, Mono-Repository Architecture, Disaster Recovery

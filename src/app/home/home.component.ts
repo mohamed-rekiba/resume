@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DomToPdfService } from '@app/services/dom-to-pdf.service';
 
 @Component({
     selector: 'app-home',
@@ -11,12 +12,14 @@ export class HomeComponent {
         '07-vertex-mckinsey.md',
         '06-cequens-senior-devops.md',
         '05-cequens-senior-software.md',
+        '04-vrteek.md',
     ];
 
     experiencesPage2: string[] = [
-        '04-vrteek.md',
         '03-escapehd.md',
         '02-freelance.md',
         '01-system-admin.md',
     ];
+
+    constructor(public domToPdf: DomToPdfService) {}
 }

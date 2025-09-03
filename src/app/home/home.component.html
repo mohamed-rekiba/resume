@@ -1,9 +1,13 @@
 <section class="page--wrapper">
-    <app-sidebar></app-sidebar>
-    <app-experience
-        [summary]="true"
-        [experiences]="experiencesPage1"
-    ></app-experience>
+    <button
+        mat-raised-button
+        (click)="domToPdf.printPdf()"
+        class="download-resume"
+    >
+        <mat-icon>download</mat-icon>
+    </button>
+    <app-header></app-header>
+    <app-experience [experiences]="experiencesPage1"></app-experience>
     <!-- SVG Masks -->
     <svg class="svg-defs">
         <clipPath id="avatar-box">
