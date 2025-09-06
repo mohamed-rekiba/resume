@@ -12,6 +12,6 @@ period: '2015 - 2017'
 
 **Technical Skills**
 
-- **Full-stack:** Laravel, PHP, MySQL, Linux, CentOS
+- **Full-stack:** PHP, Laravel, Angular, PostgreSQL, MySQL, Linux, CentOS
 - **Cloud:** AWS, GoDaddy, Server Administration
 - **DevOps:** Automated Deployment, Infrastructure Management
