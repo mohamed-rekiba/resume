@@ -12,7 +12,7 @@ period: '2014 - 2015'
 
 **Technical Skills**
 
-- **Web Development:** PHP, CodeIgniter, Laravel, MySQL, Database Integration
+- **Web Development:** PHP, CodeIgniter, Laravel, Angular, PostgreSQL, MySQL, Database Integration
 - **System Administration:** Linux, Server Management, Performance Optimization
 - **Frontend:** HTML, CSS, JavaScript, Responsive Design, User Interface Design
 - **Project Management:** Client Communication, Time Management, Budget Control
