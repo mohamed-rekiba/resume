@@ -1,1 +1,7 @@
-Senior DevOps Engineer with over a decade of experience in cloud infrastructure, automation, and system modernization. Led critical cloud migrations achieving 99.9% uptime, reduced deployment complexity, and managed high-traffic infrastructure for enterprise clients. Expert in AWS/GCP, Kubernetes, Terraform, and Python/Golang with proven track record of transforming legacy systems into automated cloud solutions.
+---
+title: 'Summary'
+company: ''
+period: ''
+---
+
+Senior DevOps Engineer with a distinctive full-stack foundation spanning software development, system administration, and cloud infrastructure. Specializes in bridging the gap between development teams and operations through strategic automation and architectural modernization. Brings a developer's mindset to infrastructure challenges, enabling organizations to accelerate digital transformation while maintaining enterprise-grade reliability. Passionate about building resilient, scalable systems that empower teams to innovate faster and deliver value consistently.

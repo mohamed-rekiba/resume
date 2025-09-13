@@ -66,3 +66,11 @@
         display: none;
     }
 }
+
+.cover-letter {
+    & > p:nth-child(-n + 2) {
+        border-bottom: 1px dashed;
+        margin-bottom: 1rem;
+        width: 30%;
+    }
+}

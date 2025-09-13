@@ -1,19 +1,44 @@
 @use '@angular/material' as mat;
 
 $typography: (
-    display-4:
-        mat.m2-define-typography-level(112px, 112px, 300, Archivo, -0.0134em),
-    display-3:
-        mat.m2-define-typography-level(56px, 56px, 400, Archivo, -0.0089em),
+    display-4: mat.m2-define-typography-level(
+            112px,
+            112px,
+            300,
+            Archivo,
+            -0.0134em
+        ),
+    display-3: mat.m2-define-typography-level(
+            56px,
+            56px,
+            400,
+            Archivo,
+            -0.0089em
+        ),
     display-2: mat.m2-define-typography-level(45px, 48px, 400, Archivo, 0em),
-    display-1:
-        mat.m2-define-typography-level(34px, 40px, 400, Archivo, 0.0074em),
+    display-1: mat.m2-define-typography-level(
+            34px,
+            40px,
+            400,
+            Archivo,
+            0.0074em
+        ),
     headline: mat.m2-define-typography-level(24px, 32px, 400, Archivo, 0em),
     title: mat.m2-define-typography-level(20px, 32px, 500, Archivo, 0.0075em),
-    subheading-2:
-        mat.m2-define-typography-level(16px, 28px, 400, Archivo, 0.0094em),
-    subheading-1:
-        mat.m2-define-typography-level(15px, 24px, 500, Archivo, 0.0067em),
+    subheading-2: mat.m2-define-typography-level(
+            16px,
+            28px,
+            400,
+            Archivo,
+            0.0094em
+        ),
+    subheading-1: mat.m2-define-typography-level(
+            15px,
+            24px,
+            500,
+            Archivo,
+            0.0067em
+        ),
     body-2: mat.m2-define-typography-level(14px, 24px, 500, Archivo, 0.0179em),
     body-1: mat.m2-define-typography-level(14px, 20px, 400, Archivo, 0.0179em),
     button: mat.m2-define-typography-level(14px, 14px, 500, Archivo, 0.0893em),
@@ -154,8 +179,7 @@ $mat-primary: (
     darker: #0e59c1,
     200: #1976d2,
     // For slide toggle,
-    contrast:
-        (
+    contrast: (
             main: $light-primary-text,
             lighter: $dark-primary-text,
             darker: $light-primary-text,
@@ -177,8 +201,7 @@ $mat-accent: (
     darker: #585858,
     200: #757575,
     // For slide toggle,
-    contrast:
-        (
+    contrast: (
             main: $light-primary-text,
             lighter: $dark-primary-text,
             darker: $light-primary-text,
@@ -200,8 +223,7 @@ $mat-warn: (
     darker: #ff2a64,
     200: #ff4081,
     // For slide toggle,
-    contrast:
-        (
+    contrast: (
             main: $dark-primary-text,
             lighter: $dark-primary-text,
             darker: $light-primary-text,
@@ -278,5 +300,52 @@ $light-theme: mat.m2-define-light-theme(
 
     .mat-badge-content {
         font-family: Archivo;
+    }
+}
+
+p {
+    padding-inline: 0.5rem;
+    margin-block: 0.5rem;
+    width: fit-content;
+    font-size: 0.6rem;
+    line-height: 2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin: unset;
+    margin-block: 0.5rem;
+}
+
+h2 {
+    font-size: 0.8rem;
+}
+
+h4 {
+    font-size: 0.75rem;
+}
+
+h5 {
+    font-size: 0.7rem;
+}
+
+ul {
+    margin: 0.2rem 0;
+    padding-left: 1rem;
+
+    li {
+        margin: 0.1rem 0;
+        line-height: 1.3;
+        font-size: 0.6rem;
+
+        strong {
+            font-weight: 600;
+            color: var(--main-color);
+        }
     }
 }

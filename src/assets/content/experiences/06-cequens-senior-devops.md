@@ -1,7 +1,7 @@
 ---
 title: 'Senior DevOps Engineer'
 company: 'Cequens'
-period: '2019 - 2023'
+period: '2020 - 2023'
 ---
 
 **Key Achievements**

@@ -5,8 +5,8 @@
         </g>
     </svg> -->
     <div class="header__summary--contact">
-        <h1 class="header__name">Mohamed Rekiba</h1>
-        <h2 class="header__position">Senior Cloud Infrastructure Engineer</h2>
+        <h1 class="header__name">{{ name }}</h1>
+        <h2 class="header__position">{{ currentPosition }}</h2>
         <div class="link-list">
             @for (social of socialInfo; track social) {
                 <a
@@ -26,7 +26,8 @@
     ></div>
 </section>
 <section class="header__info">
-    @for (contact of contactInfo; track contact) {
+    <h3>Contact Information:</h3>
+    @for (contact of contactInfo; let i = $index; track contact.title) {
         <a
             mat-icon-button
             class="contact-item"
@@ -36,10 +37,13 @@
             "
             [target]="contact.hrefSuffix ? '_blank' : '_self'"
         >
-            <mat-icon fontSet="material-icons-outlined">{{
+            <!-- <mat-icon fontSet="material-icons-outlined">{{
                 contact.icon
-            }}</mat-icon>
-            {{ contact.value }}
+            }}</mat-icon> -->
+            {{ contact.title }}: {{ contact.value }}
+            @if (i !== contactInfo.length - 1) {
+                ,
+            }
         </a>
     }
 </section>
