@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ContentService } from '@app/services/content.service';
 import { DomToPdfService } from '@app/services/dom-to-pdf.service';
 
 @Component({
@@ -21,5 +22,25 @@ export class HomeComponent {
         '01-system-admin.md',
     ];
 
-    constructor(public domToPdf: DomToPdfService) {}
+    coverLetterContent: string = '';
+
+    constructor(
+        public domToPdf: DomToPdfService,
+        private contentService: ContentService,
+    ) {}
+
+    ngOnInit(): void {
+        this.loadContent();
+    }
+
+    private loadContent(): void {
+        this.contentService.loadCoverLetter().subscribe({
+            next: (content) => {
+                this.coverLetterContent = content?.content || '';
+            },
+            error: (error) => {
+                console.error('Error loading cover letter:', error);
+            },
+        });
+    }
 }

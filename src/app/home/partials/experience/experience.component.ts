@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DomToPdfService } from '@app/services/dom-to-pdf.service';
-import { ContentService, Experience } from '@app/services/content.service';
+import { ContentService, Data } from '@app/services/content.service';
 
 @Component({
     selector: 'app-experience',
@@ -12,7 +12,7 @@ export class ExperienceComponent implements OnInit {
     @Input() summary?: boolean;
     @Input() experiences: string[] = [];
 
-    content: Experience[] = [];
+    content: Data[] = [];
     summaryContent: string = '';
     loading = true;
     error = false;
@@ -33,7 +33,7 @@ export class ExperienceComponent implements OnInit {
         if (this.summary) {
             this.contentService.loadSummary().subscribe({
                 next: (content) => {
-                    this.summaryContent = content;
+                    this.summaryContent = content?.content || '';
                 },
                 error: (error) => {
                     console.error('Error loading summary:', error);

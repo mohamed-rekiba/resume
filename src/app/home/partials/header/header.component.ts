@@ -8,6 +8,8 @@ import { ContentService } from '@app/services/content.service';
     standalone: false,
 })
 export class HeaderComponent {
+    name = 'Mohamed Rekiba';
+    currentPosition = 'Senior Cloud Infrastructure Engineer';
     socialInfo = [
         {
             link: 'https://www.linkedin.com/in/mohamed-rekiba/',
@@ -24,12 +26,12 @@ export class HeaderComponent {
     ];
 
     contactInfo = [
-        {
-            title: 'Birth of date',
-            value: 'December 12, 1984',
-            icon: 'event_note',
-            hrefSuffix: '',
-        },
+        // {
+        //     title: 'Date of birth',
+        //     value: 'December 12 1984',
+        //     icon: 'event_note',
+        //     hrefSuffix: '',
+        // },
         {
             title: 'Education',
             value: 'Bachelor of Commerce',
@@ -71,7 +73,7 @@ export class HeaderComponent {
 
         this.contentService.loadSummary().subscribe({
             next: (content) => {
-                this.summaryContent = content;
+                this.summaryContent = content?.content || '';
             },
             error: (error) => {
                 console.error('Error loading summary:', error);

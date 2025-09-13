@@ -27,3 +27,10 @@
     <app-experience [experiences]="experiencesPage2"></app-experience>
     <app-projects></app-projects>
 </section>
+
+<section class="page--wrapper">
+    <article
+        class="cover-letter"
+        [innerHtml]="coverLetterContent | safe: 'html'"
+    ></article>
+</section>
