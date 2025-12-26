@@ -15,7 +15,7 @@ export class ProjectsComponent {
             moreDetails:
                 'This app is used to send bulk requests using CSV file format with custom headers, path variables, body, and more. It also has the ability to collect and map responses to a new CSV file.',
             detailsList: [
-                'Desktop tool - built using Angular and Electron.',
+                'Desktop app - built using Angular and Electron.',
                 'API server - built using Python.',
             ],
         },

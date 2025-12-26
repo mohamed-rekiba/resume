@@ -16,6 +16,6 @@ period: '2023 - Present'
 **Technical Skills**
 
 - **Cloud & Containers:** AWS, EKS, Lambda, Glue, Kubernetes, Docker
-- **Security & Identity:** HashiCorp Vault, OKTA/OIDC, MFA, Identity Federation
+- **Security & Identity:** HashiCorp Vault, OKTA, Keycloak, OIDC, MFA, Identity Federation
 - **DevOps:** Terraform, Ansible, GitHub Actions, CI/CD, Infrastructure as Code
 - **Programming:** Golang, Python, Shell Scripting, API Integration
