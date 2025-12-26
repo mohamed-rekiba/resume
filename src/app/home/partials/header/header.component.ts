@@ -44,16 +44,28 @@ export class HeaderComponent {
             hrefSuffix: '',
         },
         {
-            title: 'Email',
-            value: 'muhammad.shaban.dev@gmail.com',
-            icon: 'mail',
-            hrefSuffix: 'mailto:',
-        },
-        {
             title: 'Phone',
             value: '+971501229435',
             icon: 'smartphone',
             hrefSuffix: 'tel:',
+        },
+        // {
+        //     title: 'Location',
+        //     value: 'Istanbul, Turkey',
+        //     icon: 'person_pin_circle',
+        //     hrefSuffix: '',
+        // },
+        // {
+        //     title: 'Phone',
+        //     value: '+905467117695',
+        //     icon: 'smartphone',
+        //     hrefSuffix: 'tel:',
+        // },
+        {
+            title: 'Email',
+            value: 'muhammad.shaban.dev@gmail.com',
+            icon: 'mail',
+            hrefSuffix: 'mailto:',
         },
     ];
 

@@ -67,10 +67,19 @@
     }
 }
 
-.cover-letter {
-    & > p:nth-child(-n + 2) {
-        border-bottom: 1px dashed;
-        margin-bottom: 1rem;
-        width: 30%;
+::ng-deep {
+    .cover-letter {
+        p {
+            margin-block: 0.5rem;
+            width: fit-content;
+            font-size: 0.6rem;
+            line-height: 2;
+        }
+
+        & > p:nth-child(-n + 2) {
+            border-bottom: 1px dashed;
+            margin-bottom: 1rem;
+            width: 30%;
+        }
     }
 }

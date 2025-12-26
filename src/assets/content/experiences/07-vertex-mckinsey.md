@@ -19,4 +19,3 @@ period: '2023 - Present'
 - **Security & Identity:** HashiCorp Vault, OKTA/OIDC, MFA, Identity Federation
 - **DevOps:** Terraform, Ansible, GitHub Actions, CI/CD, Infrastructure as Code
 - **Programming:** Golang, Python, Shell Scripting, API Integration
-- **Platforms:** Kafka, Mono-Repository Architecture, Disaster Recovery
