@@ -39,7 +39,7 @@ export class HeaderComponent {
         },
         {
             title: 'Location',
-            value: 'Dubai, UAE',
+            value: 'Dubai/UAE',
             icon: 'person_pin_circle',
             hrefSuffix: '',
         },
@@ -51,7 +51,7 @@ export class HeaderComponent {
         },
         // {
         //     title: 'Location',
-        //     value: 'Istanbul, Turkey',
+        //     value: 'Istanbul/Turkey',
         //     icon: 'person_pin_circle',
         //     hrefSuffix: '',
         // },

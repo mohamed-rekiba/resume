@@ -13,6 +13,6 @@ period: '2013 - 2015'
 **Technical Skills**
 
 - **System Administration:** Linux, CentOS, Server Management, Network Administration
-- **Infrastructure:** Email Servers, DNS, FTP, Proxy Servers, Private Cloud (ownCloud)
+- **Infrastructure:** Email Servers, DNS, FTP, Proxy Servers, Private Cloud (ownCloud/Nextcloud)
 - **Data Center:** Enterprise Systems, Network Management, Device Administration
 - **Automation:** Backup Solutions, Monitoring Systems, Process Automation
