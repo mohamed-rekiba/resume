@@ -5,6 +5,7 @@
         "esbenp.prettier-vscode",
         "eamodio.gitlens",
         "sdras.night-owl",
-        "miguelsolorio.symbols"
+        "miguelsolorio.symbols",
+        "dbaeumer.vscode-eslint"
     ]
 }

@@ -103,6 +103,8 @@
 }
 
 .header__summary--content {
+    display: flex;
+    align-items: center;
     flex: 1;
     line-height: 1.3;
     font-size: 0.7rem;
