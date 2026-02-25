@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/mohamed-rekiba/resume/compare/v1.2.1...v1.2.2) (2026-02-25)
+
+
+### Bug Fixes
+
+* **mobile:** use JS to compute scale and margin-bottom for page gaps ([ff2de9b](https://github.com/mohamed-rekiba/resume/commit/ff2de9bc4142ec0040c6335d43f4abfc8df2eea7))
+
 ## [1.2.1](https://github.com/mohamed-rekiba/resume/compare/v1.2.0...v1.2.1) (2026-02-25)
 
 
