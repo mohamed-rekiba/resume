@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/mohamed-rekiba/resume/compare/v1.1.0...v1.2.0) (2026-02-25)
+
+
+### Features
+
+* **toolbar:** add fixed PDF download URL via GitHub Releases ([a1722d1](https://github.com/mohamed-rekiba/resume/commit/a1722d133cc1ac7b2f070e42cbe2be7e92278a6b))
+
 ## [1.1.0](https://github.com/mohamed-rekiba/resume/compare/v1.0.1...v1.1.0) (2026-02-25)
 
 
