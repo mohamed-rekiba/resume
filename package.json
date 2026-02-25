@@ -10,6 +10,7 @@
     "lint": "ng lint",
     "format": "prettier --write \"src/**/*.{ts,scss,html}\" \"e2e/**/*.ts\"",
     "format:check": "prettier --check \"src/**/*.{ts,scss,html}\" \"e2e/**/*.ts\"",
+    "pdf": "npx playwright test && echo 'PDF saved to e2e-results/resume.pdf'",
     "prepare": "husky"
   },
   "private": true,
