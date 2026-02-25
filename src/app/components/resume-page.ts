@@ -35,6 +35,17 @@ import { Component, ChangeDetectionStrategy, input } from '@angular/core';
       padding-bottom: 8px;
     }
 
+    @media screen and (max-width: 850px) {
+      :host {
+        --scale: calc(100vw / 210mm);
+        width: 210mm;
+        margin-bottom: calc((var(--scale) - 1) * 297mm);
+        box-shadow: none;
+        transform-origin: top left;
+        transform: scale(var(--scale));
+      }
+    }
+
     @media print {
       :host {
         box-shadow: none;
