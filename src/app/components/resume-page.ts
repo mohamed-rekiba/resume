@@ -38,8 +38,11 @@ import { Component, ChangeDetectionStrategy, input } from '@angular/core';
     @media screen and (max-width: 850px) {
       :host {
         --scale: calc(100vw / 210mm);
+        --page-h: 297mm;
         width: 210mm;
-        margin-bottom: calc((var(--scale) - 1) * 297mm);
+        /* collapse the dead layout space left by transform not affecting flow */
+        margin-top: 0;
+        margin-bottom: calc(var(--page-h) * var(--scale) - var(--page-h) + 16px);
         box-shadow: none;
         transform-origin: top left;
         transform: scale(var(--scale));
