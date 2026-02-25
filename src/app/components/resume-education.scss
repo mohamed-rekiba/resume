@@ -1,0 +1,13 @@
+@use '../../styles/variables' as *;
+@use '../../styles/section-heading' as *;
+@use '../../styles/entry-layout' as *;
+
+:host {
+  display: block;
+}
+
+h2 {
+  @include section-heading;
+}
+
+@include entry-layout;

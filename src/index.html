@@ -1,93 +1,13 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Resume</title>
-        <base href="/" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/x-icon" href="favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;700&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"
-            rel="stylesheet"
-        />
-        <style>
-            .loader {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #fff;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                text-align: center;
-                z-index: 99999;
-                transition: 100ms ease-in-out;
-            }
-            body.loaded .loader {
-                opacity: 0;
-                visibility: hidden;
-                transition-duration: 300ms;
-            }
-
-            .loader__wrap {
-                width: 100%;
-                max-width: 9.375rem;
-            }
-            .loader__wrap .circle-pulse > * {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                border-radius: 50%;
-                box-sizing: border-box;
-                transform: scale(0);
-                animation: pulse 1.6s linear infinite;
-            }
-            .loader__wrap .circle-pulse .circle-pulse__1 {
-                width: 6rem;
-                height: 6rem;
-                margin-top: -3rem;
-                margin-left: -3rem;
-                background-color: #304cfd;
-            }
-            .loader__wrap .circle-pulse .circle-pulse__2 {
-                width: 4.8rem;
-                height: 4.8rem;
-                margin-top: -2.4rem;
-                margin-left: -2.4rem;
-                background-color: rgba(48, 76, 253, 0.7);
-                animation-delay: -0.8s;
-            }
-
-            @keyframes pulse {
-                0% {
-                    transform: scale(0, 0);
-                    opacity: 1;
-                }
-                100% {
-                    transform: scale(1, 1);
-                    opacity: 0;
-                }
-            }
-        </style>
-    </head>
-    <body class="mat-typography">
-        <div class="loader">
-            <div class="loader__wrap">
-                <div class="circle-pulse">
-                    <div class="circle-pulse__1"></div>
-                    <div class="circle-pulse__2"></div>
-                </div>
-            </div>
-        </div>
-        <app-root></app-root>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Resume</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
 </html>

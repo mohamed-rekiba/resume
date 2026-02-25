@@ -1,99 +1,195 @@
-<h1 align="left">Hey 👋 What's up?</h1>
+# Mohamed Rekiba -- Resume
 
-###
+[![CI](https://github.com/mohamed-rekiba/resume/actions/workflows/ci.yml/badge.svg)](https://github.com/mohamed-rekiba/resume/actions/workflows/ci.yml)
+[![ATS Validated](https://img.shields.io/badge/ATS-Validated-brightgreen)](#ats-compatibility)
+[![Deploy](https://github.com/mohamed-rekiba/resume/actions/workflows/release.yml/badge.svg)](https://github.com/mohamed-rekiba/resume/actions/workflows/release.yml)
 
-<p align="left">My name is <strong>Mohamed Rekiba</strong> and I'm a <strong>Senior DevOps Engineer<strong>, from Egypt 🇪🇬</p>
+**Live:** [mohamed-rekiba.github.io/resume](https://mohamed-rekiba.github.io/resume)
+**PDF:** Download from the [latest release](https://github.com/mohamed-rekiba/resume/releases/latest)
 
-###
+---
 
-<h2 align="left">About me</h2>
+An Angular application that renders my resume from Markdown into a live paginated A4 preview and exports ATS-friendly text-based PDFs. Every change is automatically tested for ATS compatibility, security-scanned, and deployed to GitHub Pages.
 
-###
+## Why This Exists
 
-<p align="left">🚀 Senior DevOps Engineer with over a decade of experience in cloud infrastructure and automation<br>☁️ Expert in AWS, Kubernetes, and Infrastructure as Code (Terraform, Ansible)<br>🎯 Passionate about Linux, cloud-native transformation and open source contributions<br>🏆 Led critical migrations achieving 99.9% uptime for enterprise clients</p>
+Most resume builders produce image-heavy PDFs that ATS (Applicant Tracking Systems) can't parse. This project treats the resume as **data** (Markdown + YAML) and renders it with **semantic HTML**, ensuring every word is machine-readable while looking clean in print.
 
-###
+The CI pipeline validates ATS compatibility on every commit by generating a real PDF, extracting its text, and asserting that section headings, dates, skills, and contact info are all parseable.
 
-<h2 align="left">I code with</h2>
+## How It Works
 
-###
+```
+resume.md (Markdown + YAML)
+    │
+    ▼
+Markdown Parser ──► Resume Model ──► Angular Components
+                                          │
+                                    Page Break Algorithm
+                                          │
+                                    ┌─────┴─────┐
+                                    │  A4 Pages  │
+                                    └─────┬─────┘
+                                          │
+                              ┌───────────┼───────────┐
+                              ▼           ▼           ▼
+                          Live Preview   PDF Export   ATS Validation (CI)
+```
 
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" height="40" alt="go logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="40" alt="go logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="40" alt="php logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" alt="nodejs logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" height="40" alt="angular logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" height="40" alt="aws logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" height="40" alt="kubernetes logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" alt="docker logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" height="40" alt="terraform logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" height="40" alt="ansible logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="40" alt="linux logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" alt="git logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="40" alt="github logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" height="40" alt="gitlab logo"  />
-</div>
+1. **Write** your resume in [`public/resume/resume.md`](public/resume/resume.md) using Markdown with YAML frontmatter
+2. **Preview** the live paginated A4 layout at `localhost:4200`
+3. **Export** to PDF via `Ctrl+P` / `Cmd+P` or the Export button
 
-###
+## Quick Start
 
-<h2 align="left">My Experience</h2>
+```bash
+npm install
+npx ng serve
+```
 
-###
+Open [localhost:4200](http://localhost:4200) to see the live preview.
 
-<p align="left">🔧 <strong>Senior Cloud Infrastructure Engineer</strong> @ Vertex Agility (McKinsey & Company)<br>
-📅 2023 - Present<br>
-🏆 Led HashiCorp Vault integration, reduced deployment complexity by 30%, achieved 99.9% network accessibility</p>
+## Resume Format
 
-<p align="left">☁️ <strong>Senior DevOps Engineer</strong> @ Cequens<br>
-📅 2019 - 2023<br>
-🏆 Led complete AWS migration achieving 99.9% uptime, managed Al Rajhi Bank infrastructure, reduced deployment time by 70%</p>
+```yaml
+---
+name: Your Name
+title: Your Job Title
+contact:
+  email: you@example.com
+  phone: "+1 (555) 123-4567"
+  location: "City, Country"
+  linkedin: linkedin.com/in/yourprofile
+  github: github.com/yourusername
+---
 
-<p align="left">💻 <strong>Senior Software Engineer</strong> @ Vrteek<br>
-📅 2017 - 2019<br>
-🏆 Built VR/AR systems, developed Facebook Messenger chatbots</p>
+## Professional Summary
 
-###
+Your summary paragraph here.
 
-<h2 align="left">Key Achievements</h2>
+## Work Experience
 
-###
+### Job Title | Company Name
+**Jan 2023 - Present** | City, Country
 
-<p align="left">✅ Led critical cloud migrations achieving 99.9% uptime<br>
-✅ Reduced deployment complexity by 30% through mono-repository architecture<br>
-✅ Managed high-traffic infrastructure for major enterprise clients<br>
-✅ Implemented automated DevOps pipelines reducing deployment time by 70%<br>
-✅ Developed custom automation tools improving operational efficiency by 60%</p>
+- Achievement with measurable impact
+- Another bullet point
 
-###
+## Skills
 
-<h2 align="left">Connect with me</h2>
+**Category:** Tool1, Tool2, Tool3
 
-###
+## Education
 
-<div align="left">
-  <a href="https://www.linkedin.com/in/mohamed-rekiba" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="linkedin logo"  />
-  </a>
-</div>
+### Degree | University
+**City, Country**
+```
 
-###
+### Supported Sections
+
+| Section | Detected By | Format |
+|---|---|---|
+| Summary | "summary", "profile", "objective" | Paragraph |
+| Experience | "experience", "employment", "work" | `### Role \| Company` with dates and bullets |
+| Skills | "skill", "technical", "technologies" | `**Label:** comma-separated` |
+| Education | "education", "academic" | `### Degree \| Institution` |
+| Certifications | "certification", "open source", "language" | Bullet list |
+
+## ATS Compatibility
+
+Every commit is validated against these checks:
+
+- **Text extractable** -- PDF is text-based, not image-based
+- **Contact info parseable** -- Name, email, LinkedIn, GitHub
+- **Standard section headings** -- "Work Experience", "Skills", "Education"
+- **Date patterns** -- `Jan 2023 - Present` format recognized by parsers
+- **Company names** -- All employers present and extractable
+- **Technical keywords** -- Skills section contains searchable terms
+- **No encoding artifacts** -- Clean text without garbled characters
+- **Page count** -- 1-3 pages (ATS-friendly length)
+
+## CI/CD Pipeline
+
+```
+Push / PR                             Push to main
+    │                                      │
+    ▼                                      ▼
+┌────────────┐  ┌───────────────┐   ┌──────────────┐
+│ Unit Tests │  │ Security Scan │   │Release Please│
+│   + Build  │  │  npm audit    │   │  changelog   │
+│            │  │  gitleaks     │   │ version bump │
+└─────┬──────┘  └───────────────┘   └──────┬───────┘
+      │                                    │
+      ▼                                    ▼ (on release merge)
+┌──────────────┐  ┌──────────┐      ┌────────────┐
+│ATS Validation│  │  CodeQL  │      │  Deploy to  │
+│  Playwright  │  │ Analysis │      │GitHub Pages │
+│  PDF export  │  │          │      │+ attach PDF │
+└──────────────┘  └──────────┘      └────────────┘
+```
+
+| Workflow | Trigger | What it does |
+|---|---|---|
+| **CI** | Push & PR | Unit tests, build, security scan, ATS validation |
+| **CodeQL** | Push, PR & weekly | Static analysis for security vulnerabilities |
+| **Release** | Push to main | Release Please PR + GitHub Pages deploy on release |
+| **Dependabot** | Weekly | Dependency update PRs for npm and GitHub Actions |
+
+## Project Structure
+
+```
+src/
+  app/
+    models/
+      resume.model.ts              # TypeScript interfaces + block builder
+    services/
+      markdown-parser.service.ts   # YAML frontmatter + Markdown parser
+      page-break.service.ts        # A4 pagination algorithm
+      pdf-export.service.ts        # Browser print trigger
+    components/
+      resume-header.ts             # Name, title, contact info
+      resume-summary.ts            # Professional summary
+      resume-experience.ts         # Work experience entry
+      resume-skills.ts             # Skills categories
+      resume-education.ts          # Education entry
+      resume-certifications.ts     # Certifications / open source list
+      resume-page.ts               # A4 page wrapper with page numbers
+      resume-preview.ts            # Pagination orchestrator
+      resume-toolbar.ts            # Top bar with export + page count
+    app.ts                         # Root component
+  styles/
+    _variables.scss                # Design tokens (colors, typography)
+    _section-heading.scss          # Shared section heading mixin
+    _entry-layout.scss             # Shared entry layout mixin
+  styles.scss                      # Global styles + @media print
+e2e/
+  ats-validation.spec.ts           # ATS compatibility test suite
+public/
+  resume/
+    resume.md                      # Resume data (edit this!)
+```
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Angular 21 (standalone components, signals, OnPush) |
+| Parsing | js-yaml (frontmatter), custom Markdown parser |
+| Testing | Vitest (unit), Playwright (e2e + PDF) |
+| CI/CD | GitHub Actions, Release Please, Dependabot |
+| Security | CodeQL, npm audit, Gitleaks |
+| Hosting | GitHub Pages |
+| PDF | Browser-native `window.print()` -- zero dependencies |
+
+## Scripts
+
+```bash
+npx ng serve               # Dev server at localhost:4200
+npx ng build                # Production build
+npx ng test                 # Unit tests (Vitest)
+npx playwright test         # ATS validation (exports PDF)
+```
+
+## License
+
+MIT

@@ -1,0 +1,22 @@
+@use '../../styles/variables' as *;
+@use '../../styles/section-heading' as *;
+
+:host {
+  display: block;
+}
+
+h2 {
+  @include section-heading;
+}
+
+.skill-line {
+  font-size: $font-size-body;
+  line-height: 1.55;
+  color: $color-body;
+  margin-bottom: 1px;
+
+  strong {
+    font-weight: 600;
+    color: $color-subheading;
+  }
+}

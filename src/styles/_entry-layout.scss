@@ -1,0 +1,48 @@
+@use 'variables' as *;
+
+@mixin entry-layout {
+  .entry {
+    margin-bottom: 2px;
+  }
+
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  h3 {
+    font-size: $font-size-entry-title;
+    font-weight: 600;
+    color: $color-subheading;
+
+    .separator {
+      color: $color-separator;
+      margin: 0 4px;
+    }
+  }
+
+  .date {
+    font-size: $font-size-body;
+    color: $color-muted;
+    white-space: nowrap;
+  }
+
+  .location {
+    font-size: $font-size-small;
+    color: $color-light;
+    margin-bottom: 3px;
+  }
+
+  ul {
+    margin: 3px 0 0 0;
+    padding-left: 16px;
+  }
+
+  li {
+    font-size: $font-size-body;
+    line-height: 1.45;
+    color: $color-body;
+    margin-bottom: 1.5px;
+  }
+}
