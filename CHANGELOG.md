@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/mohamed-rekiba/resume/compare/v1.2.0...v1.2.1) (2026-02-25)
+
+
+### Bug Fixes
+
+* **mobile:** correct page gap formula for transform-based scaling ([6c956a6](https://github.com/mohamed-rekiba/resume/commit/6c956a61195ad84995fba1df238b9390a9f35f1f))
+
 ## [1.2.0](https://github.com/mohamed-rekiba/resume/compare/v1.1.0...v1.2.0) (2026-02-25)
 
 
