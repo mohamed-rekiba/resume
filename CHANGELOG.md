@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/mohamed-rekiba/resume/compare/v1.0.0...v1.0.1) (2026-02-25)
+
+
+### Bug Fixes
+
+* **mobile:** replace zoom with CSS transform for correct viewport scaling ([92e1f77](https://github.com/mohamed-rekiba/resume/commit/92e1f77e3099914a8aebafbc604c4d2d3f5fa6b5))
+
 ## 1.0.0 (2026-02-25)
 
 
