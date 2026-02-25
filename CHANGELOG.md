@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/mohamed-rekiba/resume/compare/v1.0.1...v1.1.0) (2026-02-25)
+
+
+### Features
+
+* **resume:** add custom favicon and refine resume content ([7e193d3](https://github.com/mohamed-rekiba/resume/commit/7e193d39444f40e45a0af6ac2e7c6ea011f4c7c5))
+
 ## [1.0.1](https://github.com/mohamed-rekiba/resume/compare/v1.0.0...v1.0.1) (2026-02-25)
 
 
