@@ -1,4 +1,12 @@
-import { Component, ChangeDetectionStrategy, input } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  input,
+  ElementRef,
+  inject,
+  afterNextRender,
+  NgZone,
+} from '@angular/core';
 
 @Component({
   selector: 'app-resume-page',
@@ -37,15 +45,10 @@ import { Component, ChangeDetectionStrategy, input } from '@angular/core';
 
     @media screen and (max-width: 850px) {
       :host {
-        --scale: calc(100vw / 210mm);
-        --page-h: 297mm;
         width: 210mm;
-        /* collapse the dead layout space left by transform not affecting flow */
         margin-top: 0;
-        margin-bottom: calc(var(--page-h) * var(--scale) - var(--page-h) + 16px);
         box-shadow: none;
         transform-origin: top left;
-        transform: scale(var(--scale));
       }
     }
 
@@ -72,4 +75,30 @@ import { Component, ChangeDetectionStrategy, input } from '@angular/core';
 export class ResumePage {
   pageNumber = input.required<number>();
   totalPages = input.required<number>();
+
+  private el = inject(ElementRef<HTMLElement>);
+  private zone = inject(NgZone);
+
+  constructor() {
+    afterNextRender(() => {
+      this.applyMobileScale();
+      this.zone.runOutsideAngular(() => {
+        window.addEventListener('resize', () => this.applyMobileScale(), { passive: true });
+      });
+    });
+  }
+
+  private applyMobileScale(): void {
+    const host = this.el.nativeElement as HTMLElement;
+    if (window.innerWidth > 850) {
+      host.style.transform = '';
+      host.style.marginBottom = '';
+      return;
+    }
+    const scale = window.innerWidth / host.offsetWidth;
+    const scaledHeight = host.offsetHeight * scale;
+    const gap = 16;
+    host.style.transform = `scale(${scale})`;
+    host.style.marginBottom = `${scaledHeight - host.offsetHeight + gap}px`;
+  }
 }
