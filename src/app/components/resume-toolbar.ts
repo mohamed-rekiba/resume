@@ -8,9 +8,21 @@ import { PdfExportService } from '../services/pdf-export.service';
   template: `
     <div class="toolbar-inner">
       <span class="page-info">{{ totalPages() }} {{ totalPages() === 1 ? 'page' : 'pages' }}</span>
-      <button type="button" (click)="onExport()" aria-label="Export resume as PDF">
-        Export PDF
-      </button>
+      <div class="actions">
+        <a
+          class="btn btn-download"
+          href="https://github.com/mohamed-rekiba/resume/releases/latest/download/resume.pdf"
+          download="Mohamed_Rekiba_Resume.pdf"
+          aria-label="Download latest resume PDF"
+          target="_blank"
+          rel="noopener"
+        >
+          Download PDF
+        </a>
+        <button type="button" (click)="onExport()" aria-label="Export resume as PDF">
+          Print / Save
+        </button>
+      </div>
     </div>
   `,
   styles: `
@@ -38,8 +50,14 @@ import { PdfExportService } from '../services/pdf-export.service';
       font-weight: 500;
     }
 
-    button {
-      background: #e94560;
+    .actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    button,
+    .btn {
       color: #fff;
       border: none;
       padding: 8px 20px;
@@ -48,12 +66,29 @@ import { PdfExportService } from '../services/pdf-export.service';
       font-weight: 600;
       cursor: pointer;
       transition: background 0.15s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    button {
+      background: #e94560;
 
       &:hover {
         background: #c73a52;
       }
       &:active {
         background: #a32e42;
+      }
+    }
+
+    .btn-download {
+      background: #00d4ff22;
+      border: 1px solid #00d4ff66;
+      color: #00d4ff;
+
+      &:hover {
+        background: #00d4ff33;
+        border-color: #00d4ff;
       }
     }
 
@@ -66,9 +101,10 @@ import { PdfExportService } from '../services/pdf-export.service';
         font-size: 12px;
       }
 
-      button {
-        padding: 6px 14px;
-        font-size: 13px;
+      button,
+      .btn {
+        padding: 6px 12px;
+        font-size: 12px;
       }
     }
 
