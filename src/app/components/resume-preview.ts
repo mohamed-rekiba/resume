@@ -70,6 +70,14 @@ import { ResumePage } from './resume-page';
       margin-bottom: 8px;
     }
 
+    @media screen and (max-width: 850px) {
+      .pages-container {
+        padding: 0;
+        align-items: flex-start;
+        overflow-x: hidden;
+      }
+    }
+
     @media print {
       .measurement-area {
         display: none !important;

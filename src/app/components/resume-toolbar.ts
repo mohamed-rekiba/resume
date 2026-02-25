@@ -57,6 +57,21 @@ import { PdfExportService } from '../services/pdf-export.service';
       }
     }
 
+    @media screen and (max-width: 600px) {
+      :host {
+        padding: 8px 12px;
+      }
+
+      .page-info {
+        font-size: 12px;
+      }
+
+      button {
+        padding: 6px 14px;
+        font-size: 13px;
+      }
+    }
+
     @media print {
       :host {
         display: none !important;
