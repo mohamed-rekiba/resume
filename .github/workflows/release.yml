@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: release-${{ github.ref }}
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -30,16 +30,14 @@ jobs:
 
   deploy:
     name: Deploy to GitHub Pages
-    needs: release-please
-    if: needs.release-please.outputs.release_created == 'true'
     runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
@@ -47,11 +45,11 @@ jobs:
       - run: npm ci
       - run: npx ng build --base-href /resume/
 
-      - name: Configure Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: dist/resume/browser
 
@@ -59,15 +57,26 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Generate resume PDF
-        run: |
-          npx playwright install chromium --with-deps
-          npx playwright test
+  attach-pdf:
+    name: Attach PDF to Release
+    needs: [release-please, deploy]
+    if: needs.release-please.outputs.release_created == 'true'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+      - run: npx playwright install chromium --with-deps
+      - run: npx playwright test
         env:
           CI: true
 
-      - name: Attach PDF to release
-        if: always()
+      - name: Upload PDF to release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
