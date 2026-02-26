@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "prebuild": "npm run update-meta",
+    "update-meta": "node --experimental-strip-types scripts/update-meta.ts",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
@@ -13,6 +15,7 @@
     "pdf": "npx playwright test && echo 'PDF saved to e2e-results/resume.pdf'",
     "prepare": "husky"
   },
+  "type": "module",
   "private": true,
   "packageManager": "npm@11.10.1",
   "dependencies": {
@@ -33,6 +36,7 @@
     "@angular/compiler-cli": "^21.2.0",
     "@playwright/test": "^1.58.2",
     "@types/js-yaml": "^4.0.9",
+    "@types/node": "^25.3.1",
     "angular-eslint": "21.2.0",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^10.1.8",
