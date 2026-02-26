@@ -1,5 +1,10 @@
 import { Component, ChangeDetectionStrategy, input, computed } from '@angular/core';
-import { type ResumeMetadata } from '../models/resume.model';
+import { type ResumeMetadata, type ResumeContact } from '../models/resume.model';
+
+interface ContactItem {
+  label: string;
+  href?: string;
+}
 
 @Component({
   selector: 'app-resume-header',
@@ -9,7 +14,18 @@ import { type ResumeMetadata } from '../models/resume.model';
     <header>
       <h1>{{ metadata().name }}</h1>
       <p class="title">{{ metadata().title }}</p>
-      <p class="contact-line">{{ contactLine() }}</p>
+      <p class="contact-line">
+        @for (item of contactItems(); track item.label; let last = $last) {
+          @if (item.href) {
+            <a [href]="item.href" target="_blank" rel="noopener noreferrer">{{ item.label }}</a>
+          } @else {
+            <span>{{ item.label }}</span>
+          }
+          @if (!last) {
+            <span class="sep"> • </span>
+          }
+        }
+      </p>
     </header>
   `,
   styles: `
@@ -38,6 +54,19 @@ import { type ResumeMetadata } from '../models/resume.model';
         font-size: 11px;
         color: #555;
         word-spacing: 2px;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .sep {
+          white-space: pre;
+        }
       }
     }
   `,
@@ -45,15 +74,27 @@ import { type ResumeMetadata } from '../models/resume.model';
 export class ResumeHeader {
   metadata = input.required<ResumeMetadata>();
 
-  contactLine = computed(() => {
-    const c = this.metadata().contact;
-    const parts: string[] = [];
-    if (c.email) parts.push(c.email);
-    if (c.phone) parts.push(c.phone);
-    if (c.location) parts.push(c.location);
-    if (c.linkedin) parts.push(c.linkedin);
-    if (c.github) parts.push(c.github);
-    if (c.website) parts.push(c.website);
-    return parts.join('  •  ');
+  contactItems = computed<ContactItem[]>(() => {
+    const c: ResumeContact = this.metadata().contact;
+    const items: ContactItem[] = [];
+    if (c.email) items.push({ label: c.email, href: `mailto:${c.email}` });
+    if (c.phone) items.push({ label: c.phone, href: `tel:${c.phone.replace(/\s/g, '')}` });
+    if (c.location) items.push({ label: c.location });
+    if (c.linkedin)
+      items.push({
+        label: c.linkedin,
+        href: c.linkedin.startsWith('http') ? c.linkedin : `https://${c.linkedin}`,
+      });
+    if (c.github)
+      items.push({
+        label: c.github,
+        href: c.github.startsWith('http') ? c.github : `https://${c.github}`,
+      });
+    if (c.website)
+      items.push({
+        label: c.website,
+        href: c.website.startsWith('http') ? c.website : `https://${c.website}`,
+      });
+    return items;
   });
 }
