@@ -1,7 +1,10 @@
 import { test, expect } from '@playwright/test';
 import { writeFileSync, readFileSync, mkdirSync } from 'fs';
-import { join } from 'path';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
 import { load as yamlLoad } from 'js-yaml';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const PDF_OUTPUT_DIR = join(__dirname, '..', 'e2e-results');
 const PDF_OUTPUT_PATH = join(PDF_OUTPUT_DIR, 'resume.pdf');
