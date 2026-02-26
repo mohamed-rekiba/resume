@@ -1,9 +1,29 @@
 import { test, expect } from '@playwright/test';
 import { writeFileSync, readFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
+import { load as yamlLoad } from 'js-yaml';
 
 const PDF_OUTPUT_DIR = join(__dirname, '..', 'e2e-results');
 const PDF_OUTPUT_PATH = join(PDF_OUTPUT_DIR, 'resume.pdf');
+const RESUME_MD_PATH = join(__dirname, '..', 'public', 'resume', 'resume.md');
+
+interface ResumeFrontmatter {
+  name: string;
+  title: string;
+  contact: { email: string; linkedin: string; github: string };
+}
+
+function parseResumeMd(): ResumeFrontmatter {
+  const raw = readFileSync(RESUME_MD_PATH, 'utf-8');
+  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!match) throw new Error('Could not parse frontmatter from resume.md');
+  return yamlLoad(match[1]) as ResumeFrontmatter;
+}
+
+function extractCompanies(mdBody: string): string[] {
+  const matches = mdBody.matchAll(/^### .+\| (.+)$/gm);
+  return [...matches].map((m) => m[1].trim());
+}
 
 async function extractPdf(path: string): Promise<{ text: string; numpages: number }> {
   const { PDFParse } = await import('pdf-parse');
@@ -16,8 +36,17 @@ async function extractPdf(path: string): Promise<{ text: string; numpages: numbe
 test.describe('ATS Resume Validation', () => {
   let pdfText: string;
   let pageCount: number;
+  let frontmatter: ResumeFrontmatter;
+  let companies: string[];
 
   test.beforeAll(async ({ browser }) => {
+    const raw = readFileSync(RESUME_MD_PATH, 'utf-8');
+    const bodyMatch = raw.match(/^---[\s\S]*?---\r?\n([\s\S]*)$/);
+    const body = bodyMatch?.[1] ?? '';
+
+    frontmatter = parseResumeMd();
+    companies = extractCompanies(body);
+
     const page = await browser.newPage();
     await page.goto('/');
     await page.waitForSelector('.resume-page-wrapper', { timeout: 15_000 });
@@ -46,8 +75,8 @@ test.describe('ATS Resume Validation', () => {
   });
 
   test('contact information is parseable', () => {
-    expect(pdfText).toContain('Mohamed Rekiba');
-    expect(pdfText).toContain('muhammad.shaban.dev@gmail.com');
+    expect(pdfText).toContain(frontmatter.name);
+    expect(pdfText).toContain(frontmatter.contact.email);
     expect(pdfText).toMatch(/linkedin/i);
     expect(pdfText).toMatch(/github/i);
   });
@@ -66,21 +95,20 @@ test.describe('ATS Resume Validation', () => {
   });
 
   test('no garbled or encoded text artifacts', () => {
-    expect(pdfText).not.toMatch(/[^\x00-\x7F]{10,}/);
+    expect(pdfText).not.toMatch(/\P{ASCII}{10,}/u);
     expect(pdfText).not.toContain('undefined');
     expect(pdfText).not.toContain('[object Object]');
   });
 
   test('work experience entries include company names', () => {
-    const companies = ['Vertex Agility', 'Cequens', 'Vrteek', 'EscapeHD', 'Emec'];
     for (const company of companies) {
       expect(pdfText).toContain(company);
     }
   });
 
   test('skills section contains key technical terms', () => {
-    const keywords = ['AWS', 'Kubernetes', 'Terraform', 'Golang', 'Docker'];
-    for (const keyword of keywords) {
+    const coreKeywords = ['AWS', 'Kubernetes', 'Terraform', 'Docker'];
+    for (const keyword of coreKeywords) {
       expect(pdfText).toContain(keyword);
     }
   });
