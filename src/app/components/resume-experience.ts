@@ -1,9 +1,11 @@
 import { Component, ChangeDetectionStrategy, input } from '@angular/core';
 import { type ExperienceEntry } from '../models/resume.model';
+import { MarkdownInlinePipe } from '../pipes/markdown-inline.pipe';
 
 @Component({
   selector: 'app-resume-experience',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [MarkdownInlinePipe],
   host: { class: 'resume-block resume-experience' },
   template: `
     <section>
@@ -21,7 +23,7 @@ import { type ExperienceEntry } from '../models/resume.model';
         @if (entry().bullets.length > 0) {
           <ul>
             @for (bullet of entry().bullets; track $index) {
-              <li>{{ bullet }}</li>
+              <li [innerHTML]="bullet | markdownInline"></li>
             }
           </ul>
         }

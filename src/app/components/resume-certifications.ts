@@ -1,9 +1,11 @@
 import { Component, ChangeDetectionStrategy, input } from '@angular/core';
 import { type CertificationEntry } from '../models/resume.model';
+import { MarkdownInlinePipe } from '../pipes/markdown-inline.pipe';
 
 @Component({
   selector: 'app-resume-certifications',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [MarkdownInlinePipe],
   host: { class: 'resume-block resume-certifications' },
   template: `
     <section>
@@ -11,9 +13,11 @@ import { type CertificationEntry } from '../models/resume.model';
       <ul>
         @for (cert of items(); track cert.name) {
           <li>
-            {{ cert.name }}
+            <span [innerHTML]="cert.name | markdownInline"></span>
             @if (cert.details) {
-              <span class="details"> — {{ cert.details }}</span>
+              <span class="details">
+                — <span [innerHTML]="cert.details | markdownInline"></span
+              ></span>
             }
           </li>
         }
