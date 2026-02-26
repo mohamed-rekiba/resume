@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/mohamed-rekiba/resume/compare/v1.2.2...v1.3.0) (2026-02-26)
+
+
+### Features
+
+* **resume:** render markdown links and make contact items clickable ([acef460](https://github.com/mohamed-rekiba/resume/commit/acef4605c8aa0f8bbd1b5676bb870a59fa320bec))
+
 ## [1.2.2](https://github.com/mohamed-rekiba/resume/compare/v1.2.1...v1.2.2) (2026-02-25)
 
 
