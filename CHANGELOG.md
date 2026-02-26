@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/mohamed-rekiba/resume/compare/v1.4.1...v1.4.2) (2026-02-26)
+
+
+### Bug Fixes
+
+* **toolbar:** serve PDF from Pages to fix CORS and download filename ([d6ee097](https://github.com/mohamed-rekiba/resume/commit/d6ee0977bc66ff7b65713c5846d504a06583a488))
+
 ## [1.4.1](https://github.com/mohamed-rekiba/resume/compare/v1.4.0...v1.4.1) (2026-02-26)
 
 
