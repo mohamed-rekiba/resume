@@ -41,6 +41,8 @@ jobs:
       - run: npm ci
       - run: npx ng test --watch=false
       - run: npx ng build --base-href /resume/
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
 
   security:
     name: Security Scan

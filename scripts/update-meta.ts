@@ -53,6 +53,13 @@ const lastName = rest.join(' ');
 const fullTitle = `${fm.name} — ${fm.title}`;
 const keywords = [...parseSkillKeywords(raw).slice(0, 10), fm.name].join(', ');
 
+// Derive canonical URL from GITHUB_REPOSITORY (owner/repo) when available.
+// Falls back to the existing value already in index.html (no change).
+const ghRepo = process.env['GITHUB_REPOSITORY'];
+const canonicalUrl = ghRepo
+  ? `https://${ghRepo.split('/')[0]}.github.io/${ghRepo.split('/')[1]}/`
+  : null;
+
 let html = readFileSync(INDEX_HTML, 'utf-8');
 
 // <title>
@@ -106,5 +113,19 @@ html = html.replace(
   `$1${escapeHtml(summary)}$2`,
 );
 
+if (canonicalUrl) {
+  // <link rel="canonical">
+  html = html.replace(
+    /(<link\s+rel="canonical"\s+href=")[^"]*(")/,
+    `$1${escapeHtml(canonicalUrl)}$2`,
+  );
+  // og:url
+  html = html.replace(
+    /(<meta\s+property="og:url"\s+content=")[^"]*(")/,
+    `$1${escapeHtml(canonicalUrl)}$2`,
+  );
+}
+
 writeFileSync(INDEX_HTML, html, 'utf-8');
 console.log(`✔ index.html meta tags updated from resume.md (${fm.name} — ${fm.title})`);
+if (canonicalUrl) console.log(`✔ canonical URL set to ${canonicalUrl}`);
