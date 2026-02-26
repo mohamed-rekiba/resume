@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/mohamed-rekiba/resume/compare/v1.4.2...v1.5.0) (2026-02-26)
+
+
+### Features
+
+* derive hardcoded values from resume.md dynamically ([aefd650](https://github.com/mohamed-rekiba/resume/commit/aefd6509da449b3399094b704d47f7a6d6207909))
+
 ## [1.4.2](https://github.com/mohamed-rekiba/resume/compare/v1.4.1...v1.4.2) (2026-02-26)
 
 
