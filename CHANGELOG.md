@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/mohamed-rekiba/resume/compare/v1.4.0...v1.4.1) (2026-02-26)
+
+
+### Bug Fixes
+
+* **toolbar:** use blob fetch to bypass cross-origin download attribute restriction ([e8f09dd](https://github.com/mohamed-rekiba/resume/commit/e8f09dd1ddf739c6cf880615246d898fc6eb2d3e))
+
 ## [1.4.0](https://github.com/mohamed-rekiba/resume/compare/v1.3.0...v1.4.0) (2026-02-26)
 
 
