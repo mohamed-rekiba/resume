@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/mohamed-rekiba/resume/compare/v1.3.0...v1.4.0) (2026-02-26)
+
+
+### Features
+
+* **toolbar:** derive download filename from resume.md name field ([3a71b78](https://github.com/mohamed-rekiba/resume/commit/3a71b78300d3dc568e148badec5e63bc17667eda))
+
 ## [1.3.0](https://github.com/mohamed-rekiba/resume/compare/v1.2.2...v1.3.0) (2026-02-26)
 
 
