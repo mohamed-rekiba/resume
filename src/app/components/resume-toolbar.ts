@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, input, inject, computed } from '@angular/core';
+import { Component, ChangeDetectionStrategy, input, inject, computed, signal } from '@angular/core';
 import { PdfExportService } from '../services/pdf-export.service';
 
 @Component({
@@ -9,16 +9,15 @@ import { PdfExportService } from '../services/pdf-export.service';
     <div class="toolbar-inner">
       <span class="page-info">{{ totalPages() }} {{ totalPages() === 1 ? 'page' : 'pages' }}</span>
       <div class="actions">
-        <a
+        <button
+          type="button"
           class="btn btn-download"
-          href="https://github.com/mohamed-rekiba/resume/releases/latest/download/resume.pdf"
-          [attr.download]="downloadFilename()"
+          (click)="onDownload()"
+          [disabled]="downloading()"
           aria-label="Download latest resume PDF"
-          target="_blank"
-          rel="noopener"
         >
-          Download PDF
-        </a>
+          {{ downloading() ? 'Downloading…' : 'Download PDF' }}
+        </button>
         <button type="button" (click)="onExport()" aria-label="Export resume as PDF">
           Print / Save
         </button>
@@ -86,9 +85,14 @@ import { PdfExportService } from '../services/pdf-export.service';
       border: 1px solid #00d4ff66;
       color: #00d4ff;
 
-      &:hover {
+      &:hover:not(:disabled) {
         background: #00d4ff33;
         border-color: #00d4ff;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
       }
     }
 
@@ -120,8 +124,27 @@ export class ResumeToolbar {
   name = input.required<string>();
 
   downloadFilename = computed(() => this.name().toLowerCase().replace(/\s+/g, '_') + '_resume.pdf');
+  downloading = signal(false);
 
   private pdf = inject(PdfExportService);
+
+  async onDownload(): Promise<void> {
+    this.downloading.set(true);
+    try {
+      const response = await fetch(
+        'https://github.com/mohamed-rekiba/resume/releases/latest/download/resume.pdf',
+      );
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = this.downloadFilename();
+      a.click();
+      URL.revokeObjectURL(url);
+    } finally {
+      this.downloading.set(false);
+    }
+  }
 
   onExport(): void {
     this.pdf.print();
