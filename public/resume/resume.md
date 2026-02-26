@@ -87,8 +87,8 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 
 ## Open Source Contributions
 
-- External Secrets Operator (CNCF, 6.4K+ stars) — Added dataTo support for bulk secret pushing to Kubernetes External Secrets, implementing API types, controller logic, CRD schemas, 57 test specs, and documentation | PR #5850
-- openSUSE Build Service (OBS) — Resolved RPM spec file processing issues, self-hosted OBS infrastructure, and created custom Linux distributions and Docker images | PR #1094
+- External Secrets Operator (CNCF, 6.4K+ stars) — Added dataTo support for bulk secret pushing to Kubernetes External Secrets, implementing API types, controller logic, CRD schemas, 57 test specs, and documentation | PR: [# 5850](https://github.com/external-secrets/external-secrets/pull/5850)
+- openSUSE Build Service (OBS) — Resolved RPM spec file processing issues, self-hosted OBS infrastructure, and created custom Linux distributions and Docker images | PR: [# 1094](https://github.com/openSUSE/obs-build/pull/1094)
 - Alfanous Quran Search Engine — Contributed to advanced Quranic search engine with multiple pull requests and package maintenance
 - Kenzy Linux (2009) — Developed and maintained custom Linux distribution based on Fedora with personalized package management
 
