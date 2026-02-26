@@ -14,7 +14,7 @@ import { ResumeToolbar } from './components/resume-toolbar';
         <p>{{ error() }}</p>
       </div>
     } @else if (resume()) {
-      <app-resume-toolbar [totalPages]="totalPages()" />
+      <app-resume-toolbar [totalPages]="totalPages()" [name]="resume()!.metadata.name" />
       <main>
         <app-resume-preview [resume]="resume()!" (pagesChanged)="totalPages.set($event)" />
       </main>

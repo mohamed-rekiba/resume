@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, input, inject } from '@angular/core';
+import { Component, ChangeDetectionStrategy, input, inject, computed } from '@angular/core';
 import { PdfExportService } from '../services/pdf-export.service';
 
 @Component({
@@ -12,7 +12,7 @@ import { PdfExportService } from '../services/pdf-export.service';
         <a
           class="btn btn-download"
           href="https://github.com/mohamed-rekiba/resume/releases/latest/download/resume.pdf"
-          download="Mohamed_Rekiba_Resume.pdf"
+          [attr.download]="downloadFilename()"
           aria-label="Download latest resume PDF"
           target="_blank"
           rel="noopener"
@@ -117,6 +117,9 @@ import { PdfExportService } from '../services/pdf-export.service';
 })
 export class ResumeToolbar {
   totalPages = input.required<number>();
+  name = input.required<string>();
+
+  downloadFilename = computed(() => this.name().toLowerCase().replace(/\s+/g, '_') + '_resume.pdf');
 
   private pdf = inject(PdfExportService);
 
