@@ -44,6 +44,16 @@ jobs:
 
       - run: npm ci
       - run: npx ng build --base-href /resume/
+      - run: npx playwright install chromium --with-deps
+      - run: npx playwright test
+        env:
+          CI: true
+
+      - name: Copy PDF into Pages output
+        run: |
+          if [ -f e2e-results/resume.pdf ]; then
+            cp e2e-results/resume.pdf dist/resume/browser/resume.pdf
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
