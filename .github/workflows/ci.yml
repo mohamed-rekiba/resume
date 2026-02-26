@@ -40,7 +40,7 @@ jobs:
 
       - run: npm ci
       - run: npx ng test --watch=false
-      - run: npx ng build --base-href /resume/
+      - run: npx ng build --base-href /${{ github.event.repository.name }}/
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
 
