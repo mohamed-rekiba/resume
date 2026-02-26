@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.5.1](https://github.com/mohamed-rekiba/resume/compare/v1.5.0...v1.5.1) (2026-02-26)
+
+
+### Bug Fixes
+
+* **ci:** derive --base-href from repository name instead of hardcoding ([d9a712f](https://github.com/mohamed-rekiba/resume/commit/d9a712f56d1c6db20215a1c750766554bc89e5c0))
+* derive canonical URL from GITHUB_REPOSITORY and remove duplicate Playwright run ([fbbf7d2](https://github.com/mohamed-rekiba/resume/commit/fbbf7d29fcfdbc2d928991ab577d7ebab9de3ba8))
+* **e2e:** replace __dirname with import.meta.url for ESM compatibility ([16be0d4](https://github.com/mohamed-rekiba/resume/commit/16be0d49bc0e33181dfaf43f394bf0400b16c01d))
+
 ## [1.5.0](https://github.com/mohamed-rekiba/resume/compare/v1.4.2...v1.5.0) (2026-02-26)
 
 
