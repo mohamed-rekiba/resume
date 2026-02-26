@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.2](https://github.com/mohamed-rekiba/resume/compare/v1.5.1...v1.5.2) (2026-02-26)
+
+
+### Bug Fixes
+
+* **ci:** add checkout step to attach-pdf job for gh cli git context ([e74ac45](https://github.com/mohamed-rekiba/resume/commit/e74ac45eab5a755e4a62d0c74590209dc090dd1b))
+
 ## [1.5.1](https://github.com/mohamed-rekiba/resume/compare/v1.5.0...v1.5.1) (2026-02-26)
 
 
