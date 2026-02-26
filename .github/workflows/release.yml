@@ -43,7 +43,7 @@ jobs:
           cache: npm
 
       - run: npm ci
-      - run: npx ng build --base-href /resume/
+      - run: npx ng build --base-href /${{ github.event.repository.name }}/
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
       - run: npx playwright install chromium --with-deps
