@@ -51,11 +51,16 @@ jobs:
         env:
           CI: true
 
-      - name: Copy PDF into Pages output
+      - name: Copy PDFs into Pages output
         run: |
+          mkdir -p dist/resume/browser
           if [ -f e2e-results/resume.pdf ]; then
-            cp e2e-results/resume.pdf dist/resume/browser/resume.pdf
+            cp e2e-results/resume.pdf dist/resume/browser/
           fi
+          for f in e2e-results/resume-*.pdf; do
+            [ -f "$f" ] && cp "$f" dist/resume/browser/
+          done
+          ls -la dist/resume/browser/*.pdf 2>/dev/null || true
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -70,21 +75,30 @@ jobs:
         uses: actions/deploy-pages@v4
 
   attach-pdf:
-    name: Attach PDF to Release
+    name: Attach PDFs to Release
     needs: [release-please, deploy]
     if: needs.release-please.outputs.release_created == 'true'
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
 
-      - name: Download PDF from Pages and attach to release
+      - name: Download PDFs from Pages and attach to release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
+          TAG: ${{ needs.release-please.outputs.tag_name }}
         run: |
-          OWNER="${{ github.repository_owner }}"
-          REPO="${{ github.event.repository.name }}"
-          PDF_URL="https://${OWNER}.github.io/${REPO}/resume.pdf"
-          curl -fsSL "$PDF_URL" -o resume.pdf
-          gh release upload "${{ needs.release-please.outputs.tag_name }}" \
-            resume.pdf --clobber
-          echo "PDF attached to release from ${PDF_URL}"
+          BASE="https://${OWNER}.github.io/${REPO}"
+          # Default PDF
+          curl -fsSL "${BASE}/resume.pdf" -o resume.pdf && \
+            gh release upload "$TAG" resume.pdf --clobber && echo "Attached resume.pdf"
+          # Per-target PDFs (discover from repo)
+          for f in public/resume/targets/*.yaml; do
+            [ -f "$f" ] || continue
+            id=$(basename "$f" .yaml)
+            case "$id" in *[!a-zA-Z0-9-]*) continue ;; esac
+            if curl -fsSL "${BASE}/resume-${id}.pdf" -o "resume-${id}.pdf" 2>/dev/null && [ -s "resume-${id}.pdf" ]; then
+              gh release upload "$TAG" "resume-${id}.pdf" --clobber && echo "Attached resume-${id}.pdf"
+            fi
+          done

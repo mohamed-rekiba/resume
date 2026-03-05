@@ -38,7 +38,11 @@ Markdown Parser ──► Resume Model ──► Angular Components
 
 1. **Write** your resume in [`public/resume/resume.md`](public/resume/resume.md) using Markdown with YAML frontmatter
 2. **Preview** the live paginated A4 layout at `localhost:4200`
-3. **Export** to PDF via `Ctrl+P` / `Cmd+P` or the Export button
+3. **Export** to PDF via `Ctrl+P` / `Cmd+P` or the **Print / Save** button. The **Download PDF** link works on the deployed site (it points to the pre-built PDF for the current target). Locally, use Print / Save or run `npm run pdf` and open the file from `e2e-results/`.
+4. **Optional:** Use `?target=tr` (or another target ID) to show region-specific metadata; add overrides in `public/resume/targets/<id>.yaml`
+5. **Optional:** Use `@include sections/foo.md` in the body to compose from section files under `public/resume/sections/`
+
+See [Targets and sections guide](docs/guides/resume-targets-and-sections.md) for details.
 
 ## Quick Start
 
@@ -167,6 +171,9 @@ e2e/
 public/
   resume/
     resume.md                      # Resume data (edit this!)
+    targets/                       # Optional: ?target=<id> overrides
+      uae.yaml                     # e.g. UAE contact/title
+    sections/                      # Optional: @include sections/foo.md
 ```
 
 ## Tech Stack

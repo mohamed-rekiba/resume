@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { writeFileSync, readFileSync, mkdirSync } from 'fs';
+import { writeFileSync, readFileSync, mkdirSync, readdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { load as yamlLoad } from 'js-yaml';
@@ -7,8 +7,26 @@ import { load as yamlLoad } from 'js-yaml';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const PDF_OUTPUT_DIR = join(__dirname, '..', 'e2e-results');
-const PDF_OUTPUT_PATH = join(PDF_OUTPUT_DIR, 'resume.pdf');
 const RESUME_MD_PATH = join(__dirname, '..', 'public', 'resume', 'resume.md');
+const TARGETS_DIR = join(__dirname, '..', 'public', 'resume', 'targets');
+
+const SAFE_TARGET_ID = /^[a-zA-Z0-9-]+$/;
+
+function getTargetIds(): string[] {
+  if (!existsSync(TARGETS_DIR)) return [];
+  return readdirSync(TARGETS_DIR)
+    .filter((f) => f.endsWith('.yaml'))
+    .map((f) => f.replace(/\.yaml$/i, ''))
+    .filter((id) => SAFE_TARGET_ID.test(id))
+    .sort();
+}
+
+const TARGET = process.env['TARGET'] ?? '';
+const PDF_OUTPUT_PATH = join(PDF_OUTPUT_DIR, TARGET ? `resume-${TARGET}.pdf` : 'resume.pdf');
+
+function getBaseUrl(): string {
+  return TARGET ? `/?target=${encodeURIComponent(TARGET)}` : '/';
+}
 
 interface ResumeFrontmatter {
   name: string;
@@ -51,7 +69,7 @@ test.describe('ATS Resume Validation', () => {
     companies = extractCompanies(body);
 
     const page = await browser.newPage();
-    await page.goto('/');
+    await page.goto(getBaseUrl());
     await page.waitForSelector('.resume-page-wrapper', { timeout: 15_000 });
 
     const pdfBuffer = await page.pdf({
@@ -115,4 +133,36 @@ test.describe('ATS Resume Validation', () => {
       expect(pdfText).toContain(keyword);
     }
   });
+});
+
+test.describe('URL target metadata', () => {
+  test('?target=tr shows merged metadata (UAE location)', async ({ page }) => {
+    await page.goto('/?target=tr');
+    await page.waitForSelector('.resume-page-wrapper', { timeout: 15_000 });
+    const content = await page.textContent('main');
+    expect(content).toContain('Dubai, UAE');
+  });
+
+  test('no target loads resume', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForSelector('.resume-page-wrapper', { timeout: 15_000 });
+    const content = await page.textContent('main');
+    expect(content?.length).toBeGreaterThan(100);
+  });
+});
+
+test.describe('Generate target PDFs', () => {
+  const targetIds = getTargetIds();
+  for (const id of targetIds) {
+    test(`generates resume-${id}.pdf`, async ({ page }) => {
+      await page.goto(`/?target=${encodeURIComponent(id)}`);
+      await page.waitForSelector('.resume-page-wrapper', { timeout: 15_000 });
+      const pdfBuffer = await page.pdf({
+        preferCSSPageSize: true,
+        printBackground: false,
+      });
+      mkdirSync(PDF_OUTPUT_DIR, { recursive: true });
+      writeFileSync(join(PDF_OUTPUT_DIR, `resume-${id}.pdf`), pdfBuffer);
+    });
+  }
 });
