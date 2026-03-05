@@ -25,7 +25,7 @@ const TARGET = process.env['TARGET'] ?? '';
 const PDF_OUTPUT_PATH = join(PDF_OUTPUT_DIR, TARGET ? `resume-${TARGET}.pdf` : 'resume.pdf');
 
 function getBaseUrl(): string {
-  return TARGET ? `/?target=${encodeURIComponent(TARGET)}` : '/';
+  return TARGET ? `/?t=${encodeURIComponent(TARGET)}` : '/';
 }
 
 interface ResumeFrontmatter {
@@ -136,8 +136,8 @@ test.describe('ATS Resume Validation', () => {
 });
 
 test.describe('URL target metadata', () => {
-  test('?target=tr shows merged metadata (UAE location)', async ({ page }) => {
-    await page.goto('/?target=tr');
+  test('?t=tr shows merged metadata (UAE location)', async ({ page }) => {
+    await page.goto('/?t=tr');
     await page.waitForSelector('.resume-page-wrapper', { timeout: 15_000 });
     const content = await page.textContent('main');
     expect(content).toContain('Dubai, UAE');
@@ -155,7 +155,7 @@ test.describe('Generate target PDFs', () => {
   const targetIds = getTargetIds();
   for (const id of targetIds) {
     test(`generates resume-${id}.pdf`, async ({ page }) => {
-      await page.goto(`/?target=${encodeURIComponent(id)}`);
+      await page.goto(`/?t=${encodeURIComponent(id)}`);
       await page.waitForSelector('.resume-page-wrapper', { timeout: 15_000 });
       const pdfBuffer = await page.pdf({
         preferCSSPageSize: true,
