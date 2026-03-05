@@ -13,7 +13,7 @@ export class ResumeLoaderService {
   getTargetId(): string | null {
     if (typeof window === 'undefined' || !window.location?.search) return null;
     const params = new URLSearchParams(window.location.search);
-    const target = params.get('target');
+    const target = params.get('t');
     if (target === null || target === '') return null;
     return TARGET_ID_PATTERN.test(target) ? target : null;
   }
