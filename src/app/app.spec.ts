@@ -1,11 +1,33 @@
 import { TestBed } from '@angular/core/testing';
 import { App } from './app';
 import { MarkdownParserService } from './services/markdown-parser.service';
+import { ResumeLoaderService } from './services/resume-loader.service';
+import type { ResumeMetadata } from './models/resume.model';
+import type { TargetOverrides } from './contracts/resume-loader.contract';
+
+const baseContent = {
+  frontmatter: 'name: Test\ntitle: Engineer\ncontact:\n  email: test@example.com',
+  body: '',
+};
+
+function createMockLoader(): ResumeLoaderService {
+  return {
+    getTargetId: () => null,
+    loadBase: () => Promise.resolve(baseContent),
+    loadTargetOverrides: () => Promise.resolve(null),
+    expandIncludes: (body: string) => Promise.resolve(body),
+    mergeMetadata: (base: ResumeMetadata, overrides: TargetOverrides) => ({
+      ...base,
+      ...overrides,
+    }),
+  } as unknown as ResumeLoaderService;
+}
 
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [App],
+      providers: [{ provide: ResumeLoaderService, useValue: createMockLoader() }],
     }).compileComponents();
   });
 

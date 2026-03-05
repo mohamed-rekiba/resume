@@ -21,6 +21,11 @@ export class MarkdownParserService {
     return { metadata, sections };
   }
 
+  /** Builds a Resume from pre-merged metadata and body (e.g. after target merge and @include expansion). */
+  parseResumeWithMetadata(metadata: ResumeMetadata, body: string): Resume {
+    return { metadata, sections: this.parseSections(body) };
+  }
+
   private splitFrontmatter(raw: string): { frontmatter: string; body: string } {
     const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
     if (!match) {
