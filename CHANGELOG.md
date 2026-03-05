@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/mohamed-rekiba/resume/compare/v1.5.2...v1.6.0) (2026-03-05)
+
+
+### Features
+
+* **resume:** URL target metadata, composable sections, and multi-PDF pipeline ([6e9f999](https://github.com/mohamed-rekiba/resume/commit/6e9f9990de5cade4c3e77661b370a69d3fb0c708))
+
 ## [1.5.2](https://github.com/mohamed-rekiba/resume/compare/v1.5.1...v1.5.2) (2026-02-26)
 
 
