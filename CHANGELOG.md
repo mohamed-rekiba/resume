@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/mohamed-rekiba/resume/compare/v1.6.0...v1.6.1) (2026-03-05)
+
+
+### Bug Fixes
+
+* **deps:** align Angular packages to 21.2.1 and resolve peer dependency conflict ([7db83dc](https://github.com/mohamed-rekiba/resume/commit/7db83dc2a3d29772b97d40d9975849b77ad4eb90))
+
 ## [1.6.0](https://github.com/mohamed-rekiba/resume/compare/v1.5.2...v1.6.0) (2026-03-05)
 
 
