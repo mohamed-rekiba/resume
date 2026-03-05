@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.2](https://github.com/mohamed-rekiba/resume/compare/v1.6.1...v1.6.2) (2026-03-05)
+
+
+### Bug Fixes
+
+* **download:** simplify resume PDF download ([9b75885](https://github.com/mohamed-rekiba/resume/commit/9b7588557ee23a3d16ff8acfd310bcce276e81d4))
+
 ## [1.6.1](https://github.com/mohamed-rekiba/resume/compare/v1.6.0...v1.6.1) (2026-03-05)
 
 
