@@ -1,5 +1,6 @@
-import { Component, ChangeDetectionStrategy, input, inject, computed } from '@angular/core';
+import { Component, ChangeDetectionStrategy, input, inject } from '@angular/core';
 import { PdfExportService } from '../services/pdf-export.service';
+import { ResumeLoaderService } from '../services/resume-loader.service';
 
 @Component({
   selector: 'app-resume-toolbar',
@@ -11,9 +12,9 @@ import { PdfExportService } from '../services/pdf-export.service';
       <div class="actions">
         <a
           class="btn btn-download"
-          href="resume.pdf"
-          [attr.download]="downloadFilename()"
-          aria-label="Download latest resume PDF"
+          [href]="downloadHref"
+          [attr.download]="downloadFilename"
+          aria-label="Download resume PDF"
         >
           Download PDF
         </a>
@@ -117,9 +118,20 @@ export class ResumeToolbar {
   totalPages = input.required<number>();
   name = input.required<string>();
 
-  downloadFilename = computed(() => this.name().toLowerCase().replace(/\s+/g, '_') + '_resume.pdf');
-
   private pdf = inject(PdfExportService);
+  private loader = inject(ResumeLoaderService);
+
+  get downloadFilename(): string {
+    const base = this.name().toLowerCase().replace(/\s+/g, '_');
+    const target = this.loader.getTargetId();
+    return target ? `${base}_resume.pdf` : `${base}_resume.pdf`;
+  }
+
+  /** PDF URL for the current target (resume.pdf or resume-<target>.pdf). Works on deployed site where PDFs are built. */
+  get downloadHref(): string {
+    const target = this.loader.getTargetId();
+    return target ? `resume-${target}.pdf` : 'resume.pdf';
+  }
 
   onExport(): void {
     this.pdf.print();

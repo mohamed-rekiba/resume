@@ -1,8 +1,10 @@
 import { Component, ChangeDetectionStrategy, signal, inject, OnInit } from '@angular/core';
 import { type Resume } from './models/resume.model';
 import { MarkdownParserService } from './services/markdown-parser.service';
+import { ResumeLoaderService } from './services/resume-loader.service';
 import { ResumePreview } from './components/resume-preview';
 import { ResumeToolbar } from './components/resume-toolbar';
+import { RESUME_BASE_PATH } from './contracts/resume-loader.contract';
 
 @Component({
   selector: 'app-root',
@@ -52,16 +54,24 @@ export class App implements OnInit {
   totalPages = signal(0);
 
   private parser = inject(MarkdownParserService);
+  private loader = inject(ResumeLoaderService);
 
   async ngOnInit(): Promise<void> {
     try {
-      const response = await fetch('resume/resume.md');
-      if (!response.ok) {
-        this.error.set(`Failed to load resume.md (HTTP ${response.status})`);
-        return;
+      const targetId = this.loader.getTargetId();
+
+      const base = await this.loader.loadBase();
+      let metadata = this.parser.parseResume('---\n' + base.frontmatter + '\n---\n').metadata;
+
+      if (targetId) {
+        const overrides = await this.loader.loadTargetOverrides(targetId);
+        if (overrides) {
+          metadata = this.loader.mergeMetadata(metadata, overrides);
+        }
       }
-      const raw = await response.text();
-      const parsed = this.parser.parseResume(raw);
+
+      const body = await this.loader.expandIncludes(base.body, RESUME_BASE_PATH);
+      const parsed = this.parser.parseResumeWithMetadata(metadata, body);
       this.resume.set(parsed);
     } catch {
       this.error.set('Failed to load resume. Make sure public/resume/resume.md exists.');
