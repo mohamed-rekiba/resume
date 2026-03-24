@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.3](https://github.com/mohamed-rekiba/resume/compare/v1.6.2...v1.6.3) (2026-03-24)
+
+
+### Bug Fixes
+
+* **deps:** resolve TypeScript peer conflict and restore checks ([91f3f53](https://github.com/mohamed-rekiba/resume/commit/91f3f5368ded72ed0102a9d83f38c27fad6ef3f0))
+* **resume:** align Linux profile ([00ac8ba](https://github.com/mohamed-rekiba/resume/commit/00ac8ba8498252258ddee03f59d3c23828312a41))
+
 ## [1.6.2](https://github.com/mohamed-rekiba/resume/compare/v1.6.1...v1.6.2) (2026-03-05)
 
 
