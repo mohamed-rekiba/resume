@@ -11,13 +11,13 @@ contact:
 
 ## Professional Summary
 
-Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience architecting scalable cloud solutions, automating infrastructure, and building full-stack applications. Proven track record leading AWS cloud migrations, implementing CI/CD pipelines, and designing high-availability systems for enterprise clients including McKinsey & Company. Combines deep Linux systems expertise with a software engineering mindset to bridge development and operations, enabling organizations to ship faster with enterprise-grade reliability.
+Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience architecting scalable cloud solutions, automating infrastructure, and building full-stack applications. Proven track record leading AWS cloud migrations, implementing CI/CD pipelines, and designing high-availability systems for enterprise clients including McKinsey & Company. Combines deep Linux systems expertise with a software engineering mindset to bridge development and operations, enabling organizations to ship faster with enterprise-grade reliability across Ubuntu and Red Hat environments.
 
 ## Work Experience
 
 ### Senior Cloud Infrastructure Engineer | Vertex Agility (McKinsey & Company)
 
-**Jan 2023 - Present** | Dubai, UAE
+**Jan 2023 - Present** | Dubai, UAE - Hybrid
 
 - Architected enterprise HashiCorp Vault integration with external providers (Amazon EKS, GitHub Actions, AWS Secrets Manager, Azure Key Vault), establishing a single source of truth for secrets with dynamic credential rotation — reducing manual credential management by 60%
 - Modernized legacy authentication systems by integrating OKTA with Vault identity groups, improving security posture and cutting new user onboarding time by 40%
@@ -71,7 +71,7 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 
 ## Skills
 
-**Cloud & Infrastructure:** AWS (EC2, EKS, ECS, Lambda, S3, Glue, Athena, Kinesis, CodePipeline), Kubernetes, Docker, Linux Administration
+**Cloud & Infrastructure:** AWS (EC2, EKS, ECS, Lambda, S3, Glue, Athena, Kinesis, CodePipeline), Kubernetes, Docker, Ubuntu/Red Hat/Linux Administration
 **DevOps & IaC:** Terraform, Ansible, GitHub Actions, GitLab CI/CD, AWS CodePipeline, Infrastructure as Code
 **Programming:** Golang, Python, PHP, TypeScript, JavaScript, Node.js, Shell Scripting
 **Security & Identity:** HashiCorp Vault, OKTA, Keycloak, OIDC, MFA, pfSense, VPN, Firewall Management
