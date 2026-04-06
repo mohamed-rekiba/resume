@@ -39,7 +39,7 @@
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^25.5.0",
     "angular-eslint": "21.3.1",
-    "eslint": "^10.1.0",
+    "eslint": "^10.2.0",
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
     "jsdom": "^29.0.1",
