@@ -43,7 +43,7 @@
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
     "jsdom": "^29.1.1",
-    "lint-staged": "^17.0.4",
+    "lint-staged": "^17.0.5",
     "pdf-parse": "^2.4.5",
     "prettier": "^3.8.3",
     "typescript": "^5.9.3",
