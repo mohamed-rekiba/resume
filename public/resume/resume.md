@@ -24,6 +24,7 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 - Consolidated mono-repository architecture that reduced deployment complexity by 30% and streamlined infrastructure management across multiple teams
 - Developed comprehensive disaster recovery solution with automated AWS credential management and secrets rotation, ensuring 99.9% business continuity
 - Created proactive monitoring solutions for critical services, achieving 99.9% network accessibility and enabling rapid issue detection
+- Implemented GitOps delivery with Argo CD on Kubernetes, standardizing application sync, progressive rollouts, and configuration drift detection across environments
 
 ### Senior DevOps Engineer | Cequens
 
@@ -72,7 +73,7 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 ## Skills
 
 **Cloud & Infrastructure:** AWS (EC2, EKS, ECS, Lambda, S3, Glue, Athena, Kinesis, CodePipeline), Kubernetes, Docker, Ubuntu/Red Hat/Linux Administration
-**DevOps & IaC:** Terraform, Ansible, GitHub Actions, GitLab CI/CD, AWS CodePipeline, Infrastructure as Code
+**DevOps & IaC:** Terraform, Ansible, Argo CD, GitHub Actions, GitLab CI/CD, AWS CodePipeline, Infrastructure as Code
 **Programming:** Golang, Python, PHP, TypeScript, JavaScript, Node.js, Shell Scripting
 **Security & Identity:** HashiCorp Vault, OKTA, Keycloak, OIDC, MFA, pfSense, VPN, Firewall Management
 **Web & Application:** Angular, Laravel, REST APIs, Microservices, FrankenPHP, Caddy, Nginx, Apache, HAProxy, Traefik
@@ -85,9 +86,13 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 
 **Cairo, Egypt**
 
+## Projects
+
+- **Arvel** ([arvel.dev](https://arvel.dev)) — Creator and lead maintainer of an async Python web framework (FastAPI, Pydantic, SQLAlchemy) with Laravel-style developer experience: typed active-record ORM, queues, scheduler, 60+ CLI generators, JWT auth, and end-to-end typing; published on PyPI with CI, security scanning, and full documentation at [github.com/mohamed-rekiba/arvel](https://github.com/mohamed-rekiba/arvel)
+
 ## Open Source Contributions
 
-- External Secrets Operator (CNCF, 6.4K+ stars) — Added dataTo support for bulk secret pushing to Kubernetes External Secrets, implementing API types, controller logic, CRD schemas, 57 test specs, and documentation | PR: [# 5850](https://github.com/external-secrets/external-secrets/pull/5850)
+- External Secrets Operator (CNCF, 6.4K+ stars) — Merged `dataTo` support for bulk secret pushing to Kubernetes External Secrets, implementing API types, controller logic, CRD schemas, 57 test specs, and documentation | Merged: [#5850](https://github.com/external-secrets/external-secrets/pull/5850)
 - openSUSE Build Service (OBS) — Resolved RPM spec file processing issues, self-hosted OBS infrastructure, and created custom Linux distributions and Docker images | PR: [# 1094](https://github.com/openSUSE/obs-build/pull/1094)
 - Alfanous Quran Search Engine — Contributed to advanced Quranic search engine with multiple pull requests and package maintenance
 - Kenzy Linux (2009) — Developed and maintained custom Linux distribution based on Fedora with personalized package management

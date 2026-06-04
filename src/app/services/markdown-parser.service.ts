@@ -118,6 +118,7 @@ export class MarkdownParserService {
       lower.includes('credential') ||
       lower.includes('open source') ||
       lower.includes('contribution') ||
+      lower.includes('project') ||
       lower.includes('language') ||
       lower.includes('award') ||
       lower.includes('publication')

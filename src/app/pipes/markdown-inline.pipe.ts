@@ -1,5 +1,8 @@
 import { inject, Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { marked } from 'marked';
+
+marked.use({ gfm: true });
 
 @Pipe({ name: 'markdownInline', standalone: true })
 export class MarkdownInlinePipe implements PipeTransform {
@@ -7,10 +10,13 @@ export class MarkdownInlinePipe implements PipeTransform {
 
   transform(value: string): SafeHtml {
     if (!value) return '';
-    const html = value.replace(
-      /\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
-      '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>',
+
+    const html = marked.parseInline(value, { async: false }) as string;
+    const withExternalLinks = html.replace(
+      /<a href="/g,
+      '<a target="_blank" rel="noopener noreferrer" href="',
     );
-    return this.sanitizer.bypassSecurityTrustHtml(html);
+
+    return this.sanitizer.bypassSecurityTrustHtml(withExternalLinks);
   }
 }
