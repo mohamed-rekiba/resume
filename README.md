@@ -1,6 +1,7 @@
 # Mohamed Rekiba -- Resume
 
 [![CI](https://github.com/mohamed-rekiba/resume/actions/workflows/ci.yml/badge.svg)](https://github.com/mohamed-rekiba/resume/actions/workflows/ci.yml)
+[![Security](https://github.com/mohamed-rekiba/resume/actions/workflows/security.yml/badge.svg)](https://github.com/mohamed-rekiba/resume/actions/workflows/security.yml)
 [![ATS Validated](https://img.shields.io/badge/ATS-Validated-brightgreen)](#ats-compatibility)
 [![Deploy](https://github.com/mohamed-rekiba/resume/actions/workflows/release.yml/badge.svg)](https://github.com/mohamed-rekiba/resume/actions/workflows/release.yml)
 
@@ -53,6 +54,21 @@ npx ng serve
 
 Open [localhost:4200](http://localhost:4200) to see the live preview.
 
+### Pre-commit hooks
+
+Quality gates run locally before each commit (same spirit as [Arvel](https://github.com/mohamed-rekiba/arvel)):
+
+```bash
+pip install pre-commit   # or: brew install pre-commit
+pre-commit install       # git hook; Husky also runs `pre-commit run`
+```
+
+Hooks: whitespace/EOF fixes, YAML/JSON checks, gitleaks, Prettier write, ESLint fix, and unit tests.
+
+`pre-commit run` only checks **staged** files (same as on `git commit`). With nothing staged, file hooks show `(no files to check) Skipped`.
+
+Run the full suite on all files: `npm run precommit` (or `pre-commit run --all-files`). Staged-only: `npm run precommit:staged`.
+
 ## Resume Format
 
 ```yaml
@@ -91,13 +107,13 @@ Your summary paragraph here.
 
 ### Supported Sections
 
-| Section | Detected By | Format |
-|---|---|---|
-| Summary | "summary", "profile", "objective" | Paragraph |
-| Experience | "experience", "employment", "work" | `### Role \| Company` with dates and bullets |
-| Skills | "skill", "technical", "technologies" | `**Label:** comma-separated` |
-| Education | "education", "academic" | `### Degree \| Institution` |
-| Certifications | "certification", "open source", "language" | Bullet list |
+| Section        | Detected By                                | Format                                       |
+| -------------- | ------------------------------------------ | -------------------------------------------- |
+| Summary        | "summary", "profile", "objective"          | Paragraph                                    |
+| Experience     | "experience", "employment", "work"         | `### Role \| Company` with dates and bullets |
+| Skills         | "skill", "technical", "technologies"       | `**Label:** comma-separated`                 |
+| Education      | "education", "academic"                    | `### Degree \| Institution`                  |
+| Certifications | "certification", "open source", "language" | Bullet list                                  |
 
 ## ATS Compatibility
 
@@ -115,29 +131,26 @@ Every commit is validated against these checks:
 ## CI/CD Pipeline
 
 ```
-Push / PR                             Push to main
-    │                                      │
-    ▼                                      ▼
-┌────────────┐  ┌───────────────┐   ┌──────────────┐
-│ Unit Tests │  │ Security Scan │   │Release Please│
-│   + Build  │  │  npm audit    │   │  changelog   │
-│            │  │  gitleaks     │   │ version bump │
-└─────┬──────┘  └───────────────┘   └──────┬───────┘
-      │                                    │
-      ▼                                    ▼ (on release merge)
-┌──────────────┐  ┌──────────┐      ┌────────────┐
-│ATS Validation│  │  CodeQL  │      │  Deploy to  │
-│  Playwright  │  │ Analysis │      │GitHub Pages │
-│  PDF export  │  │          │      │+ attach PDF │
-└──────────────┘  └──────────┘      └────────────┘
+Push / PR                          Push to main
+    │                                   │
+    ├─ Lint (Prettier + ESLint)       ▼
+    ├─ Unit tests              Release Please
+    ├─ Production build               │
+    └─ ATS (Playwright + PDF)         ▼ (on release)
+         │                      Deploy GitHub Pages
+    Parallel security workflow  + attach PDF
+    ├─ npm audit (moderate+)
+    ├─ gitleaks
+    └─ CodeQL (weekly + PR)
 ```
 
-| Workflow | Trigger | What it does |
-|---|---|---|
-| **CI** | Push & PR | Unit tests, build, security scan, ATS validation |
-| **CodeQL** | Push, PR & weekly | Static analysis for security vulnerabilities |
-| **Release** | Push to main | Release Please PR + GitHub Pages deploy on release |
-| **Dependabot** | Weekly | Dependency update PRs for npm and GitHub Actions |
+| Workflow       | Trigger           | What it does                                              |
+| -------------- | ----------------- | --------------------------------------------------------- |
+| **CI**         | Push & PR         | Lint/format, unit tests, production build, ATS validation |
+| **Security**   | Push, PR & daily  | `npm audit`, gitleaks secret scan                         |
+| **CodeQL**     | Push, PR & weekly | Static analysis for security vulnerabilities              |
+| **Release**    | Push to main      | Release Please PR + GitHub Pages deploy on release        |
+| **Dependabot** | Weekly            | Dependency update PRs for npm and GitHub Actions          |
 
 ## Project Structure
 
@@ -178,15 +191,15 @@ public/
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Framework | Angular 21 (standalone components, signals, OnPush) |
-| Parsing | js-yaml (frontmatter), custom Markdown parser |
-| Testing | Vitest (unit), Playwright (e2e + PDF) |
-| CI/CD | GitHub Actions, Release Please, Dependabot |
-| Security | CodeQL, npm audit, Gitleaks |
-| Hosting | GitHub Pages |
-| PDF | Browser-native `window.print()` -- zero dependencies |
+| Layer     | Technology                                           |
+| --------- | ---------------------------------------------------- |
+| Framework | Angular 21 (standalone components, signals, OnPush)  |
+| Parsing   | js-yaml (frontmatter), custom Markdown parser        |
+| Testing   | Vitest (unit), Playwright (e2e + PDF)                |
+| CI/CD     | GitHub Actions, Release Please, Dependabot           |
+| Security  | CodeQL, npm audit, Gitleaks                          |
+| Hosting   | GitHub Pages                                         |
+| PDF       | Browser-native `window.print()` -- zero dependencies |
 
 ## Scripts
 
