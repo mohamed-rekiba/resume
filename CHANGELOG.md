@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/mohamed-rekiba/resume/compare/v1.7.0...v1.7.1) (2026-06-04)
+
+
+### Bug Fixes
+
+* **deps:** pin qs to 6.15.2 for moderate DoS advisory ([a2a5239](https://github.com/mohamed-rekiba/resume/commit/a2a523932abd2f04c8d47b6ad6816bbb32e346bb))
+
 ## [1.7.0](https://github.com/mohamed-rekiba/resume/compare/v1.6.3...v1.7.0) (2026-06-04)
 
 
