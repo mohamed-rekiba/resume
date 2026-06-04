@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/mohamed-rekiba/resume/compare/v1.6.3...v1.7.0) (2026-06-04)
+
+
+### Features
+
+* **resume:** add Projects, Argo CD, and inline markdown rendering ([aafbd55](https://github.com/mohamed-rekiba/resume/commit/aafbd5573b904f07ce37ff073d97094b5f2c60de))
+
 ## [1.6.3](https://github.com/mohamed-rekiba/resume/compare/v1.6.2...v1.6.3) (2026-03-24)
 
 ### Bug Fixes
