@@ -9,11 +9,11 @@ updates:
     groups:
       angular:
         patterns:
-          - "@angular/*"
+          - '@angular/*'
       playwright:
         patterns:
-          - "@playwright/*"
-          - "playwright"
+          - '@playwright/*'
+          - 'playwright'
 
   - package-ecosystem: github-actions
     directory: /

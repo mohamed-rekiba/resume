@@ -9,9 +9,11 @@
     "update-meta": "node --experimental-strip-types scripts/update-meta.ts",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "eslint \"src/**/*.ts\" \"e2e/**/*.ts\" \"scripts/**/*.ts\"",
     "format": "prettier --write \"src/**/*.{ts,scss,html}\" \"e2e/**/*.ts\"",
     "format:check": "prettier --check \"src/**/*.{ts,scss,html}\" \"e2e/**/*.ts\"",
+    "precommit": "pre-commit run --all-files",
+    "precommit:staged": "pre-commit run",
     "pdf": "npx playwright test && echo 'PDFs saved to e2e-results/ (resume.pdf + resume-<target>.pdf per target)'",
     "prepare": "husky"
   },
@@ -42,7 +44,6 @@
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
     "jsdom": "^29.1.1",
-    "lint-staged": "^17.0.7",
     "pdf-parse": "^2.4.5",
     "prettier": "^3.8.3",
     "typescript": "^6.0.3",
@@ -60,9 +61,5 @@
         }
       }
     ]
-  },
-  "lint-staged": {
-    "*.{ts,scss,html}": "prettier --write",
-    "*.ts": "eslint --fix"
   }
 }

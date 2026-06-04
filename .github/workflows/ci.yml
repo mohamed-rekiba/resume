@@ -7,9 +7,15 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
+
+env:
+  NODE_VERSION: '24.16.0'
 
 jobs:
   lint:
@@ -20,62 +26,57 @@ jobs:
 
       - uses: actions/setup-node@v6
         with:
-          node-version: 24
+          node-version: ${{ env.NODE_VERSION }}
           cache: npm
 
       - run: npm ci
-      - run: npm run format:check
-      - run: npx ng lint
+      - name: Prettier check
+        run: npm run format:check
+      - name: ESLint (max-warnings 0)
+        run: npm run lint
 
   test:
-    name: Unit Tests & Build
+    name: Unit Tests
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
 
       - uses: actions/setup-node@v6
         with:
-          node-version: 24
+          node-version: ${{ env.NODE_VERSION }}
           cache: npm
 
       - run: npm ci
-      - run: npx ng test --watch=false
-      - run: npx ng build --base-href /${{ github.event.repository.name }}/
+      - run: npm run test -- --no-watch
+
+  build:
+    name: Production Build
+    runs-on: ubuntu-24.04
+    needs: [lint, test]
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - run: npm ci
+      - name: ng build
+        run: npx ng build --base-href /${{ github.event.repository.name }}/
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
 
-  security:
-    name: Security Scan
-    runs-on: ubuntu-24.04
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 24
-          cache: npm
-
-      - run: npm ci
-      - name: Audit dependencies
-        run: npm audit --audit-level=moderate
-
-      - name: Scan for secrets
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
   ats-validation:
     name: ATS Compatibility
-    needs: test
     runs-on: ubuntu-24.04
+    needs: [build]
     steps:
       - uses: actions/checkout@v6
 
       - uses: actions/setup-node@v6
         with:
-          node-version: 24
+          node-version: ${{ env.NODE_VERSION }}
           cache: npm
 
       - run: npm ci

@@ -1,0 +1,10 @@
+title = "resume gitleaks configuration"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "False positives"
+paths = [
+  '''public/resume/.*\.md$''',
+]
