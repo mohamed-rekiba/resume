@@ -20,6 +20,20 @@ li {
   color: $color-body;
   margin-bottom: 1.5px;
 
+  strong {
+    font-weight: 600;
+  }
+
+  code {
+    font-family: 'Roboto Mono', ui-monospace, monospace;
+    font-size: 0.92em;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
   .details {
     color: $color-light;
   }
