@@ -8,6 +8,10 @@ on:
   schedule:
     - cron: '0 6 * * 1'
 
+permissions:
+  contents: read
+  security-events: write
+
 concurrency:
   group: codeql-${{ github.ref }}
   cancel-in-progress: true
@@ -16,8 +20,6 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-24.04
-    permissions:
-      security-events: write
     strategy:
       fail-fast: false
       matrix:

@@ -1,0 +1,44 @@
+# Local hooks use the repo's npm dependencies (see package.json).
+# Install: pip install pre-commit && pre-commit install
+# Husky runs `pre-commit run` on each commit when hooks are installed.
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+        args: [--maxkb=500]
+      - id: check-merge-conflict
+      - id: check-yaml
+        args: [--unsafe]
+      - id: check-json
+        # tsconfig and VS Code JSON allow comments (JSONC); validate package-lock etc. only.
+        exclude: ^(tsconfig(\..*)?\.json|\.vscode/.*\.json)$
+      - id: detect-private-key
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
+
+  - repo: local
+    hooks:
+      - id: prettier-write
+        name: prettier --write
+        entry: npx prettier --write --ignore-unknown
+        language: system
+        files: \.(ts|tsx|scss|html|md|yaml|yml|json|cjs)$
+      - id: eslint-fix
+        name: eslint --fix
+        entry: npx eslint --fix
+        language: system
+        types: [ts]
+        files: ^(src|e2e|scripts)/.*\.ts$
+      - id: unit-tests
+        name: ng test --no-watch
+        entry: npx ng test --no-watch
+        language: system
+        pass_filenames: false
+        always_run: true
