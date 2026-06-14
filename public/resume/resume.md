@@ -75,7 +75,7 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 **Cloud & Infrastructure:** AWS (EC2, EKS, ECS, Lambda, S3, Glue, Athena, Kinesis, CodePipeline), Kubernetes, Docker, Ubuntu/Red Hat/Linux Administration
 **DevOps & IaC:** Terraform, Ansible, Argo CD, GitHub Actions, GitLab CI/CD, AWS CodePipeline, Infrastructure as Code
 **Programming:** Golang, Python, PHP, TypeScript, JavaScript, Node.js, Shell Scripting
-**Security & Identity:** Keycloak (roles/groups, user federation, OIDC), HashiCorp Vault, OKTA, SSSD, LDAP, MFA, pfSense, VPN, Firewall Management
+**Security & IAM:** Keycloak (roles/groups/permissions, user federation, OIDC/OAuth2/SAML), Keycloak–Kubernetes integration, HashiCorp Vault, OKTA, LDAP/Active Directory, MFA, RBAC, pfSense, VPN, Firewall Management
 **Web & Application:** Angular, Laravel, REST APIs, Microservices, FrankenPHP, Caddy, Nginx, Apache, HAProxy, Traefik
 **Databases:** MySQL, PostgreSQL, MariaDB, Query Optimization, Data Lake Architecture
 **Monitoring:** CloudWatch, Datadog, Prometheus, Grafana, Log Management
