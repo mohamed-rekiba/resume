@@ -11,7 +11,7 @@ contact:
 
 ## Professional Summary
 
-Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience architecting scalable cloud solutions, automating infrastructure, and building full-stack applications. Proven track record leading AWS cloud migrations, implementing CI/CD pipelines, and designing high-availability systems for enterprise clients including McKinsey & Company. Combines deep Linux systems expertise with a software engineering mindset to bridge development and operations, enabling organizations to ship faster with enterprise-grade reliability across Ubuntu and Red Hat environments.
+Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience architecting scalable cloud solutions, automating infrastructure, and building full-stack applications. Proven track record leading AWS cloud migrations, implementing CI/CD pipelines, and designing high-availability systems for enterprise clients including McKinsey & Company. Strong Identity and Access Management background with Keycloak, HashiCorp Vault, and OIDC. Combines deep Linux systems expertise with a software engineering mindset to bridge development and operations, enabling organizations to ship faster with enterprise-grade reliability across Ubuntu and Red Hat environments.
 
 ## Work Experience
 
@@ -20,7 +20,7 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 **Jan 2023 - Present** | Dubai, UAE - Hybrid
 
 - Architected enterprise HashiCorp Vault integration with external providers (Amazon EKS, GitHub Actions, AWS Secrets Manager, Azure Key Vault), establishing a single source of truth for secrets with dynamic credential rotation — reducing manual credential management by 60%
-- Modernized legacy authentication systems by integrating OKTA with Vault identity groups, improving security posture and cutting new user onboarding time by 40%
+- Modernized legacy authentication systems by integrating OKTA and Keycloak with Vault identity groups, managing roles, groups, and user federation to improve security posture and cut new user onboarding time by 40%
 - Consolidated mono-repository architecture that reduced deployment complexity by 30% and streamlined infrastructure management across multiple teams
 - Developed comprehensive disaster recovery solution with automated AWS credential management and secrets rotation, ensuring 99.9% business continuity
 - Created proactive monitoring solutions for critical services, achieving 99.9% network accessibility and enabling rapid issue detection
@@ -75,7 +75,7 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 **Cloud & Infrastructure:** AWS (EC2, EKS, ECS, Lambda, S3, Glue, Athena, Kinesis, CodePipeline), Kubernetes, Docker, Ubuntu/Red Hat/Linux Administration
 **DevOps & IaC:** Terraform, Ansible, Argo CD, GitHub Actions, GitLab CI/CD, AWS CodePipeline, Infrastructure as Code
 **Programming:** Golang, Python, PHP, TypeScript, JavaScript, Node.js, Shell Scripting
-**Security & Identity:** HashiCorp Vault, OKTA, Keycloak, OIDC, MFA, pfSense, VPN, Firewall Management
+**Security & Identity:** Keycloak (roles/groups, user federation, OIDC), HashiCorp Vault, OKTA, SSSD, LDAP, MFA, pfSense, VPN, Firewall Management
 **Web & Application:** Angular, Laravel, REST APIs, Microservices, FrankenPHP, Caddy, Nginx, Apache, HAProxy, Traefik
 **Databases:** MySQL, PostgreSQL, MariaDB, Query Optimization, Data Lake Architecture
 **Monitoring:** CloudWatch, Datadog, Prometheus, Grafana, Log Management
