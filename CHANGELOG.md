@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/mohamed-rekiba/resume/compare/v1.8.0...v1.9.0) (2026-06-14)
+
+
+### Features
+
+* **resume:** update security and IAM skills in resume ([4d4a9c6](https://github.com/mohamed-rekiba/resume/commit/4d4a9c6536ed24c8302844573f4240848c94927e))
+
 ## [1.8.0](https://github.com/mohamed-rekiba/resume/compare/v1.7.1...v1.8.0) (2026-06-14)
 
 
