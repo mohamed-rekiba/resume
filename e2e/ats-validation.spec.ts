@@ -136,11 +136,11 @@ test.describe('ATS Resume Validation', () => {
 });
 
 test.describe('URL target metadata', () => {
-  test('?t=tr shows merged metadata (UAE location)', async ({ page }) => {
+  test('?t=tr shows merged metadata (Istanbul location)', async ({ page }) => {
     await page.goto('/?t=tr');
     await page.waitForSelector('.resume-page-wrapper', { timeout: 15_000 });
     const content = await page.textContent('main');
-    expect(content).toContain('Dubai, UAE');
+    expect(content).toContain('Istanbul');
   });
 
   test('no target loads resume', async ({ page }) => {
