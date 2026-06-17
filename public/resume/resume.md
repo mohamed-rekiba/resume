@@ -1,6 +1,6 @@
 ---
 name: Mohamed Rekiba
-title: Senior DevOps & Cloud Infrastructure Engineer
+title: Senior Technical Architecture & Cloud Engineer
 contact:
   email: muhammad.shaban.dev@gmail.com
   phone: '+971501229435'
@@ -11,7 +11,7 @@ contact:
 
 ## Professional Summary
 
-Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience architecting scalable cloud solutions, automating infrastructure, and building full-stack applications. Proven track record leading AWS cloud migrations, implementing CI/CD pipelines, and designing high-availability systems for enterprise clients including McKinsey & Company. Strong Identity and Access Management background with Keycloak, HashiCorp Vault, and OIDC. Combines deep Linux systems expertise with a software engineering mindset to bridge development and operations, enabling organizations to ship faster with enterprise-grade reliability across Ubuntu and Red Hat environments.
+Senior Technical Architecture and Cloud Engineer with 12+ years designing, delivering, and operating enterprise cloud solutions across AWS and hybrid environments. Proven track record leading cloud migrations, landing zone architecture, and operational assurance programmes for large-scale enterprise clients including McKinsey & Company. Deep expertise in high availability, disaster recovery, observability, IAM governance, and cost optimisation aligned with Well-Architected Framework principles. Combines solution architecture and systems thinking with hands-on cloud operations to resolve complex cross-platform challenges, strengthen resilience, and act as a trusted technical advisor to stakeholders.
 
 ## Work Experience
 
@@ -19,40 +19,39 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 
 **Jan 2023 - Present** | Dubai, UAE - Hybrid
 
-- Architected enterprise HashiCorp Vault integration with external providers (Amazon EKS, GitHub Actions, AWS Secrets Manager, Azure Key Vault), establishing a single source of truth for secrets with dynamic credential rotation — reducing manual credential management by 60%
-- Modernized legacy authentication systems by integrating OKTA and Keycloak with Vault identity groups, managing roles, groups, and user federation to improve security posture and cut new user onboarding time by 40%
-- Consolidated mono-repository architecture that reduced deployment complexity by 30% and streamlined infrastructure management across multiple teams
-- Developed comprehensive disaster recovery solution with automated AWS credential management and secrets rotation, ensuring 99.9% business continuity
-- Created proactive monitoring solutions for critical services, achieving 99.9% network accessibility and enabling rapid issue detection
-- Implemented GitOps delivery with Argo CD on Kubernetes, standardizing application sync, progressive rollouts, and configuration drift detection across environments
+- Architected enterprise secrets and identity platform integrating HashiCorp Vault with Amazon EKS, GitHub Actions, AWS Secrets Manager, and Azure Key Vault — establishing landing zone IAM governance with dynamic credential rotation and reducing manual credential management by 60%
+- Designed and implemented comprehensive disaster recovery solution with automated AWS credential management and secrets rotation, supporting HA/DR objectives and maintaining 99.9% business continuity across critical services
+- Led modernisation of enterprise authentication architecture by integrating OKTA and Keycloak with Vault identity groups, roles, and user federation — improving security posture and cutting new user onboarding time by 40%
+- Built proactive monitoring and alerting for critical services using Datadog and CloudWatch, achieving 99.9% network accessibility and enabling rapid incident detection, containment, and service restoration
+- Drove operational excellence through GitOps delivery with Argo CD on Kubernetes, standardising application sync, progressive rollouts, and configuration drift detection across environments
+- Consolidated mono-repository architecture that reduced deployment complexity by 30% and streamlined cross-team infrastructure governance
 
 ### Senior DevOps Engineer | Cequens
 
 **Mar 2020 - Dec 2022** | Cairo, Egypt
 
-- Led complete cloud migration from legacy infrastructure to AWS, achieving 99.9% uptime while reducing operational costs by 25%
-- Engineered hybrid multi-cloud solution using AWS CI/CD pipelines and Kubernetes, supporting infrastructure that processed millions of daily transactions
-- Implemented automated DevOps pipelines using AWS CodePipeline, GitLab, and Terraform, reducing deployment time by 70% and eliminating manual errors
-- Built containerized applications with Docker/ECS and established centralized Data Lake on AWS using Glue, Athena, and Kinesis, improving data processing efficiency by 40%
-- Built a custom pfSense agent to collect firewall logs and emit Datadog metrics, enabling full network observability with alerting on anomalous traffic patterns — reducing security incidents by 90%
-- Developed custom automation tools in Python, Golang, and Shell scripting that improved operational efficiency by 70%
+- Led end-to-end cloud migration architecture from legacy infrastructure to AWS, achieving 99.9% uptime while reducing operational costs by 25% through capacity planning and resource utilisation optimisation
+- Engineered hybrid multi-cloud solution using AWS, Kubernetes, and Terraform, supporting infrastructure that processed millions of daily transactions with high availability and resilience
+- Implemented automated CI/CD pipelines using AWS CodePipeline, GitLab, and Terraform, reducing deployment time by 70% and eliminating manual errors across cloud operations
+- Built centralised Data Lake on AWS using Glue, Athena, and Kinesis for big data workloads, improving data processing efficiency by 40% and supporting analytics platform adoption
+- Deployed containerised applications with Docker/ECS and established network observability via custom pfSense agent emitting Datadog metrics — reducing security incidents by 90% through proactive alerting on anomalous traffic
+- Developed automation tooling in Python, Golang, and Shell scripting that improved operational efficiency by 70% across cloud support and assurance activities
 
 ### Senior Software Engineer | Cequens
 
 **Feb 2019 - Feb 2020** | Cairo, Egypt
 
-- Developed and maintained custom REST APIs and SDKs for enterprise telecommunications platform, improving integration efficiency by 50%
-- Created Bulk Runner application for bulk operations featuring desktop client (Angular/Electron) and API server (Python) with CSV processing, reducing manual operations time by 90%
+- Designed and delivered REST APIs and SDKs for enterprise telecommunications platform, improving integration efficiency by 50% across middleware and application dependencies
+- Built Bulk Runner application with desktop client (Angular/Electron) and API server (Python) for high-volume CSV processing, reducing manual operations time by 90%
 - Implemented scalable microservices architecture using AWS Lambda, Step Functions, and API Gateway, improving system performance by 40%
 
 ### Senior Software Engineer | Vrteek
 
 **Jun 2017 - Jan 2019** | Cairo, Egypt
 
-- Developed Brain Coach interactive game for Tizen OS using HTML5, CSS3, and JavaScript.
-- Created Facebook Messenger chatbots using Node.js and MySQL, Tic Tac Bot was a top 60 finalist in the Facebook Messenger Bot Challenge for Middle East and Africa
-- Developed VR/AR administration full-stack platforms using Laravel, Node.js, Angular, and MySQL
-- Delivered a browser-based 3D virtual expo experience using Three.js — visitors navigate booths in first-person via mouse and keyboard, with each booth rendering custom display panels and demo videos
+- Developed full-stack VR/AR administration platforms using Laravel, Node.js, Angular, and MySQL with end-to-end application architecture ownership
+- Created Facebook Messenger chatbots using Node.js and MySQL; Tic Tac Bot ranked top 60 in the Facebook Messenger Bot Challenge for Middle East and Africa
+- Delivered browser-based 3D virtual expo using Three.js with custom booth rendering and interactive navigation
 
 ### Software Engineer | EscapeHD
 
@@ -66,19 +65,20 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 
 **May 2013 - Dec 2014** | Cairo, Egypt
 
-- Administered comprehensive Linux server infrastructure on CentOS, managing email servers (Postfix/Dovecot), DNS (BIND), FTP, and proxy servers (Squid), achieving 99.5% uptime
-- Deployed and managed private cloud solutions using ownCloud and Nextcloud with Collabora Office integration for real-time document collaboration
+- Administered Linux server infrastructure on CentOS including email (Postfix/Dovecot), DNS (BIND), FTP, and proxy servers (Squid), achieving 99.5% uptime
+- Deployed private cloud solutions using ownCloud and Nextcloud with Collabora Office integration for real-time document collaboration
 - Implemented automated backup and monitoring solutions, improving system reliability and reducing manual intervention by 60%
 
 ## Skills
 
-**Cloud & Infrastructure:** AWS (EC2, EKS, ECS, Lambda, S3, Glue, Athena, Kinesis, CodePipeline), Kubernetes, Docker, Ubuntu/Red Hat/Linux Administration
-**DevOps & IaC:** Terraform, Ansible, Argo CD, GitHub Actions, GitLab CI/CD, AWS CodePipeline, Infrastructure as Code
-**Programming:** Golang, Python, PHP, TypeScript, JavaScript, Node.js, Shell Scripting
-**Security & IAM:** Keycloak (roles/groups/permissions, user federation, OIDC/OAuth2/SAML), Keycloak–Kubernetes integration, HashiCorp Vault, OKTA, LDAP/Active Directory, MFA, RBAC, pfSense, VPN, Firewall Management
-**Web & Application:** Angular, Laravel, REST APIs, Microservices, FrankenPHP, Caddy, Nginx, Apache, HAProxy, Traefik
-**Databases:** MySQL, PostgreSQL, MariaDB, Query Optimization, Data Lake Architecture
-**Monitoring:** CloudWatch, Datadog, Prometheus, Grafana, Log Management
+**Solution & Cloud Architecture:** AWS (EC2, EKS, ECS, Lambda, S3, VPC), Landing Zone Design, Hybrid/Multi-Cloud, Well-Architected Principles, Cloud Migration, Reference Architectures, Capacity Planning
+**Cloud Operations & Assurance:** High Availability, Disaster Recovery, Incident Response, Proactive Monitoring, Observability, Operational Assessments, Architecture Reviews, Risk Identification
+**DevOps & IaC:** Terraform, Ansible, Argo CD, GitHub Actions, GitLab CI/CD, AWS CodePipeline, Infrastructure as Code, GitOps
+**Data & Integration:** AWS Glue, Athena, Kinesis, Data Lake Architecture, MySQL, PostgreSQL, MariaDB, REST APIs, Microservices, Middleware
+**Security & IAM:** HashiCorp Vault, Keycloak, OKTA, OIDC/OAuth2/SAML, LDAP/Active Directory, MFA, RBAC, Cloud Security Operations
+**Monitoring & Networking:** CloudWatch, Datadog, Prometheus, Grafana, pfSense, VPN, Firewall Management, HAProxy, Nginx, Traefik
+**Programming:** Golang, Python, TypeScript, JavaScript, Node.js, PHP, Shell Scripting
+**Platforms:** Kubernetes, Docker, Ubuntu/Red Hat/Linux Administration
 
 ## Education
 
