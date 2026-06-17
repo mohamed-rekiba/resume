@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/mohamed-rekiba/resume/compare/v1.9.0...v1.10.0) (2026-06-17)
+
+
+### Features
+
+* **resume:** update job titles and descriptions for clarity and relevance ([6bb6070](https://github.com/mohamed-rekiba/resume/commit/6bb6070842b08821b2767ebf3568bfd6ddc5ad26))
+
 ## [1.9.0](https://github.com/mohamed-rekiba/resume/compare/v1.8.0...v1.9.0) (2026-06-14)
 
 
