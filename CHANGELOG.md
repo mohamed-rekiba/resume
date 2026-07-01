@@ -1,5 +1,43 @@
 # Changelog
 
+## [1.11.0](https://github.com/mohamed-rekiba/resume/compare/v1.10.0...v1.11.0) (2026-07-01)
+
+
+### Features
+
+* **deps:** update packages ([4cf42d0](https://github.com/mohamed-rekiba/resume/commit/4cf42d05368c3ce5006a7daad9df2c649eada482))
+* derive hardcoded values from resume.md dynamically ([aefd650](https://github.com/mohamed-rekiba/resume/commit/aefd6509da449b3399094b704d47f7a6d6207909))
+* **resume:** add custom favicon and refine resume content ([7e193d3](https://github.com/mohamed-rekiba/resume/commit/7e193d39444f40e45a0af6ac2e7c6ea011f4c7c5))
+* **resume:** add Projects, Argo CD, and inline markdown rendering ([aafbd55](https://github.com/mohamed-rekiba/resume/commit/aafbd5573b904f07ce37ff073d97094b5f2c60de))
+* **resume:** enhance professional summary and work experience details ([59dea2c](https://github.com/mohamed-rekiba/resume/commit/59dea2cc51c574cec2f10815b315bf16f3345271))
+* **resume:** rebuild as ATS-compatible Angular 21 resume builder ([561f30c](https://github.com/mohamed-rekiba/resume/commit/561f30c4500bdd53b5844571c5e99cf5779272c6))
+* **resume:** render markdown links and make contact items clickable ([acef460](https://github.com/mohamed-rekiba/resume/commit/acef4605c8aa0f8bbd1b5676bb870a59fa320bec))
+* **resume:** update job titles and descriptions for clarity and relevance ([6bb6070](https://github.com/mohamed-rekiba/resume/commit/6bb6070842b08821b2767ebf3568bfd6ddc5ad26))
+* **resume:** update security and IAM skills in resume ([4d4a9c6](https://github.com/mohamed-rekiba/resume/commit/4d4a9c6536ed24c8302844573f4240848c94927e))
+* **resume:** URL target metadata, composable sections, and multi-PDF pipeline ([6e9f999](https://github.com/mohamed-rekiba/resume/commit/6e9f9990de5cade4c3e77661b370a69d3fb0c708))
+* **scripts:** add npm run pdf command for local PDF export ([e6019c1](https://github.com/mohamed-rekiba/resume/commit/e6019c151b57ea423627d76f59c2f5844dd00281))
+* **toolbar:** add fixed PDF download URL via GitHub Releases ([a1722d1](https://github.com/mohamed-rekiba/resume/commit/a1722d133cc1ac7b2f070e42cbe2be7e92278a6b))
+* **toolbar:** derive download filename from resume.md name field ([3a71b78](https://github.com/mohamed-rekiba/resume/commit/3a71b78300d3dc568e148badec5e63bc17667eda))
+* update package dependencies and improve resume content ([7901c6a](https://github.com/mohamed-rekiba/resume/commit/7901c6a84340bbcb0d4544c118d93b786e9149be))
+
+
+### Bug Fixes
+
+* **ci:** add checkout step to attach-pdf job for gh cli git context ([e74ac45](https://github.com/mohamed-rekiba/resume/commit/e74ac45eab5a755e4a62d0c74590209dc090dd1b))
+* **ci:** derive --base-href from repository name instead of hardcoding ([d9a712f](https://github.com/mohamed-rekiba/resume/commit/d9a712f56d1c6db20215a1c750766554bc89e5c0))
+* **deps:** align Angular packages to 21.2.1 and resolve peer dependency conflict ([7db83dc](https://github.com/mohamed-rekiba/resume/commit/7db83dc2a3d29772b97d40d9975849b77ad4eb90))
+* **deps:** pin qs to 6.15.2 for moderate DoS advisory ([a2a5239](https://github.com/mohamed-rekiba/resume/commit/a2a523932abd2f04c8d47b6ad6816bbb32e346bb))
+* **deps:** resolve TypeScript peer conflict and restore checks ([91f3f53](https://github.com/mohamed-rekiba/resume/commit/91f3f5368ded72ed0102a9d83f38c27fad6ef3f0))
+* derive canonical URL from GITHUB_REPOSITORY and remove duplicate Playwright run ([fbbf7d2](https://github.com/mohamed-rekiba/resume/commit/fbbf7d29fcfdbc2d928991ab577d7ebab9de3ba8))
+* **download:** simplify resume PDF download ([9b75885](https://github.com/mohamed-rekiba/resume/commit/9b7588557ee23a3d16ff8acfd310bcce276e81d4))
+* **e2e:** replace __dirname with import.meta.url for ESM compatibility ([16be0d4](https://github.com/mohamed-rekiba/resume/commit/16be0d49bc0e33181dfaf43f394bf0400b16c01d))
+* **mobile:** correct page gap formula for transform-based scaling ([6c956a6](https://github.com/mohamed-rekiba/resume/commit/6c956a61195ad84995fba1df238b9390a9f35f1f))
+* **mobile:** replace zoom with CSS transform for correct viewport scaling ([92e1f77](https://github.com/mohamed-rekiba/resume/commit/92e1f77e3099914a8aebafbc604c4d2d3f5fa6b5))
+* **mobile:** use JS to compute scale and margin-bottom for page gaps ([ff2de9b](https://github.com/mohamed-rekiba/resume/commit/ff2de9bc4142ec0040c6335d43f4abfc8df2eea7))
+* **resume:** align Linux profile ([00ac8ba](https://github.com/mohamed-rekiba/resume/commit/00ac8ba8498252258ddee03f59d3c23828312a41))
+* **toolbar:** serve PDF from Pages to fix CORS and download filename ([d6ee097](https://github.com/mohamed-rekiba/resume/commit/d6ee0977bc66ff7b65713c5846d504a06583a488))
+* **toolbar:** use blob fetch to bypass cross-origin download attribute restriction ([e8f09dd](https://github.com/mohamed-rekiba/resume/commit/e8f09dd1ddf739c6cf880615246d898fc6eb2d3e))
+
 ## [1.10.0](https://github.com/mohamed-rekiba/resume/compare/v1.9.0...v1.10.0) (2026-06-17)
 
 
