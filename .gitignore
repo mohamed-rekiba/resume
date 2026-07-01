@@ -43,6 +43,7 @@ __screenshots__/
 /e2e-results/
 /playwright-report/
 /test-results/
+.playwright-mcp/
 
 # System files
 .DS_Store

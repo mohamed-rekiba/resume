@@ -37,6 +37,12 @@ body {
     break-inside: avoid;
   }
 
+  /* Drop the trailing block margin so a few px of leftover margin don't spill
+     onto a blank final page. */
+  .pages-container .resume-page-wrapper:last-of-type .resume-block:last-child {
+    margin-bottom: 0;
+  }
+
   h2 {
     break-after: avoid;
   }

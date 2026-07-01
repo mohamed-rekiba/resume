@@ -1,23 +1,23 @@
 ---
 name: Mohamed Rekiba
-title: Senior DevOps & Cloud Infrastructure Engineer
+title: Senior DevOps & Platform Engineer
 contact:
   email: muhammad.shaban.dev@gmail.com
-  phone: '+971501229435'
-  location: 'Dubai, UAE'
+  phone: '+905467117695'
+  location: 'Istanbul, Türkiye'
   linkedin: linkedin.com/in/mohamed-rekiba
   github: github.com/mohamed-rekiba
 ---
 
 ## Professional Summary
 
-Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience architecting scalable cloud solutions, automating infrastructure, and building full-stack applications. Proven track record leading AWS cloud migrations, implementing CI/CD pipelines, and designing high-availability systems for enterprise clients including McKinsey & Company. Strong Identity and Access Management background with Keycloak, HashiCorp Vault, and OIDC. Combines deep Linux systems expertise with a software engineering mindset to bridge development and operations, enabling organizations to ship faster with enterprise-grade reliability across Ubuntu and Red Hat environments.
+Senior DevOps and Platform Engineer with 12+ years of experience architecting scalable cloud solutions, automating infrastructure, and building full-stack applications. Proven track record leading AWS cloud migrations, implementing CI/CD pipelines, and designing high-availability systems for enterprise clients. Strong Identity and Access Management background with Keycloak, HashiCorp Vault, and OIDC. Combines deep Linux systems expertise with a software engineering mindset to bridge development and operations, enabling organizations to ship faster with enterprise-grade reliability across Ubuntu and Red Hat environments.
 
 ## Work Experience
 
-### Senior Cloud Infrastructure Engineer | Vertex Agility (McKinsey & Company)
+### Senior Platform Engineer | Vertex Agility
 
-**Jan 2023 - Present** | Dubai, UAE - Hybrid
+**Dec 2023 - Present** | Dubai, UAE - Remote
 
 - Architected enterprise HashiCorp Vault integration with external providers (Amazon EKS, GitHub Actions, AWS Secrets Manager, Azure Key Vault), establishing a single source of truth for secrets with dynamic credential rotation — reducing manual credential management by 60%
 - Modernized legacy authentication systems by integrating OKTA and Keycloak with Vault identity groups, managing roles, groups, and user federation to improve security posture and cut new user onboarding time by 40%
@@ -28,7 +28,7 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 
 ### Senior DevOps Engineer | Cequens
 
-**Mar 2020 - Dec 2022** | Cairo, Egypt
+**Mar 2020 - Nov 2023** | Cairo, Egypt - Remote
 
 - Led complete cloud migration from legacy infrastructure to AWS, achieving 99.9% uptime while reducing operational costs by 25%
 - Engineered hybrid multi-cloud solution using AWS CI/CD pipelines and Kubernetes, supporting infrastructure that processed millions of daily transactions
@@ -39,7 +39,7 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 
 ### Senior Software Engineer | Cequens
 
-**Feb 2019 - Feb 2020** | Cairo, Egypt
+**Feb 2019 - Feb 2020** | Cairo, Egypt - On-Site
 
 - Developed and maintained custom REST APIs and SDKs for enterprise telecommunications platform, improving integration efficiency by 50%
 - Created Bulk Runner application for bulk operations featuring desktop client (Angular/Electron) and API server (Python) with CSV processing, reducing manual operations time by 90%
@@ -47,7 +47,7 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 
 ### Senior Software Engineer | Vrteek
 
-**Jun 2017 - Jan 2019** | Cairo, Egypt
+**Jun 2017 - Jan 2019** | Cairo, Egypt - On-Site
 
 - Developed Brain Coach interactive game for Tizen OS using HTML5, CSS3, and JavaScript.
 - Created Facebook Messenger chatbots using Node.js and MySQL, Tic Tac Bot was a top 60 finalist in the Facebook Messenger Bot Challenge for Middle East and Africa
@@ -56,7 +56,7 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 
 ### Software Engineer | EscapeHD
 
-**Mar 2015 - May 2017** | Cairo, Egypt
+**Jan 2015 - May 2017** | Cairo, Egypt - On-Site
 
 - Developed full-stack administration platform using Laravel and MySQL, improving operational efficiency by 40%
 - Managed enterprise server infrastructure across AWS and dedicated hosting, maintaining 99.5% uptime
@@ -64,7 +64,7 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 
 ### IT Consultant & Linux Administrator | Emec
 
-**May 2013 - Dec 2014** | Cairo, Egypt
+**May 2013 - Dec 2014** | Cairo, Egypt - On-Site
 
 - Administered comprehensive Linux server infrastructure on CentOS, managing email servers (Postfix/Dovecot), DNS (BIND), FTP, and proxy servers (Squid), achieving 99.5% uptime
 - Deployed and managed private cloud solutions using ownCloud and Nextcloud with Collabora Office integration for real-time document collaboration
@@ -75,7 +75,7 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 **Cloud & Infrastructure:** AWS (EC2, EKS, ECS, Lambda, S3, Glue, Athena, Kinesis, CodePipeline), Kubernetes, Docker, Ubuntu/Red Hat/Linux Administration
 **DevOps & IaC:** Terraform, Ansible, Argo CD, GitHub Actions, GitLab CI/CD, AWS CodePipeline, Infrastructure as Code
 **Programming:** Golang, Python, PHP, TypeScript, JavaScript, Node.js, Shell Scripting
-**Security & IAM:** Keycloak (roles/groups/permissions, user federation, OIDC/OAuth2/SAML), Keycloak–Kubernetes integration, HashiCorp Vault, OKTA, LDAP/Active Directory, MFA, RBAC, pfSense, VPN, Firewall Management
+**Security & IAM:** Keycloak (roles/groups/permissions, user federation, OIDC/OAuth2/SAML), HashiCorp Vault, OKTA, RBAC, pfSense, VPN, Firewall Management
 **Web & Application:** Angular, Laravel, REST APIs, Microservices, FrankenPHP, Caddy, Nginx, Apache, HAProxy, Traefik
 **Databases:** MySQL, PostgreSQL, MariaDB, Query Optimization, Data Lake Architecture
 **Monitoring:** CloudWatch, Datadog, Prometheus, Grafana, Log Management
@@ -88,7 +88,7 @@ Senior DevOps and Cloud Infrastructure Engineer with 12+ years of experience arc
 
 ## Projects
 
-- **Arvel** ([arvel.dev](https://arvel.dev)) — Creator and lead maintainer of an async Python web framework (FastAPI, Pydantic, SQLAlchemy) with Laravel-style developer experience: typed active-record ORM, queues, scheduler, 60+ CLI generators, JWT auth, and end-to-end typing; published on PyPI with CI, security scanning, and full documentation at [github.com/mohamed-rekiba/arvel](https://github.com/mohamed-rekiba/arvel)
+- **Arvel** ([arvel.dev](https://arvel.dev)) — Creator and lead maintainer of a batteries-included, type-safe async web framework for Python with Laravel-style developer experience: active-record ORM with eager loading, OAuth2/OIDC/2FA auth, queues, caching, and a scaffolding CLI; strictly typed (mypy + pyright), on PyPI with CI and full docs at [github.com/mohamed-rekiba/arvel](https://github.com/mohamed-rekiba/arvel)
 
 ## Open Source Contributions
 
