@@ -48,7 +48,7 @@
     "husky": "^9.1.7",
     "jsdom": "^29.1.1",
     "pdf-parse": "^2.4.5",
-    "prettier": "^3.9.4",
+    "prettier": "^3.9.5",
     "typescript": "^6.0.3",
     "typescript-eslint": "8.62.1",
     "vitest": "^4.1.9"
