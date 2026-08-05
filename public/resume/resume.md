@@ -17,7 +17,7 @@ Senior DevOps and Platform Engineer with 12+ years of experience architecting sc
 
 ### Senior Platform Engineer | Vertex Agility
 
-**Dec 2023 - Present** | Dubai, UAE - Remote
+**Dec 2023 - Present** | Dubai, UAE
 
 - Architected enterprise HashiCorp Vault integration with external providers (Amazon EKS, GitHub Actions, AWS Secrets Manager, Azure Key Vault), establishing a single source of truth for secrets with dynamic credential rotation — reducing manual credential management by 60%
 - Modernized legacy authentication systems by integrating OKTA and Keycloak with Vault identity groups, managing roles, groups, and user federation to improve security posture and cut new user onboarding time by 40%
@@ -28,7 +28,7 @@ Senior DevOps and Platform Engineer with 12+ years of experience architecting sc
 
 ### Senior DevOps Engineer | Cequens
 
-**Mar 2020 - Nov 2023** | Cairo, Egypt - Remote
+**Mar 2020 - Nov 2023** | Cairo, Egypt
 
 - Led complete cloud migration from legacy infrastructure to AWS, achieving 99.9% uptime while reducing operational costs by 25%
 - Engineered hybrid multi-cloud solution using AWS CI/CD pipelines and Kubernetes, supporting infrastructure that processed millions of daily transactions
@@ -39,7 +39,7 @@ Senior DevOps and Platform Engineer with 12+ years of experience architecting sc
 
 ### Senior Software Engineer | Cequens
 
-**Feb 2019 - Feb 2020** | Cairo, Egypt - On-Site
+**Feb 2019 - Feb 2020** | Cairo, Egypt
 
 - Developed and maintained custom REST APIs and SDKs for enterprise telecommunications platform, improving integration efficiency by 50%
 - Created Bulk Runner application for bulk operations featuring desktop client (Angular/Electron) and API server (Python) with CSV processing, reducing manual operations time by 90%
@@ -47,7 +47,7 @@ Senior DevOps and Platform Engineer with 12+ years of experience architecting sc
 
 ### Senior Software Engineer | Vrteek
 
-**Jun 2017 - Jan 2019** | Cairo, Egypt - On-Site
+**Jun 2017 - Jan 2019** | Cairo, Egypt
 
 - Developed Brain Coach interactive game for Tizen OS using HTML5, CSS3, and JavaScript.
 - Created Facebook Messenger chatbots using Node.js and MySQL, Tic Tac Bot was a top 60 finalist in the Facebook Messenger Bot Challenge for Middle East and Africa
@@ -56,7 +56,7 @@ Senior DevOps and Platform Engineer with 12+ years of experience architecting sc
 
 ### Software Engineer | EscapeHD
 
-**Jan 2015 - May 2017** | Cairo, Egypt - On-Site
+**Jan 2015 - May 2017** | Cairo, Egypt
 
 - Developed full-stack administration platform using Laravel and MySQL, improving operational efficiency by 40%
 - Managed enterprise server infrastructure across AWS and dedicated hosting, maintaining 99.5% uptime
@@ -64,7 +64,7 @@ Senior DevOps and Platform Engineer with 12+ years of experience architecting sc
 
 ### IT Consultant & Linux Administrator | Emec
 
-**May 2013 - Dec 2014** | Cairo, Egypt - On-Site
+**May 2013 - Dec 2014** | Cairo, Egypt
 
 - Administered comprehensive Linux server infrastructure on CentOS, managing email servers (Postfix/Dovecot), DNS (BIND), FTP, and proxy servers (Squid), achieving 99.5% uptime
 - Deployed and managed private cloud solutions using ownCloud and Nextcloud with Collabora Office integration for real-time document collaboration
