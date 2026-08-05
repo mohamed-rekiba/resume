@@ -3,8 +3,8 @@ name: Mohamed Rekiba
 title: Senior DevOps & Platform Engineer
 contact:
   email: muhammad.shaban.dev@gmail.com
-  phone: '+905467117695'
-  location: 'Istanbul, Türkiye'
+  phone: '+971501229435'
+  location: 'Dubai, UAE'
   linkedin: linkedin.com/in/mohamed-rekiba
   github: github.com/mohamed-rekiba
 ---
