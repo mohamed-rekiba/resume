@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/mohamed-rekiba/resume/compare/v1.12.0...v1.13.0) (2026-08-14)
+
+
+### Features
+
+* **resume:** strengthen backend positioning for Python platform roles ([fcf8197](https://github.com/mohamed-rekiba/resume/commit/fcf8197327e5a73da58f9273417b1b232798f0a2))
+
 ## [1.12.0](https://github.com/mohamed-rekiba/resume/compare/v1.11.0...v1.12.0) (2026-08-14)
 
 
