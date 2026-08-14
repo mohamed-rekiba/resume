@@ -11,7 +11,7 @@ contact:
 
 ## Professional Summary
 
-Senior DevOps and Platform Engineer with 12+ years of experience architecting scalable cloud solutions, automating infrastructure, and building full-stack applications. Proven track record leading AWS cloud migrations, implementing CI/CD pipelines, and designing high-availability systems for enterprise clients. Strong Identity and Access Management background with Keycloak, HashiCorp Vault, and OIDC. Combines deep Linux systems expertise with a software engineering mindset to bridge development and operations, enabling organizations to ship faster with enterprise-grade reliability across Ubuntu and Red Hat environments.
+Senior DevOps and Platform Engineer with 12+ years of experience architecting scalable cloud solutions, automating infrastructure, and building production-grade Python backend services. Proven track record leading AWS cloud migrations, implementing CI/CD pipelines, and designing fault-tolerant, high-availability distributed systems for enterprise clients. Strong Identity and Access Management background with Keycloak, HashiCorp Vault, and OAuth2/OIDC/JWT. Combines deep Linux systems expertise with a software engineering mindset to bridge development and operations, enabling organizations to ship faster with enterprise-grade reliability across Ubuntu and Red Hat environments.
 
 ## Work Experience
 
@@ -74,17 +74,11 @@ Senior DevOps and Platform Engineer with 12+ years of experience architecting sc
 
 **Cloud & Infrastructure:** AWS (EC2, EKS, ECS, Lambda, S3, Glue, Athena, Kinesis, CodePipeline), Kubernetes, Docker, Ubuntu/Red Hat/Linux Administration
 **DevOps & IaC:** Terraform, Ansible, Argo CD, GitHub Actions, GitLab CI/CD, AWS CodePipeline, Infrastructure as Code
-**Programming:** Golang, Python, PHP, TypeScript, JavaScript, Node.js, Shell Scripting
-**Security & IAM:** Keycloak (roles/groups/permissions, user federation, OIDC/OAuth2/SAML), HashiCorp Vault, OKTA, RBAC, pfSense, VPN, Firewall Management
-**Web & Application:** Angular, Laravel, REST APIs, Microservices, FrankenPHP, Caddy, Nginx, Apache, HAProxy, Traefik
-**Databases:** MySQL, PostgreSQL, MariaDB, Query Optimization, Data Lake Architecture
+**Programming:** Python, Golang, PHP, TypeScript, JavaScript, Node.js, Shell Scripting
+**Security & IAM:** Keycloak (roles/groups/permissions, user federation, OIDC/OAuth2/SAML/JWT), HashiCorp Vault, OKTA, RBAC, pfSense, VPN, Firewall Management
+**Backend & APIs:** REST API Design, Microservices, Distributed Systems, Celery, RabbitMQ, Amazon SQS, Async Workers, Angular, Laravel, FrankenPHP, Caddy, Nginx, Apache, HAProxy, Traefik
+**Databases:** PostgreSQL, MySQL, MariaDB, Redis, MongoDB, Elasticsearch/OpenSearch, Schema Design, Indexing & Query Optimization, Data Lake Architecture
 **Monitoring:** CloudWatch, Datadog, Prometheus, Grafana, Log Management
-
-## Education
-
-### Bachelor of Commerce
-
-**Cairo, Egypt**
 
 ## Projects
 
@@ -96,6 +90,12 @@ Senior DevOps and Platform Engineer with 12+ years of experience architecting sc
 - openSUSE Build Service (OBS) — Resolved RPM spec file processing issues, self-hosted OBS infrastructure, and created custom Linux distributions and Docker images | PR: [# 1094](https://github.com/openSUSE/obs-build/pull/1094)
 - Alfanous Quran Search Engine — Contributed to advanced Quranic search engine with multiple pull requests and package maintenance
 - Kenzy Linux (2009) — Developed and maintained custom Linux distribution based on Fedora with personalized package management
+
+## Education
+
+### Bachelor of Commerce
+
+**Cairo, Egypt**
 
 ## Languages
 
