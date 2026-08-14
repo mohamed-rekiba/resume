@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.12.0](https://github.com/mohamed-rekiba/resume/compare/v1.11.0...v1.12.0) (2026-08-14)
+
+
+### Features
+
+* **resume:** add contact information for Dubai and update Istanbul contact details ([432898f](https://github.com/mohamed-rekiba/resume/commit/432898ff2d420e3867f25afe0ea981a4c1b24e97))
+
+
+### Bug Fixes
+
+* **resume:** remove redundant "Remote" designation from job locations ([ca7884d](https://github.com/mohamed-rekiba/resume/commit/ca7884d4f37b9e221c55439116c29b1543370903))
+
 ## [1.11.0](https://github.com/mohamed-rekiba/resume/compare/v1.10.0...v1.11.0) (2026-07-01)
 
 
